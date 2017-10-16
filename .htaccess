@@ -1,0 +1,29 @@
+RewriteEngine On
+
+RewriteRule ^assets/uploads/news/(.*)$ bing-logo.php?q=$1&type=news
+RewriteRule ^assets/uploads/cities/(.*)$ bing-logo.php?q=$1&type=city
+RewriteRule ^assets/uploads/industries/(.*)$ bing-logo.php?q=$1&type=industry
+RewriteRule ^assets/uploads/technologies/(.*)$ bing-logo.php?q=$1&type=technology
+RewriteRule ^assets/uploads/institutes/(.*)$ bing-logo.php?q=$1&type=institute
+RewriteRule ^assets/uploads/screenshot/(.*)$ screenshot.php?q=$1
+RewriteRule ^assets/uploads/logo/(.*)$ iconify.php?q=$1
+
+RewriteRule ^startup/(.*)$ startup.php?slug=$1
+RewriteRule ^profile/(.*)$ profile.php?username=$1
+
+RewriteRule ^city/(.*)$ list.php?slug=$1&type=city
+RewriteRule ^industry/(.*)$ list.php?slug=$1&type=industry
+RewriteRule ^technology/(.*)$ list.php?slug=$1&type=technology
+RewriteRule ^institute/(.*)$ list.php?slug=$1&type=university
+RewriteRule ^city/(.*)$/(.*)$ list.php?slug=$1&type=city&page=$2
+RewriteRule ^industry/(.*)$/(.*)$ list.php?slug=$1&type=industry&page=$2
+RewriteRule ^technology/(.*)$/(.*)$ list.php?slug=$1&type=technology&page=$2
+RewriteRule ^institute/(.*)$/(.*)$ list.php?slug=$1&type=university&page=$2
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/$ http://mwlii:8888/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule ^(.+)\.php$ http://mwlii:8888/$1 [R=301,L]
+
+RewriteRule ^([^/.]+)$ $1.php [L]

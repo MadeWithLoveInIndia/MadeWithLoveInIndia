@@ -1,0 +1,3291 @@
+{
+"CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
+"creatorBuild": "19142",
+"files": {
+	"\/404.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/404.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/css\/design.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/design.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/icons\/android-chrome-144x144.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1443,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-144x144.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-144x144.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/android-chrome-192x192.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1748,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-192x192.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-192x192.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/android-chrome-256x256.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2490,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-256x256.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-256x256.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/android-chrome-36x36.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 476,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-36x36.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-36x36.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/android-chrome-384x384.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3425,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-384x384.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-384x384.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/android-chrome-48x48.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 575,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-48x48.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-48x48.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/android-chrome-512x512.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4319,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-512x512.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-512x512.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/android-chrome-72x72.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 777,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-72x72.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-72x72.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/android-chrome-96x96.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 924,
+		"inputAbbreviatedPath": "\/assets\/icons\/android-chrome-96x96.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/android-chrome-96x96.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-114x114-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 857,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-114x114-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-114x114-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-114x114.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 586,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-114x114.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-114x114.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-120x120-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 888,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-120x120-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-120x120-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-120x120.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 658,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-120x120.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-120x120.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-144x144-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 973,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-144x144-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-144x144-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-144x144.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 691,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-144x144.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-144x144.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-152x152-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1059,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-152x152-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-152x152-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-152x152.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 803,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-152x152.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-152x152.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-180x180-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1174,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-180x180-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-180x180-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-180x180.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 911,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-180x180.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-180x180.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-57x57-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 586,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-57x57-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-57x57-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-57x57.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 460,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-57x57.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-57x57.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-60x60-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 584,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-60x60-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-60x60-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-60x60.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 464,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-60x60.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-60x60.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-72x72-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 651,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-72x72-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-72x72-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-72x72.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 494,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-72x72.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-72x72.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-76x76-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 656,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-76x76-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-76x76-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-76x76.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 503,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-76x76.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-76x76.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon-precomposed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1174,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/apple-touch-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 911,
+		"inputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/apple-touch-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/favicon-16x16.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 374,
+		"inputAbbreviatedPath": "\/assets\/icons\/favicon-16x16.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/favicon-16x16.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/favicon-194x194.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1188,
+		"inputAbbreviatedPath": "\/assets\/icons\/favicon-194x194.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/favicon-194x194.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/favicon-32x32.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 464,
+		"inputAbbreviatedPath": "\/assets\/icons\/favicon-32x32.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/favicon-32x32.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/mstile-144x144.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1035,
+		"inputAbbreviatedPath": "\/assets\/icons\/mstile-144x144.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/mstile-144x144.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/mstile-150x150.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 977,
+		"inputAbbreviatedPath": "\/assets\/icons\/mstile-150x150.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/mstile-150x150.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/mstile-310x150.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 929,
+		"inputAbbreviatedPath": "\/assets\/icons\/mstile-310x150.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/mstile-310x150.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/mstile-310x310.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1625,
+		"inputAbbreviatedPath": "\/assets\/icons\/mstile-310x310.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/mstile-310x310.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/icons\/mstile-70x70.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 759,
+		"inputAbbreviatedPath": "\/assets\/icons\/mstile-70x70.png",
+		"outputAbbreviatedPath": "\/assets\/icons\/mstile-70x70.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/sass\/design.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/sass\/design.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/design.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/assets\/uploads\/cached\/common\/a.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9184,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/a.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/a.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/accessibility-technology.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6871,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/accessibility-technology.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/accessibility-technology.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/accessibility.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7650,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/accessibility.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/accessibility.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/agriculture.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9656,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/agriculture.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/agriculture.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/ahmedabad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9107,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ahmedabad.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ahmedabad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/android.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3702,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/android.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/android.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/art.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12960,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/art.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/art.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/artificial-intelligence.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10636,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/artificial-intelligence.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/artificial-intelligence.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/bangalore.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7785,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/bangalore.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/bangalore.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/blog.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5881,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/blog.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/blog.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/classifieds.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14836,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/classifieds.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/classifieds.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/clean-energy.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6999,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/clean-energy.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/clean-energy.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/computer-science.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4421,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/computer-science.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/computer-science.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/consumer.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5170,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/consumer.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/consumer.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/coworking.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9600,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/coworking.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/coworking.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/crowd-funding.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3868,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/crowd-funding.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/crowd-funding.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/delhi.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5894,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhi.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhi.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/design.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5888,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/design.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/design.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/dhrol.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10646,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/dhrol.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/dhrol.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/e-commerce.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7528,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/e-commerce.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/e-commerce.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/education.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7316,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/education.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/education.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/email.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4901,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/email.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/email.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/events.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4895,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/events.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/events.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/faridabad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9243,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/faridabad.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/faridabad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/fashion.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5617,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/fashion.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/fashion.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/file-sharing.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9067,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/file-sharing.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/file-sharing.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/food-tech.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10628,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/food-tech.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/food-tech.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/ghaziabad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8489,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ghaziabad.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ghaziabad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/health-foods.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7447,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/health-foods.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/health-foods.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/hindustan-times-app-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3286,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/hindustan-times-app-icon.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/hindustan-times-app-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/huffpost-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4040,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/huffpost-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/huffpost-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/human-resources.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8418,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/human-resources.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/human-resources.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/hyderabad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7664,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/hyderabad.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/hyderabad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/information-services.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4140,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/information-services.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/information-services.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/jaipur.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12302,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/jaipur.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/jaipur.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/javascript.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8365,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/javascript.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/javascript.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/kolkata.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12039,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/kolkata.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/kolkata.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/lucknow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8396,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/lucknow.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/lucknow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/madurai.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13269,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/madurai.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/madurai.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/manipal.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7039,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/manipal.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/manipal.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mobile-accessories.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9896,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-accessories.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-accessories.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mobile-analytics.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9183,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-analytics.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-analytics.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mobile-application.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7176,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-application.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-application.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mobile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4816,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mumbai.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10834,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mumbai.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mumbai.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/music-streaming.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7340,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/music-streaming.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/music-streaming.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/musicians.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7320,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/musicians.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/musicians.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/node-js.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2994,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/node-js.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/node-js.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/non-profit.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4859,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/non-profit.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/non-profit.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/php.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6062,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/php.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/php.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/pune.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10986,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/pune.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/pune.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/r.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3981,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/r.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/r.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/react.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7054,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/react.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/react.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/reactjs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4018,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/reactjs.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/reactjs.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/security.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7148,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/security.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/security.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/service-industries.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12750,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/service-industries.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/service-industries.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/shopping.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6372,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/shopping.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/shopping.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/social-media.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9096,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/social-media.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/social-media.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/sports.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7518,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/sports.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/sports.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/startups.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4983,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/startups.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/startups.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/technology.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7136,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/technology.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/technology.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/the-mother%27s-international-school-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9770,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/the-mother%27s-international-school-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/the-mother%27s-international-school-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/tiruchirappalli.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13374,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/tiruchirappalli.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/tiruchirappalli.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/university-of-twente-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6030,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-twente-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-twente-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/vasai-virar.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9092,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/vasai-virar.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/vasai-virar.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/website.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6558,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/website.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/website.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/a11y.co.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6082,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/a11y.co.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/a11y.co.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/a2-cricket.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1070,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/a2-cricket.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/a2-cricket.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/art4education.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1453,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/art4education.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/art4education.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/b-fashionable.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1207,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/b-fashionable.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/b-fashionable.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/bharathacks.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2484,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/bharathacks.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/bharathacks.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/capacloud.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1320,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/capacloud.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/capacloud.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/creative-wall-arts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1405,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/creative-wall-arts.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/creative-wall-arts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/crink-jewel.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1320,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/crink-jewel.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/crink-jewel.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/cutasu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1208,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/cutasu.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/cutasu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/cyankart.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1219,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/cyankart.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/cyankart.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/dealqueen.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31262,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/dealqueen.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/dealqueen.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/dotnetcrunch.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4672,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/dotnetcrunch.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/dotnetcrunch.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/ds-tech-blog.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1115,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/ds-tech-blog.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/ds-tech-blog.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/flairlift.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 365,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/flairlift.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/flairlift.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/geekshack.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11675,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/geekshack.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/geekshack.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/hike-messenger.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 369,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/hike-messenger.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/hike-messenger.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/home-rejoice.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 410,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/home-rejoice.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/home-rejoice.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/indian-govt-jobs-online.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 466,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/indian-govt-jobs-online.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/indian-govt-jobs-online.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/justwant.in.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 622,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/justwant.in.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/justwant.in.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/kya-hai.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1202,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/kya-hai.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/kya-hai.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/letsendorse.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 335,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/letsendorse.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/letsendorse.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/madanyu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1191,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/madanyu.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/madanyu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/made-with-love-in-india.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1191,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/made-with-love-in-india.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/made-with-love-in-india.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/maverick-labs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1472,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/maverick-labs.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/maverick-labs.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/melangebox.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17521,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/melangebox.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/melangebox.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/minet.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7125,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/minet.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/minet.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/mob-ac.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1191,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/mob-ac.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/mob-ac.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/mobsf.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10942,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/mobsf.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/mobsf.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/monsterbeats.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1191,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/monsterbeats.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/monsterbeats.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/nimblepost.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1958,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/nimblepost.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/nimblepost.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/oswald-foundation.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8009,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/oswald-foundation.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/oswald-foundation.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/oswald-labs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8009,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/oswald-labs.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/oswald-labs.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/pandasbakery.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54925,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/pandasbakery.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/pandasbakery.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/shoppingo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7747,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/shoppingo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/shoppingo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/siladityaa-sharma%27s-portfolio.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 237,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/siladityaa-sharma%27s-portfolio.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/siladityaa-sharma%27s-portfolio.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/sixteen-inches.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1605,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/sixteen-inches.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/sixteen-inches.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/snapdeal.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1542,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/snapdeal.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/snapdeal.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/spaceyfi.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 390760,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/spaceyfi.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/spaceyfi.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/swapieze.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1548,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/swapieze.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/swapieze.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/textimz.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 365,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/textimz.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/textimz.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/tomato-safety.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1291,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/tomato-safety.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/tomato-safety.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/tomatoheart.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1279,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/tomatoheart.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/tomatoheart.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/transfer.sh.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1291,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/transfer.sh.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/transfer.sh.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/undercult.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 277540,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/undercult.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/undercult.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/valar-downloadis.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4367,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/valar-downloadis.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/valar-downloadis.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/valmiki.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4114,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/valmiki.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/valmiki.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/visual-question-answering.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1246,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/visual-question-answering.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/visual-question-answering.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/wallsies.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1291,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/wallsies.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/wallsies.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/witty-next-door.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3710,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/witty-next-door.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/witty-next-door.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/zcsaha.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3815,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/zcsaha.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/zcsaha.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/a11y.co.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36644,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/a11y.co.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/a11y.co.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/a2-cricket.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 123297,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/a2-cricket.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/a2-cricket.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/art4education.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47736,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/art4education.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/art4education.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/b-fashionable.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59602,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/b-fashionable.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/b-fashionable.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/bharathacks.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 128947,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/bharathacks.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/bharathacks.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/capacloud.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 176634,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/capacloud.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/capacloud.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/creative-wall-arts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 178225,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/creative-wall-arts.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/creative-wall-arts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/crink-jewel.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 116308,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/crink-jewel.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/crink-jewel.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/cutasu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 167089,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/cutasu.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/cutasu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/cyankart.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 135103,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/cyankart.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/cyankart.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/dealqueen.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 121143,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/dealqueen.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/dealqueen.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/dotnetcrunch.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 111337,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/dotnetcrunch.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/dotnetcrunch.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/ds-tech-blog.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22976,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/ds-tech-blog.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/ds-tech-blog.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/flairlift.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 167308,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/flairlift.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/flairlift.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/geekshack.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 94679,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/geekshack.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/geekshack.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/hike-messenger.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 150224,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/hike-messenger.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/hike-messenger.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/home-rejoice.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 178098,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/home-rejoice.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/home-rejoice.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/indian-govt-jobs-online.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 96635,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/indian-govt-jobs-online.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/indian-govt-jobs-online.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/indian-govt.-jobs-online.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 96571,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/indian-govt.-jobs-online.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/indian-govt.-jobs-online.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/justwant.in.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 83338,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/justwant.in.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/justwant.in.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/kya-hai.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122362,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/kya-hai.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/kya-hai.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/letsendorse.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 254471,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/letsendorse.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/letsendorse.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/madanyu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 164763,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/madanyu.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/madanyu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/made-with-love-in-india.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 64367,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/made-with-love-in-india.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/made-with-love-in-india.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/maverick-labs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 133722,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/maverick-labs.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/maverick-labs.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/melangebox.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 166100,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/melangebox.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/melangebox.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/minet.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29222,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/minet.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/minet.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/mob-ac.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 115672,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/mob-ac.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/mob-ac.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/mobsf.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105012,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/mobsf.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/mobsf.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/monsterbeats.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 146856,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/monsterbeats.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/monsterbeats.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/nimblepost.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 84876,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/nimblepost.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/nimblepost.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/oswald-foundation.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 90756,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/oswald-foundation.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/oswald-foundation.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/oswald-labs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 90756,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/oswald-labs.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/oswald-labs.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/pandasbakery.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 145106,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/pandasbakery.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/pandasbakery.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/shoppingo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 44649,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/shoppingo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/shoppingo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/siladityaa-sharma%27s-portfolio.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/siladityaa-sharma%27s-portfolio.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/siladityaa-sharma%27s-portfolio.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/sixteen-inches.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 134517,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/sixteen-inches.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/sixteen-inches.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/snapdeal.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 160824,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/snapdeal.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/snapdeal.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/spaceyfi.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 151399,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/spaceyfi.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/spaceyfi.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/swapieze.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 235787,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/swapieze.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/swapieze.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/textimz.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 134838,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/textimz.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/textimz.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/tomato-safety.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 91184,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/tomato-safety.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/tomato-safety.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/tomatoheart.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 138029,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/tomatoheart.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/tomatoheart.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/transfer.sh.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 75593,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/transfer.sh.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/transfer.sh.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/undercult.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37423,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/undercult.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/undercult.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/valar-downloadis.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 234936,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/valar-downloadis.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/valar-downloadis.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/valmiki.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 71937,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/valmiki.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/valmiki.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/visual-question-answering.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21650,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/visual-question-answering.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/visual-question-answering.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/wallsies.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 101421,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/wallsies.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/wallsies.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/witty-next-door.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 71816,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/witty-next-door.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/witty-next-door.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/zcsaha.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 97502,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/zcsaha.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/zcsaha.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bing-logo.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bing-logo.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/cities.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/cities.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/data\/cities.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/cities.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/data\/cities-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/data\/cities.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/cities.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/data\/industries.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/industries.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/data\/randomusers.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/randomusers.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/data\/saver.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/saver.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/data\/viewer.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/viewer.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/database.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/database.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/header.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/header.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/iconify.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/iconify.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/list.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/list.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/login.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/login.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/preview.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/preview.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/profile.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/profile.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/publish.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/publish.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/register.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/register.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/screenshot.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/screenshot.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/startup.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/startup.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/submit.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/submit.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/techs.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/techs.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		}
+	},
+"hooks": [
+	],
+"lastSavedByUser": "Anand Chowdhary",
+"manualImportLinks": {
+	},
+"projectAttributes": {
+	"bowerAbbreviatedPath": "",
+	"displayValue": "mwlii",
+	"displayValueWasSetByUser": 0,
+	"iconImageName": "brackets_brown"
+	},
+"projectSettings": {
+	"alwaysUseExternalServer": 0,
+	"animateCSSInjections": 1,
+	"autoApplyPSLanguageSettingsStyle": 0,
+	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoSyncProjectSettingsFile": 1,
+	"browserRefreshDelay": 0,
+	"coffeeAutoOutputPathEnabled": 1,
+	"coffeeAutoOutputPathFilenamePattern": "*.js",
+	"coffeeAutoOutputPathRelativePath": "",
+	"coffeeAutoOutputPathReplace1": "",
+	"coffeeAutoOutputPathReplace2": "",
+	"coffeeAutoOutputPathStyle": 0,
+	"coffeeCreateSourceMap": 0,
+	"coffeeLintFlags2": {
+		"arrow_spacing": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"camel_case_classes": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"colon_assignment_spacing": {
+			"active": 0,
+			"flagValue": 1
+			},
+		"cyclomatic_complexity": {
+			"active": 0,
+			"flagValue": 10
+			},
+		"duplicate_key": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"ensure_comprehensions": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"indentation": {
+			"active": 1,
+			"flagValue": 2
+			},
+		"line_endings": {
+			"active": 0,
+			"flagValue": 0
+			},
+		"max_line_length": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"missing_fat_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"newlines_after_classes": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"no_backticks": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_debugger": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_empty_functions": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_empty_param_list": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_implicit_braces": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_implicit_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_interpolation_in_single_quotes": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_nested_string_interpolation": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_plusplus": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_private_function_fat_arrows": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_stand_alone_at": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_tabs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_this": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_throwing_strings": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_trailing_semicolons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_trailing_whitespace": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_unnecessary_double_quotes": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_unnecessary_fat_arrows": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"non_empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prefer_english_operator": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"space_operators": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"spacing_after_comma": {
+			"active": 1,
+			"flagValue": -1
+			}
+		},
+	"coffeeMinifyOutput": 1,
+	"coffeeOutputStyle": 0,
+	"coffeeSyntaxCheckerStyle": 1,
+	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerPreviewPathAddition": "",
+	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
+	"hamlAutoOutputPathEnabled": 1,
+	"hamlAutoOutputPathFilenamePattern": "*.html",
+	"hamlAutoOutputPathRelativePath": "",
+	"hamlAutoOutputPathReplace1": "",
+	"hamlAutoOutputPathReplace2": "",
+	"hamlAutoOutputPathStyle": 0,
+	"hamlEscapeHTMLCharacters": 0,
+	"hamlNoEscapeInAttributes": 0,
+	"hamlOutputFormat": 2,
+	"hamlOutputStyle": 0,
+	"hamlUseCDATA": 0,
+	"hamlUseDoubleQuotes": 0,
+	"hamlUseUnixNewlines": 0,
+	"jadeAutoOutputPathEnabled": 1,
+	"jadeAutoOutputPathFilenamePattern": "*.html",
+	"jadeAutoOutputPathRelativePath": "",
+	"jadeAutoOutputPathReplace1": "",
+	"jadeAutoOutputPathReplace2": "",
+	"jadeAutoOutputPathStyle": 0,
+	"jadeCompileDebug": 1,
+	"jadeOutputStyle": 0,
+	"javascriptAutoOutputPathEnabled": 1,
+	"javascriptAutoOutputPathFilenamePattern": "*-min.js",
+	"javascriptAutoOutputPathRelativePath": "\/min",
+	"javascriptAutoOutputPathReplace1": "",
+	"javascriptAutoOutputPathReplace2": "",
+	"javascriptAutoOutputPathStyle": 2,
+	"javascriptCreateSourceMap": 1,
+	"javascriptOutputStyle": 1,
+	"javascriptSyntaxCheckerStyle": 1,
+	"jsCheckerReservedNamesString": "",
+	"jsHintFlags2": {
+		"asi": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bitwise": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"boss": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"browser": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"browserify": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"camelcase": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"couch": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"curly": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"debug": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"devel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"dojo": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"elision": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eqeqeq": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eqnull": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"es3": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"esnext": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"evil": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"expr": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"forin": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"freeze": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"funcscope": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"futurehostile": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"globalstrict": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"immed": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"indent": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"iterator": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"jasmine": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"jquery": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"lastsemic": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"latedef": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"laxbreak": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"laxcomma": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"loopfunc": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"maxcomplexity": {
+			"active": 0,
+			"flagValue": 10
+			},
+		"maxdepth": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"maxlen": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"maxparams": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"maxstatements": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"mocha": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"mootools": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"moz": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"multistr": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"newcap": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"noarg": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"nocomma": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"node": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"noempty": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"nonbsp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"nonew": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"nonstandard": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"notypeof": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"noyield": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"onecase": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"phantom": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"plusplus": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prototypejs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"qunit": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"regexp": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"rhino": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"scripturl": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"shadow": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"shelljs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"singleGroups": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"strict": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"sub": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"supernew": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"typed": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"undef": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"unused": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"varstmt": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"withstmt": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"worker": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"wsh": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"yui": {
+			"active": 0,
+			"flagValue": -1
+			}
+		},
+	"jsLintFlags2": {
+		"bitwise": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"browser": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"couch": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"devel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"es6": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"eval": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"for": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"maxlen": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"node": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"this": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"white": {
+			"active": 0,
+			"flagValue": -1
+			}
+		},
+	"jsonAutoOutputPathEnabled": 0,
+	"jsonAutoOutputPathFilenamePattern": "*-min.json",
+	"jsonAutoOutputPathRelativePath": "",
+	"jsonAutoOutputPathReplace1": "",
+	"jsonAutoOutputPathReplace2": "",
+	"jsonAutoOutputPathStyle": 0,
+	"jsonOrderOutput": 0,
+	"jsonOutputStyle": 1,
+	"kitAutoOutputPathEnabled": 1,
+	"kitAutoOutputPathFilenamePattern": "*.html",
+	"kitAutoOutputPathRelativePath": "",
+	"kitAutoOutputPathReplace1": "",
+	"kitAutoOutputPathReplace2": "",
+	"kitAutoOutputPathStyle": 0,
+	"lessAllowInsecureImports": 0,
+	"lessAutoOutputPathEnabled": 1,
+	"lessAutoOutputPathFilenamePattern": "*.css",
+	"lessAutoOutputPathRelativePath": "..\/css",
+	"lessAutoOutputPathReplace1": "less",
+	"lessAutoOutputPathReplace2": "css",
+	"lessAutoOutputPathStyle": 2,
+	"lessCreateSourceMap": 0,
+	"lessDisableJavascript": 0,
+	"lessIeCompatibility": 1,
+	"lessOutputStyle": 0,
+	"lessRelativeURLS": 0,
+	"lessStrictImports": 0,
+	"lessStrictMath": 0,
+	"lessStrictUnits": 0,
+	"markdownAutoOutputPathEnabled": 1,
+	"markdownAutoOutputPathFilenamePattern": "*.html",
+	"markdownAutoOutputPathRelativePath": "",
+	"markdownAutoOutputPathReplace1": "",
+	"markdownAutoOutputPathReplace2": "",
+	"markdownAutoOutputPathStyle": 0,
+	"markdownCriticStyle": 0,
+	"markdownEnableFootnotes": 1,
+	"markdownEnableLabels": 1,
+	"markdownEnableSmartQuotes": 1,
+	"markdownEscapeLineBreaks": 0,
+	"markdownMaskEmailAddresses": 1,
+	"markdownOutputFormat": 0,
+	"markdownOutputStyle": 0,
+	"markdownParseMetadata": 1,
+	"markdownProcessHTML": 0,
+	"markdownRandomFootnoteNumbers": 0,
+	"markdownUseCompatibilityMode": 0,
+	"reloadFileURLs": 0,
+	"sassAutoOutputPathEnabled": 1,
+	"sassAutoOutputPathFilenamePattern": "*.css",
+	"sassAutoOutputPathRelativePath": "..\/css",
+	"sassAutoOutputPathReplace1": "sass",
+	"sassAutoOutputPathReplace2": "css",
+	"sassAutoOutputPathStyle": 2,
+	"sassCreateSourceMap": 0,
+	"sassDebugStyle": 0,
+	"sassDecimalPrecision": 10,
+	"sassOutputStyle": 0,
+	"sassUseLibsass": 0,
+	"shouldRunAutoprefixer": 0,
+	"shouldRunBless": 0,
+	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs, node_modules",
+	"slimAutoOutputPathEnabled": 1,
+	"slimAutoOutputPathFilenamePattern": "*.html",
+	"slimAutoOutputPathRelativePath": "",
+	"slimAutoOutputPathReplace1": "",
+	"slimAutoOutputPathReplace2": "",
+	"slimAutoOutputPathStyle": 0,
+	"slimCompileOnly": 0,
+	"slimLogicless": 0,
+	"slimOutputFormat": 0,
+	"slimOutputStyle": 1,
+	"slimRailsCompatible": 0,
+	"stylusAutoOutputPathEnabled": 1,
+	"stylusAutoOutputPathFilenamePattern": "*.css",
+	"stylusAutoOutputPathRelativePath": "..\/css",
+	"stylusAutoOutputPathReplace1": "stylus",
+	"stylusAutoOutputPathReplace2": "css",
+	"stylusAutoOutputPathStyle": 2,
+	"stylusCreateSourceMap": 0,
+	"stylusDebugStyle": 0,
+	"stylusImportCSS": 0,
+	"stylusOutputStyle": 0,
+	"stylusResolveRelativeURLS": 0,
+	"typescriptAutoOutputPathEnabled": 1,
+	"typescriptAutoOutputPathFilenamePattern": "*.js",
+	"typescriptAutoOutputPathRelativePath": "\/js",
+	"typescriptAutoOutputPathReplace1": "",
+	"typescriptAutoOutputPathReplace2": "",
+	"typescriptAutoOutputPathStyle": 2,
+	"typescriptCreateDeclarationFile": 0,
+	"typescriptCreateSourceMap": 0,
+	"typescriptJSXMode": 0,
+	"typescriptMinifyOutput": 0,
+	"typescriptModuleResolutionType": 0,
+	"typescriptModuleType": 2,
+	"typescriptNoImplicitAny": 0,
+	"typescriptPreserveConstEnums": 0,
+	"typescriptRemoveComments": 0,
+	"typescriptSuppressImplicitAnyIndexErrors": 0,
+	"typescriptTargetECMAVersion": 0,
+	"uglifyDefinesString": "",
+	"uglifyFlags2": {
+		"ascii-only": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bare-returns": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"booleans": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"bracketize": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"cascade": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"comments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"comparisons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"compress": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"conditionals": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"dead_code": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_console": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_debugger": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eval": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"evaluate": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_vars": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"indent-level": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"indent-start": {
+			"active": 0,
+			"flagValue": 0
+			},
+		"inline-script": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"join_vars": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"loops": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"mangle": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"max-line-len": {
+			"active": 1,
+			"flagValue": 32000
+			},
+		"negate_iife": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"properties": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"pure_getters": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"quote-keys": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"screw-ie8": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"semicolons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"sequences": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"sort": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"space-colon": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"toplevel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unused": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"warnings": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"width": {
+			"active": 1,
+			"flagValue": 80
+			}
+		},
+	"uglifyReservedNamesString": "$",
+	"websiteRelativeRoot": ""
+	},
+"settingsFileVersion": "2"
+}

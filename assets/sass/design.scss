@@ -1,0 +1,234 @@
+$red: #f44336;
+
+body {
+	background: #f9f9f9;
+}
+
+a {
+	cursor: pointer;
+}
+
+p, .p {
+	font-size: 90%;
+}
+
+p:last-of-type {
+	margin-bottom: 0;
+}
+
+.container {
+	max-width: 1070px;
+}
+
+.card {
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.035);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.love-navbar {
+	min-height: 4rem;
+}
+
+.profile-card {
+	padding: 60px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://picsum.photos/700/250/?random");
+}
+
+.city-card {
+	padding: 75px 60px;
+	overflow: hidden;
+	position: relative;
+	.before {
+		content: "";
+		position: absolute;
+		left: -20px; right: -20px;
+		top: -20px; bottom: -20px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		filter: blur(10px);
+		opacity: 0.5;
+		z-index: 0;
+		.no-opacity {
+			opacity: 0;
+			user-select: none;
+			cursor: default;
+		}
+	}
+	background: #000;
+	// background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://picsum.photos/700/250/?random");
+}
+
+img, 
+canvas, 
+iframe, 
+video, 
+svg, 
+select, 
+textarea { 
+  max-width: 100%; 
+}
+
+.smaller {
+	font-size: 90%;
+	font-weight: 400;
+}
+.bigger {
+	font-size: 110%;
+	font-weight: 400;
+}
+.zoomer {
+	transform: scale(1.75);
+	margin: 0 5px;
+}
+
+.btn-facebook, .btn-twitter, .btn-linkedin, .btn-google {
+	color: #fff;
+	&:hover {
+		color: #fff;
+	}
+	i {
+		transform: scale(1.25);
+	}
+}
+
+.btn-facebook { background: #3b5998; }
+.btn-linkedin { background: #007bb6; }
+.btn-google { background: #d34836; }
+.btn-twitter { background: #55acee; }
+
+table {
+	width: 100%;
+}
+
+.list-group-item {
+	border-left: 0;
+	border-right: 0;
+	&:hover {
+		.badge.d-none {
+			display: inline-block !important;
+		}
+	}
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.list-group-item:first-child {
+	border-top: 0;
+}
+
+.badge {
+	padding: 0.5em 0.75em;
+	&.badge-light {
+		background: #eee;
+		font-weight: 500;
+	}
+}
+
+.startup-image img {
+	width: 80px;
+	height: 80px;
+}
+.education-image img {
+	width: 60px;
+	height: 60px;
+}
+.badge-earned i {
+	background: #aaa;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 35px;
+	font-size: 24px;
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+}
+.badges-info .h6 {
+	font-size: 95%;
+	font-weight: 400;
+}
+
+.profile-links {
+	a {
+		color: #fff;
+		font-size: 200%;
+		margin-left: 15px;
+	}
+}
+
+.nav-item {
+	margin-right: 0.5rem;
+}
+
+.login-intro {
+	background: #fff;
+}
+
+.text-lighter {
+	color: rgba(255, 255, 255, 0.65);
+}
+
+.btn-visit-website {
+	position: relative;
+	i {
+		position: absolute;
+		right: 20px;
+		top: 23px;
+		font-size: 135%;
+	}
+}
+
+.checkbox-icon {
+	font-size: 90%;
+}
+
+.smaller-caption {
+	line-height: 1.25;
+	font-size: 80%;
+}
+
+.comment-body a:hover {
+	text-decoration: none;
+}
+
+.star-rating i {
+	transform: scale(1.35) translateY(-1px);
+}
+.larger-icon {
+	transform: scale(1.25);
+}
+
+.bg-tomato {
+	background: tomato !important;
+}
+
+.fixed-width-icon {
+	width: 20px;
+}
+
+.ppagination {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			width: 40px;
+			height: 40px;
+			border: 1px solid #ddd;
+			border-radius: 100px;
+			margin: 0 5px;
+			line-height: 37px;
+			color: inherit;
+			background: #fff;
+		}
+		&.active a {
+			background: #888;
+			color: #fff;
+		}
+	}
+}
