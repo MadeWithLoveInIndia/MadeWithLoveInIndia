@@ -62,7 +62,7 @@ function getHeader($cat = null, $title = null) {
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-white love-navbar border border-top-0">
 			<div class="container">
-				<a class="navbar-brand" href="#">&hearts;</a>
+				<a class="navbar-brand" href="#">Made with <i class="ion ion-md-heart red"></i> in India</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -75,14 +75,6 @@ function getHeader($cat = null, $title = null) {
 						<?php $listItem = "Cities"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
 							<a class="nav-link" href="/cities">Cities</a>
-						</li>
-						<?php $listItem = "People"; ?>
-						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
-							<a class="nav-link" href="#">People</a>
-						</li>
-						<?php $listItem = "Benefits"; ?>
-						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
-							<a class="nav-link" href="#">Benefits</a>
 						</li>
 						<?php $listItem = "About"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
@@ -138,12 +130,61 @@ function getHeader($cat = null, $title = null) {
 	}
 	function getFooter() {
 ?>
-		<!-- <footer>
+		<footer>
 			<div class="login-intro text-center pt-5 pb-5 mt-5 border">
-				<h3>Made with love, in India</h3>
-				<p>Hello world</p>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-6">
+							<h3>Join the Movement</h3>
+							<p>If you use the <em>Made with Love in India</em> badge in your startup&rsquo;s website or products, submit it and get featured on our platform.</p>
+							<p>Copy and paste the following code in your footer:</p>
+							<input data-placement="top" title="Copied!" data-clipboard-target="#joinCode" id="joinCode" class="form-control mt-2" onclick="this.setSelectionRange(0, this.value.length)" readonly type="text" value='&lt;a href="https://madewithlove.org.in" target="_blank"&gt;Made with &lt;span style="color: #e74c3c"&gt;&amp;hearts;&lt;/span&gt; in India&lt;/a&gt;'>
+							<a href="#" class="btn btn-outline-danger mt-3">Submit Startup</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</footer> -->
+			<div id="colophon">
+				<div class="container pt-5 pb-5">
+					<div class="row">
+						<div class="col-6 col-md-3">
+							<h4 class="card-title pb-2 mb-0 bigger">Find Startups</h4>
+							<ul>
+								<li><a href="#">Startup Cities in India</a></li>
+								<li><a href="#">Top Startups in India</a></li>
+								<li><a href="#">Popular Technologies</a></li>
+								<li><a href="#">Message Entrepreneurs</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-md-3">
+							<h4 class="card-title pb-2 mb-0 bigger">Learn More</h4>
+							<ul>
+								<li><a href="#">About the Initiative</a></li>
+								<li><a href="#">Work with Us</a></li>
+								<li><a href="#">Responsibilities</a></li>
+								<li><a href="#">Buy Official Swag</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-md-3">
+							<h4 class="card-title pb-2 mb-0 bigger">Policies</h4>
+							<ul>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Cookie Policy</a></li>
+								<li><a href="#">A11Y Statement</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-md-3">
+							<p>Founded in April 2013, the Made with Love in India initiative is a movement to celebrate, promote, and build a brand — India.</p>
+							<p><a href="#">Learn more about us <i class="ion ion-md-arrow-forward ml-1"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="pb-5 text-center">
+					<p>&copy; 2013&ndash;<?php echo date("Y"); ?> &middot; Made with <i class="ion ion-md-heart red"></i> in India</p>
+				</div>
+			</div>
+		</footer>
 
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
@@ -151,14 +192,21 @@ function getHeader($cat = null, $title = null) {
 			<script> $(function () {
 				$('[data-toggle="tooltip"]').tooltip();
 			}) </script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuiZevIb1G87KAoLRSECEdWNBQ06JCMjU&libraries=places&callback=initMap" async defer></script>
 		<script>
-			$(".startup-image img").on("load", function() {
-				var vibrant = new Vibrant($(".startup-image img")[0]);
-				var swatches = vibrant.swatches();
-				$(".btn-visit-website").css("background-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
-				$(".btn-visit-website").css("border-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
+			// $(".startup-image img").on("load", function() {
+			// 	var vibrant = new Vibrant($(".startup-image img")[0]);
+			// 	var swatches = vibrant.swatches();
+			// 	$(".btn-visit-website").css("background-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
+			// 	$(".btn-visit-website").css("border-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
+			// });
+			var clipboard = new Clipboard("#joinCode");
+			clipboard.on("success", function() {
+				$("#joinCode").attr("data-toggle", "tooltip");
+				$("#joinCode").tooltip();
+				$("#joinCode").tooltip("show");
 			});
 			function initMap() {
 				if ($(".cityAutoComplete")[0]) {

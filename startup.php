@@ -401,7 +401,7 @@
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Featured in Lists</h4>
 							</div>
 							<div class="list-group" style="margin-top: -15px">
-							<?php display('<a href="/city/%s" class="list-group-item list-group-item-action">
+							<?php display('<a href="/city/%s" class="list-group-item list-group-item-action"><span style="display: none">%s</span>
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
 											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
@@ -413,8 +413,8 @@
 											</div>
 										</div>
 									</div>
-								</a>', slugify($profile["city"]), md5($profile["city"]), $profile["city"], $profile["city"], $profile["city"]); ?>
-								<?php display('<a href="/industry/%s" class="list-group-item list-group-item-action">
+								</a>', boolify($profile["city"]), slugify($profile["city"]), md5($profile["city"]), $profile["city"], $profile["city"], $profile["city"]); ?>
+								<?php display('<a href="/industry/%s" class="list-group-item list-group-item-action"><span style="display: none">%s</span>
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
 											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
@@ -422,12 +422,12 @@
 										<div class="startup-info d-flex align-items-center">
 											<div>
 												<h3 class="h6 mb-1">%s Startups</h3>
-												<p class="text-muted mb-1 smaller-caption">Description of item</p>
+												<p class="text-muted mb-1 smaller-caption">Find more %s startups</p>
 											</div>
 										</div>
 									</div>
-								</a>', slugify($profile["industry"]), md5($profile["industry"]), $profile["industry"], $profile["industry"], $profile["industry"]); ?>
-								<?php display('<a href="/technology/%s" class="list-group-item list-group-item-action">
+								</a>', boolify($profile["industry"]), slugify($profile["industry"]), md5($profile["industry"]), $profile["industry"], $profile["industry"], $profile["industry"], $profile["industry"]); ?>
+								<?php display('<a href="/technology/%s" class="list-group-item list-group-item-action"><span style="display: none">%s</span>
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
 											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
@@ -435,11 +435,11 @@
 										<div class="startup-info d-flex align-items-center">
 											<div>
 												<h3 class="h6 mb-1">%s Startups</h3>
-												<p class="text-muted mb-1 smaller-caption">Description of item</p>
+												<p class="text-muted mb-1 smaller-caption">Startups using %s</p>
 											</div>
 										</div>
 									</div>
-								</a>', slugify($profile["tag1"]), md5($profile["tag1"]), $profile["tag1"], $profile["tag1"], $profile["tag1"]); ?>
+								</a>', boolify($profile["tag1"]), slugify($profile["tag1"]), md5($profile["tag1"]), $profile["tag1"], $profile["tag1"], $profile["tag1"], $profile["tag1"]); ?>
 								<?php
 								$nTags = 0;
 								if ($profile["tag2"]) $nTags++;

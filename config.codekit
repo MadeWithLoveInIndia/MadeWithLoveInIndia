@@ -1015,6 +1015,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/nodejs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4538,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/nodejs.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/nodejs.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/non-profit.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1587,6 +1598,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/logos\/quizzr.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2139,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/quizzr.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/quizzr.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/logos\/shoppingo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2155,6 +2177,17 @@
 		"initialSize": 145106,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/pandasbakery.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/pandasbakery.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/quizzr.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 117417,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/quizzr.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/quizzr.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

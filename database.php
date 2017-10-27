@@ -1039,7 +1039,7 @@ $startupsPerPage = 10;
 
 function boolify($a = null) {
   if (isset($a)) {
-    if ($a == 0 || $a == false) {
+    if ($a == "0" || $a == false || $a == "") {
       return null;
     } else {
       return $a;
@@ -1197,6 +1197,7 @@ function slugify($text) {
   return $text;
 }
 
+session_name("madeWithLoveAuth");
 session_start();
 
 ?>

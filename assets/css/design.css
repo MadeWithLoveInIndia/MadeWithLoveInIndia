@@ -1,11 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:600,600i,700");
 body {
-  background: #f9f9f9; }
+  background: #f9f9f9;
+  font-family: "Nunito";
+  font-weight: 600;
+  font-size: 97%;
+  border-top: 3px solid #dc3545;
+  border-bottom: 10px solid #dc3545; }
+
+.red {
+  color: #dc3545; }
 
 a {
   cursor: pointer; }
-
-p, .p {
-  font-size: 90%; }
 
 p:last-of-type {
   margin-bottom: 0; }
@@ -18,7 +24,8 @@ p:last-of-type {
   border: 1px solid rgba(0, 0, 0, 0.1); }
 
 .love-navbar {
-  min-height: 4rem; }
+  min-height: 4.5rem;
+  font-size: 105%; }
 
 .profile-card {
   padding: 60px; }
@@ -62,7 +69,7 @@ textarea {
   font-weight: 400; }
 
 .bigger {
-  font-size: 110%;
+  font-size: 115%;
   font-weight: 400; }
 
 .zoomer {
@@ -189,10 +196,24 @@ table {
       height: 40px;
       border: 1px solid #ddd;
       border-radius: 100px;
+      transition: border-color 200ms;
       margin: 0 5px;
       line-height: 37px;
       color: inherit;
       background: #fff; }
+      .ppagination li a:hover {
+        border-color: #dc3545;
+        text-decoration: none; }
     .ppagination li.active a {
-      background: #888;
+      background: #dc3545;
+      border-color: #dc3545;
       color: #fff; }
+
+#colophon ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  #colophon ul a {
+    color: inherit;
+    margin-top: 0.25rem;
+    display: inline-block; }
