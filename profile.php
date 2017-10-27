@@ -3,7 +3,7 @@
 	include "header.php";
 	$profile = DB::queryFirstRow("SELECT * FROM users WHERE username=%s", $currentURL[4]);
 	if (!$profile) { header("Location: /404"); }
-	getHeader("People");
+	getHeader("People", $profile["name"]);
 	$nStartups = getnStartups($profile["id"]);
 ?>
 
@@ -12,6 +12,9 @@
 				<div class="row">
 					<div class="col-md">
 						<div class="card card-body profile-card mb-4">
+							<div class="before" style='background-image: url("<?php echo avatarUrl($profile["email"]); ?>")'>
+								<span class="no-opacity">View <?php display('%s', $profile["name"]); ?>'s Profile on Made with Love in India, including startups founded, education, and more.</span>
+							</div>
 							<div class="container">
 								<div class="row">
 									<div class="col-md-3">
@@ -39,7 +42,7 @@
 								<?php
 								$myStartups = get3Startups($profile["id"]);
 								for ($i = 0; $i < 3; $i++) { if ($myStartups[$i]) { ?>
-								<a href="/startup/<?php echo urlify($myStartups[$i]["slug"]); ?>" class="list-group-item list-group-item-action p-4">
+								<a href="/startup/<?php echo $myStartups[$i]["slug"]; ?>" class="list-group-item list-group-item-action p-4">
 									<div class="d-flex flex-row">
 										<div class="startup-image mr-3">
 											<?php display('<img alt="%s" src="/assets/uploads/logo/%s_%s.jpg">', $myStartups[$i]["name"], md5($myStartups[$i]["slug"]), $myStartups[$i]["slug"]); ?>
@@ -60,7 +63,12 @@
 										</div>
 									</div>
 								</a>
-								<?php } } ?>
+								<?php } } if (sizeof($$myStartups) == 0) { ?>
+								<div class="text-muted text-center p-4">
+									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not founded any startups yet.</h4>
+									<p>Do you want to get in touch with <?php echo explode(" ", $profile["name"])[0]; ?>? <a href="#">Message now.</a></p>
+								</div>
+								<?php } ?>
 							</div>
 						</div>
 						<div class="card">
@@ -68,7 +76,10 @@
 								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Education</h4>
 							</div>
 							<div class="list-group">
-								<?php for ($i = 0; $i < 5; $i++) {
+								<?php $nUnis = 0; for ($i = 0; $i < 5; $i++) {
+									if ($profile["university" . $i]) {
+										$nUnis++;
+									}
 									display('<a href="/institute/%s" class="list-group-item list-group-item-action">
 										<div class="d-flex flex-row">
 											<div class="education-image mr-3">
@@ -81,8 +92,12 @@
 												</div>
 											</div>
 										</div>
-									</a>', urlify($profile["university" . ($i + 1)]), md5($profile["university" . ($i + 1)]), $profile["university" . ($i + 1)], $profile["university" . ($i + 1)], $profile["course" . ($i + 1)]);
-								} ?>
+									</a>', urlify($profile["university" . ($i + 1)]), md5($profile["university" . ($i + 1)]), slugify($profile["university" . ($i + 1)]), $profile["university" . ($i + 1)], $profile["course" . ($i + 1)]);
+								} if ($nUnis == 0) { ?>
+								<div class="text-muted text-center p-4">
+									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not added his education.</h4>
+								</div>
+								<?php } ?>
 							</div>
 						</div>
 					</div>

@@ -4,6 +4,8 @@ function getHeader($cat = null, $title = null) {
 			$title = "Startups in " . $title;
 		} else if ($cat == "Startups" || $cat == "Technologies") {
 			$title .= " Startups";
+		} else if ($cat == "People") {
+			$title .= "&rsquo;s Profile";
 		}
 		if (isset($title)) {
 			$title .= " &middot; Made with Love in India";
@@ -87,6 +89,26 @@ function getHeader($cat = null, $title = null) {
 							<a class="nav-link" href="#">About</a>
 						</li>
 					</ul>
+					<?php if (isset($_SESSION["user"])) { ?>
+					<ul class="navbar-nav">
+						<?php $listItem = "Login"; ?>
+						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
+							<a class="nav-link" href="/profile/<?php echo $_SESSION["user"]["username"]; ?>"><?php echo $_SESSION["user"]["name"]; ?></a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="ion ion-ios-more zoomer"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/logout">Logout</a>
+							</div>
+						</li>
+					</ul>
+					<?php } else { ?>
 					<ul class="navbar-nav">
 						<?php $listItem = "Login"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
@@ -107,6 +129,7 @@ function getHeader($cat = null, $title = null) {
 							</div>
 						</li>
 					</ul>
+					<?php } ?>
 					<a class="btn btn-outline-danger ml-2" href="/submit">Submit Startup</a>
 				</div>
 			</div>

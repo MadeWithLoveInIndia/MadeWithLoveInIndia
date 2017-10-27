@@ -1,6 +1,15 @@
 <?php
 	include "database.php";
 	include "header.php";
+	if (isset($_POST["email"]) && isset($_POST["password"])) {
+		$me = DB::queryFirstRow("SELECT * FROM users WHERE email=%s", $_POST["email"]);
+		if (password_verify($_POST["password"], $me["password"])) {
+			$_SESSION["user"] = $me;
+			header("Location: /profile/" . $me["username"]);
+		} else {
+			$wrongPass = "Incorrect email or password.";
+		}
+	}
 	getHeader("Page", "Login");
 ?>
 <main id="content">
@@ -8,6 +17,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-5">
 				<h2>Login</h2>
+				<?php display('<div class="alert alert-danger mt-4" role="alert">%s</div>', $wrongPass); ?>
 				<form class="mt-4" method="post">
 					<div class="form-group">
 						<label for="email">Email</label>
@@ -20,7 +30,7 @@
 					<button class="btn btn-primary" type="submit">Log in</button>
 					<a class="btn btn-secondary ml-1" href="/register">Register</a>
 				</form>
-				<p class="mt-3">Forgot your password? <a href="/recover">Recover</a></p>
+				<p class="mt-3">Forgot your password? <a href="/recover">Recover it now</a></p>
 			</div>
 		</div>
 	</div>

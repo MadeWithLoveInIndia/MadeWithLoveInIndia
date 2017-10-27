@@ -23,9 +23,9 @@
 								</h2>
 								<?php display('<p class="text-muted mb-1">%s</p>', $profile["tagline"]); ?>
 								<div class="startup-tags">
-									<?php display('<a href="/city/%s" class="badge badge-light">%s</a>', urlify($profile["city"]), $profile["city"]); ?>
-									<?php display('<a href="/industry/%s" class="badge badge-light">%s</a>', urlify($profile["industry"]), $profile["industry"]); ?>
-									<?php display('<a href="/technology/%s" class="badge badge-light">%s</a>', urlify($profile["tag1"]), $profile["tag1"]); ?>
+									<?php display('<a href="/city/%s" class="badge badge-light">%s</a>', slugify($profile["city"]), $profile["city"]); ?>
+									<?php display('<a href="/industry/%s" class="badge badge-light">%s</a>', slugify($profile["industry"]), $profile["industry"]); ?>
+									<?php display('<a href="/technology/%s" class="badge badge-light">%s</a>', slugify($profile["tag1"]), $profile["tag1"]); ?>
 								</div>
 							</header>
 						</div>
@@ -158,7 +158,7 @@
 											</div>
 										</div>
 									</div>
-								</a>', $news[$i]["link"], $news[$i]["publication"] ? md5($news[$i]["publication"]) : null, urlify($news[$i]["publication"]), $news[$i]["publication"], timeMe($news[$i]["datetime"]), strlen($news[$i]["title"]) > 75 ? mb_substr($news[$i]["title"], 0, 75) . "&hellip;" : $news[$i]["title"]); } ?>
+								</a>', $news[$i]["link"], $news[$i]["publication"] ? md5($news[$i]["publication"]) : null, slugify($news[$i]["publication"]), $news[$i]["publication"], timeMe($news[$i]["datetime"]), strlen($news[$i]["title"]) > 75 ? mb_substr($news[$i]["title"], 0, 75) . "&hellip;" : $news[$i]["title"]); } ?>
 								<?php $newsPerPage = 3;
 								if ($nNews > $newsPerPage) { ?>
 								<a href="#" class="list-group-item list-group-item-action text-center p-3">
@@ -413,7 +413,7 @@
 											</div>
 										</div>
 									</div>
-								</a>', urlify($profile["city"]), md5($profile["city"]), $profile["city"], $profile["city"], $profile["city"]); ?>
+								</a>', slugify($profile["city"]), md5($profile["city"]), $profile["city"], $profile["city"], $profile["city"]); ?>
 								<?php display('<a href="/industry/%s" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
@@ -426,7 +426,7 @@
 											</div>
 										</div>
 									</div>
-								</a>', urlify($profile["industry"]), md5($profile["industry"]), $profile["industry"], $profile["industry"], $profile["industry"]); ?>
+								</a>', slugify($profile["industry"]), md5($profile["industry"]), $profile["industry"], $profile["industry"], $profile["industry"]); ?>
 								<?php display('<a href="/technology/%s" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
@@ -439,7 +439,7 @@
 											</div>
 										</div>
 									</div>
-								</a>', urlify($profile["tag1"]), md5($profile["tag1"]), $profile["tag1"], $profile["tag1"], $profile["tag1"]); ?>
+								</a>', slugify($profile["tag1"]), md5($profile["tag1"]), $profile["tag1"], $profile["tag1"], $profile["tag1"]); ?>
 								<?php
 								$nTags = 0;
 								if ($profile["tag2"]) $nTags++;

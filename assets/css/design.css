@@ -21,15 +21,16 @@ p:last-of-type {
   min-height: 4rem; }
 
 .profile-card {
-  padding: 60px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://picsum.photos/700/250/?random"); }
+  padding: 60px; }
 
 .city-card {
-  padding: 75px 60px;
+  padding: 75px 60px; }
+
+.profile-card, .city-card {
   overflow: hidden;
   position: relative;
   background: #000; }
-  .city-card .before {
+  .profile-card .before, .city-card .before {
     content: "";
     position: absolute;
     left: -20px;
@@ -42,7 +43,7 @@ p:last-of-type {
     filter: blur(10px);
     opacity: 0.5;
     z-index: 0; }
-    .city-card .before .no-opacity {
+    .profile-card .before .no-opacity, .city-card .before .no-opacity {
       opacity: 0;
       user-select: none;
       cursor: default; }

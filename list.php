@@ -9,12 +9,17 @@
 	}
 	switch ($type) {
 		case "city":
+			if ($currentURL[4] == "new-delhi") {
+				header("Location: /city/delhi");
+			} else if ($currentURL[4] == "bengaluru") {
+				header("Location: /city/bangalore");
+			}
 			$nResults = DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE city=%s", unurlify($currentURL[4]))["a"];
 			$nPages = intval($nResults / $startupsPerPage);
 			$nPages += $nResults % $startupsPerPage > 0 ? 1 : 0;
 			$myStartups = DB::query("SELECT * FROM startups WHERE city=%s LIMIT %d OFFSET %d", unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
 			$city = DB::queryFirstRow("SELECT * FROM cities WHERE slug=%s", $currentURL[4]);
-			if (!$city) { header("Location: /404"); }
+			// if (!$city) { header("Location: /404"); }
 			if ($city["name"] == "Delhi") { $city["name"] = "New Delhi"; }
 			getHeader("Cities", $city["name"]);
 			break;

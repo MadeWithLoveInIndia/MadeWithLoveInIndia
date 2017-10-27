@@ -1030,7 +1030,8 @@ function avatarUrl($email) {
   if (file_exists("uploads/manual/" . md5($email))) {
     return "uploads/manual/" . md5($email);
   } else {
-    return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( "https://unsplash.it/128/128" ) . "&s=" . 128;
+    // return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( "https://unsplash.it/128/128" ) . "&s=" . 128;
+    return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=identicon&s=" . 128;
   }
 }
 
@@ -1168,6 +1169,32 @@ function timeAgo($datetime, $full = false) {
 
   if (!$full) $string = array_slice($string, 0, 1);
   return $string ? implode(', ', $string) . ' ago' : 'just now';
+}
+
+function slugify($text) {
+  // replace non letter or digits by -
+  $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+
+  // transliterate
+  $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+
+  // remove unwanted characters
+  $text = preg_replace('~[^-\w]+~', '', $text);
+
+  // trim
+  $text = trim($text, '-');
+
+  // remove duplicate -
+  $text = preg_replace('~-+~', '-', $text);
+
+  // lowercase
+  $text = strtolower($text);
+
+  if (empty($text)) {
+    return 'n-a';
+  }
+
+  return $text;
 }
 
 session_start();
