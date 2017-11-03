@@ -2,8 +2,14 @@
 function getHeader($cat = null, $title = null) {
 		if ($cat == "Cities") {
 			$title = "Startups in " . $title;
-		} else if ($cat == "Startups" || $cat == "Technologies") {
+		} else if ($cat == "Technologies") {
 			$title .= " Startups";
+		} else if ($cat == "Startups") {
+			// $title .= " Startups";
+		} else if ($cat == "Page") {
+			if ($title == "Home") {
+				$title = null;
+			}
 		} else if ($cat == "People") {
 			$title .= "&rsquo;s Profile";
 		}
@@ -12,6 +18,7 @@ function getHeader($cat = null, $title = null) {
 		} else {
 			$title = "Made with Love in India";
 		}
+		$metaDescription = "Founded in April 2013, the Made with Love in India initiative is a movement to celebrate, promote, and build a brand &mdash; India."
 ?>
 <!doctype html>
 <html lang="en" ng-app="love">
@@ -23,6 +30,19 @@ function getHeader($cat = null, $title = null) {
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<title><?php echo $title; ?></title>
+		<meta property="og:title" content="<?php echo $title; ?>">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<meta name="description" content="<?php echo $metaDescription; ?>">
+		<meta property="og:description" content="<?php echo $metaDescription; ?>">
+
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@mwlii">
+		<meta name="twitter:creator" content="@AnandChowdhary">
+		<meta property="og:image" content="IMAGE URL">
+
+		<meta property="og:url" content="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
+		<link rel="canonical" href="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
@@ -48,6 +68,8 @@ function getHeader($cat = null, $title = null) {
 		<script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<script src="/app.js"></script> -->
 
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+
 	</head>
 
 	<body>
@@ -62,12 +84,17 @@ function getHeader($cat = null, $title = null) {
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-white love-navbar border border-top-0">
 			<div class="container">
-				<a class="navbar-brand" href="#">Made with <i class="ion ion-md-heart red"></i> in India</a>
+				<a class="navbar-brand" href="/">Made with <i class="ion ion-md-heart red"></i> in India</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/">Home</a>
+						</li>
+					</ul>
+					<!-- <ul class="navbar-nav mr-auto">
 						<?php $listItem = "Startups"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
 							<a class="nav-link" href="#">Startups</span></a>
@@ -80,7 +107,11 @@ function getHeader($cat = null, $title = null) {
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
 							<a class="nav-link" href="#">About</a>
 						</li>
-					</ul>
+						<?php $listItem = "Blog"; ?>
+						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
+							<a class="nav-link" href="#">Blog</a>
+						</li>
+					</ul> -->
 					<?php if (isset($_SESSION["user"])) { ?>
 					<ul class="navbar-nav">
 						<?php $listItem = "Login"; ?>
@@ -122,7 +153,7 @@ function getHeader($cat = null, $title = null) {
 						</li>
 					</ul>
 					<?php } ?>
-					<a class="btn btn-outline-danger ml-2" href="/submit">Submit Startup</a>
+					<a class="btn btn-outline-danger ml-2" href="/submit"><i class="ion ion-md-add-circle mr-2 zoomed"></i>Submit Startup</a>
 				</div>
 			</div>
 		</nav>
@@ -139,7 +170,7 @@ function getHeader($cat = null, $title = null) {
 							<p>If you use the <em>Made with Love in India</em> badge in your startup&rsquo;s website or products, submit it and get featured on our platform.</p>
 							<p>Copy and paste the following code in your footer:</p>
 							<input data-placement="top" title="Copied!" data-clipboard-target="#joinCode" id="joinCode" class="form-control mt-2" onclick="this.setSelectionRange(0, this.value.length)" readonly type="text" value='&lt;a href="https://madewithlove.org.in" target="_blank"&gt;Made with &lt;span style="color: #e74c3c"&gt;&amp;hearts;&lt;/span&gt; in India&lt;/a&gt;'>
-							<a href="#" class="btn btn-outline-danger mt-3">Submit Startup</a>
+							<a href="#" class="btn btn-outline-danger mt-3">Submit Startup <i class="ion ion-md-arrow-forward ml-1"></i></a>
 						</div>
 					</div>
 				</div>
@@ -165,7 +196,7 @@ function getHeader($cat = null, $title = null) {
 								<li><a href="#">Buy Official Swag</a></li>
 							</ul>
 						</div>
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-3 mt-5 mt-md-0">
 							<h4 class="card-title pb-2 mb-0 bigger">Policies</h4>
 							<ul>
 								<li><a href="#">Terms of Use</a></li>
@@ -174,14 +205,14 @@ function getHeader($cat = null, $title = null) {
 								<li><a href="#">A11Y Statement</a></li>
 							</ul>
 						</div>
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-3 mt-5 mt-md-0">
 							<p>Founded in April 2013, the Made with Love in India initiative is a movement to celebrate, promote, and build a brand — India.</p>
 							<p><a href="#">Learn more about us <i class="ion ion-md-arrow-forward ml-1"></i></a></p>
 						</div>
 					</div>
 				</div>
 				<div class="pb-5 text-center">
-					<p>&copy; 2013&ndash;<?php echo date("Y"); ?> &middot; Made with <i class="ion ion-md-heart red"></i> in India</p>
+					<p>&copy; 2013&ndash;<?php echo date("Y"); ?> &middot; <a href="/" class="text-dark">Made with <i class="ion ion-md-heart red"></i> in India</a></p>
 				</div>
 			</div>
 		</footer>
@@ -195,6 +226,7 @@ function getHeader($cat = null, $title = null) {
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuiZevIb1G87KAoLRSECEdWNBQ06JCMjU&libraries=places&callback=initMap" async defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
 		<script>
 			// $(".startup-image img").on("load", function() {
 			// 	var vibrant = new Vibrant($(".startup-image img")[0]);
@@ -207,6 +239,12 @@ function getHeader($cat = null, $title = null) {
 				$("#joinCode").attr("data-toggle", "tooltip");
 				$("#joinCode").tooltip();
 				$("#joinCode").tooltip("show");
+			});
+			$("#industry").easyAutocomplete({
+				url: "/assets/json/industries.json"
+			});
+			$("#technology").easyAutocomplete({
+				url: "/assets/json/tech.json"
 			});
 			function initMap() {
 				if ($(".cityAutoComplete")[0]) {

@@ -3,7 +3,7 @@
 	include "header.php";
 	$profile = DB::queryFirstRow("SELECT * FROM startups WHERE slug=%s", $currentURL[4]);
 	if (!$profile) { header("Location: /404"); }
-	getHeader("Startups");
+	getHeader("Startups", $profile["name"]);
 ?>
 
 		<main id="content" class="pt-4 pb-4">
@@ -146,7 +146,7 @@
 							$nNews = getnNews($profile["id"]); ?>
 							<div class="list-group">
 								<?php for ($i = 0; $i < 3; $i++) {
-									display('<a href="%s" class="list-group-item list-group-item-action">
+									display('<a target="_blank" href="%s" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
 											<img alt="Startup Name" src="/assets/uploads/news/%s_%s.jpg">
@@ -158,7 +158,7 @@
 											</div>
 										</div>
 									</div>
-								</a>', $news[$i]["link"], $news[$i]["publication"] ? md5($news[$i]["publication"]) : null, slugify($news[$i]["publication"]), $news[$i]["publication"], timeMe($news[$i]["datetime"]), strlen($news[$i]["title"]) > 75 ? mb_substr($news[$i]["title"], 0, 75) . "&hellip;" : $news[$i]["title"]); } ?>
+								</a>', $news[$i]["link"], $news[$i]["publication"] ? md5($news[$i]["publication"]) : null, slugify($news[$i]["publication"]), $news[$i]["publication"], timeMe($news[$i]["datetime"]), strlen($news[$i]["title"]) > 65 ? trim(mb_substr($news[$i]["title"], 0, 65)) . "&hellip;" : $news[$i]["title"]); } ?>
 								<?php $newsPerPage = 3;
 								if ($nNews > $newsPerPage) { ?>
 								<a href="#" class="list-group-item list-group-item-action text-center p-3">
@@ -173,7 +173,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<aside class="col-md-4">
 						<?php display('<a target="_blank" href="%sref=Made+with+Love+in+India" class="btn btn-primary btn-block btn-visit-website text-left p-3 mb-3">
 							<div class="text-truncate">Visit %s</div>
 							<div class="text-lighter small mt-1 text-truncate">%s</div>
@@ -401,7 +401,7 @@
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Featured in Lists</h4>
 							</div>
 							<div class="list-group" style="margin-top: -15px">
-							<?php display('<a href="/city/%s" class="list-group-item list-group-item-action"><span style="display: none">%s</span>
+							<?php display('<a href="/city/%s" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
 											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
@@ -413,8 +413,8 @@
 											</div>
 										</div>
 									</div>
-								</a>', boolify($profile["city"]), slugify($profile["city"]), md5($profile["city"]), $profile["city"], $profile["city"], $profile["city"]); ?>
-								<?php display('<a href="/industry/%s" class="list-group-item list-group-item-action"><span style="display: none">%s</span>
+								</a>', slugify($profile["city"]), md5($profile["city"]), $profile["city"], $profile["city"], $profile["city"]); ?>
+								<?php display('<a href="/industry/%s" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
 											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
@@ -426,8 +426,8 @@
 											</div>
 										</div>
 									</div>
-								</a>', boolify($profile["industry"]), slugify($profile["industry"]), md5($profile["industry"]), $profile["industry"], $profile["industry"], $profile["industry"], $profile["industry"]); ?>
-								<?php display('<a href="/technology/%s" class="list-group-item list-group-item-action"><span style="display: none">%s</span>
+								</a>', slugify($profile["industry"]), md5($profile["industry"]), $profile["industry"], $profile["industry"], $profile["industry"], $profile["industry"], slugify($profile["industry"])); ?>
+								<?php display('<a href="/technology/%s" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
 											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
@@ -439,7 +439,7 @@
 											</div>
 										</div>
 									</div>
-								</a>', boolify($profile["tag1"]), slugify($profile["tag1"]), md5($profile["tag1"]), $profile["tag1"], $profile["tag1"], $profile["tag1"], $profile["tag1"]); ?>
+								</a>', slugify($profile["tag1"]), md5($profile["tag1"]), $profile["tag1"], $profile["tag1"], $profile["tag1"], $profile["tag1"]); ?>
 								<?php
 								$nTags = 0;
 								if ($profile["tag2"]) $nTags++;
@@ -471,7 +471,7 @@
 							<a class="nav-link text-muted pl-0 pr-3" href="#">Flag Page</a>
 							<a class="nav-link text-muted pl-3 pr-0" href="#" rel="nofollow">Update Screenshot</a>
 						</nav>
-					</div>
+					</aside>
 				</div>
 			</div>
 		</main>

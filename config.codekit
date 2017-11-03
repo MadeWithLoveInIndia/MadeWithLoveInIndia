@@ -427,6 +427,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/json\/industries.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/json\/industries.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/json\/industries-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/assets\/json\/tech.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/json\/tech.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/json\/tech-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/sass\/design.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -450,6 +472,17 @@
 		"initialSize": 4378,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/-square-logo.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/81516.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4216,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/81516.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/81516.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -648,6 +681,17 @@
 		"initialSize": 5894,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhi.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhi.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/delhixxx.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5495,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhixxx.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhixxx.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2487,6 +2531,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/iconify.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/index.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

@@ -1,6 +1,25 @@
 <?php
 	require_once "database.php";
 	include "header.php";
+	$url = "https://www.google.com/recaptcha/api/siteverify";
+	$options = array(
+		"http" => array(
+			"header"  => "Content-type: application/x-www-form-urlencoded\r\n",
+			"method"  => "POST",
+			"content" => http_build_query([
+				"secret" => "6LdExBIUAAAAAKJf_kG2yAMqvMdhehrU_nazjUMm", // It's okay for you to see this :)
+				"response" => $_POST["g-recaptcha-response"]
+			])
+		)
+	);
+	$context  = stream_context_create($options);
+	$result = file_get_contents($url, false, $context);
+	if ($result === FALSE || json_decode($result)->success == false) {
+		header("Location: /submit?error=captcha");
+	}
+	if (!($_POST["startupname"] && $_POST["subtitle"] && $_POST["url"] && $_POST["email"] && $_POST["description"])) {
+		header("Location: /submit?error=missinginfo");
+	}
 	getHeader("Page", "Submit Startup");
 ?>
 <main id="content">

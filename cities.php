@@ -46,7 +46,7 @@
 							</div>
 							<div class="list-group">
 								<?php
-								for ($i = 0; $i < sizeof($myStartups); $i++) { if ($myStartups[$i]) { ?>
+								for ($i = 0; $i < sizeof($myStartups); $i++) { if ($myStartups[$i] && $myStartups[$i]["slug"] !== "") { ?>
 								<a href="/city/<?php echo urlify($myStartups[$i]["slug"]); ?>" class="list-group-item list-group-item-action p-4">
 									<div class="d-flex flex-row">
 										<div class="startup-image mr-3">
