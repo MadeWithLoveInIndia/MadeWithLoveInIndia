@@ -465,6 +465,17 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/assets\/uploads\/cached\/common\/%5b.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2215,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/%5b.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/%5b.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -872,6 +883,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/india.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10990,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/india.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/india.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/information-services.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -967,6 +989,17 @@
 		"initialSize": 9183,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-analytics.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-analytics.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mobile-app.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7176,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-app.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile-app.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

@@ -98,7 +98,7 @@
 											<div class="startup-tags">
 												<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["city"]); ?>
 												<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["industry"]); ?>
-												<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["tag1"]); ?>
+												<?php display('<span class="badge badge-light">%s</span>', json_decode($myStartups[$i]["tag1"])[0]); ?>
 											</div>
 										</div>
 									</div>

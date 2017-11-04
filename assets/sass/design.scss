@@ -212,6 +212,10 @@ table {
 	font-size: 90%;
 }
 
+.lh-1 {
+	line-height: 1.25;
+}
+
 .smaller-caption {
 	line-height: 1.25;
 	font-size: 80%;
@@ -290,4 +294,15 @@ table {
 	b {
 		background: #ccc;
 	}
+}
+
+a.card {
+	color: inherit;
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+
+.card {
+	overflow: hidden;
 }

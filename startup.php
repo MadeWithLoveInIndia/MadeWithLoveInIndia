@@ -25,7 +25,7 @@
 								<div class="startup-tags">
 									<?php display('<a href="/city/%s" class="badge badge-light">%s</a>', slugify($profile["city"]), $profile["city"]); ?>
 									<?php display('<a href="/industry/%s" class="badge badge-light">%s</a>', slugify($profile["industry"]), $profile["industry"]); ?>
-									<?php display('<a href="/technology/%s" class="badge badge-light">%s</a>', slugify($profile["tag1"]), $profile["tag1"]); ?>
+									<?php display('<a href="/technology/%s" class="badge badge-light">%s</a>', json_decode($profile["tag1"])[0], json_decode($profile["tag1"])[0]); ?>
 								</div>
 							</header>
 						</div>
@@ -439,15 +439,11 @@
 											</div>
 										</div>
 									</div>
-								</a>', slugify($profile["tag1"]), md5($profile["tag1"]), $profile["tag1"], $profile["tag1"], $profile["tag1"], $profile["tag1"]); ?>
+								</a>', (json_decode($profile["tag1"])[0]), md5(json_decode($profile["tag1"])[0]), json_decode($profile["tag1"])[0], json_decode($profile["tag1"])[0], json_decode($profile["tag1"])[0], json_decode($profile["tag1"])[0]); ?>
 								<?php
-								$nTags = 0;
-								if ($profile["tag2"]) $nTags++;
-								if ($profile["tag3"]) $nTags++;
-								if ($profile["tag4"]) $nTags++;
-								if ($profile["tag5"]) $nTags++;
-								if ($nTags > 0) { ?>
-								<a href="#" class="list-group-item list-group-item-action text-center p-3">
+								$nTags = sizeof(json_decode($profile["tag1"]));
+								if ($nTags > 1) { ?>
+								<a href="/startup/<?php echo $profile["slug"]; ?>/lists" class="list-group-item list-group-item-action text-center p-3">
 									<h3 class="h6 smaller mb-0">View <?php echo numberify($nTags, 0); ?> more featured lists<i class="ion ion-ios-arrow-down ml-2"></i></h3>
 								</a>
 								<?php } ?>

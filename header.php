@@ -61,6 +61,7 @@ function getHeader($cat = null, $title = null) {
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css" integrity="sha384-+iqgM+tGle5wS+uPwXzIjZS5v6VkqCUV7YQ/e/clzRHAxYbzpUJ+nldylmtBWCP0" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700|Hind:300,400,500,600,700" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/css/design.css">
 
@@ -166,7 +167,7 @@ function getHeader($cat = null, $title = null) {
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-md-6">
-							<h3>Join the Movement</h3>
+							<h3 class="mb-3">Join the Movement</h3>
 							<p>If you use the <em>Made with Love in India</em> badge in your startup&rsquo;s website or products, submit it and get featured on our platform.</p>
 							<p>Copy and paste the following code in your footer:</p>
 							<input data-placement="top" title="Copied!" data-clipboard-target="#joinCode" id="joinCode" class="form-control mt-2" onclick="this.setSelectionRange(0, this.value.length)" readonly type="text" value='&lt;a href="https://madewithlove.org.in" target="_blank"&gt;Made with &lt;span style="color: #e74c3c"&gt;&amp;hearts;&lt;/span&gt; in India&lt;/a&gt;'>
@@ -183,7 +184,7 @@ function getHeader($cat = null, $title = null) {
 							<ul>
 								<li><a href="#">Startup Cities in India</a></li>
 								<li><a href="#">Top Startups in India</a></li>
-								<li><a href="#">Popular Technologies</a></li>
+								<li><a href="#">Popular Industries</a></li>
 								<li><a href="#">Message Entrepreneurs</a></li>
 							</ul>
 						</div>
@@ -226,6 +227,7 @@ function getHeader($cat = null, $title = null) {
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuiZevIb1G87KAoLRSECEdWNBQ06JCMjU&libraries=places&callback=initMap" async defer></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
 		<script>
 			// $(".startup-image img").on("load", function() {
