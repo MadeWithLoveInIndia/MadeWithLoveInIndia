@@ -97,14 +97,9 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="/">Home</a>
-						</li>
-					</ul>
-					<!-- <ul class="navbar-nav mr-auto">
 						<?php $listItem = "Startups"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
-							<a class="nav-link" href="#">Startups</span></a>
+							<a class="nav-link" href="/startups">Startups</span></a>
 						</li>
 						<?php $listItem = "Cities"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
@@ -112,13 +107,9 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 						</li>
 						<?php $listItem = "About"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
-							<a class="nav-link" href="#">About</a>
+							<a class="nav-link" href="/about">About</a>
 						</li>
-						<?php $listItem = "Blog"; ?>
-						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
-							<a class="nav-link" href="#">Blog</a>
-						</li>
-					</ul> -->
+					</ul>
 					<?php if (isset($_SESSION["user"])) { ?>
 					<ul class="navbar-nav">
 						<?php $listItem = "Login"; ?>
@@ -130,11 +121,11 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 								<i class="ion ion-ios-more zoomer"></i>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="#">Action</a>
-								<a class="dropdown-item" href="#">Another action</a>
-								<a class="dropdown-item" href="#">Something else here</a>
+								<a class="dropdown-item" href="/responsibilities">Responsibilities</a>
+								<a class="dropdown-item" href="/badges">Badges</a>
+								<a class="dropdown-item" href="/industries">Industries</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="/logout">Logout</a>
+								<a class="dropdown-item" href="<?php echo "/logout?returnto=$_SERVER[REQUEST_URI]"; ?>">Logout</a>
 							</div>
 						</li>
 					</ul>
@@ -153,9 +144,9 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 								<i class="ion ion-ios-more zoomer"></i>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="#">Action</a>
-								<a class="dropdown-item" href="#">Another action</a>
-								<a class="dropdown-item" href="#">Something else here</a>
+								<a class="dropdown-item" href="/responsibilities">Responsibilities</a>
+								<a class="dropdown-item" href="/badges">Badges</a>
+								<a class="dropdown-item" href="/industries">Industries</a>
 							</div>
 						</li>
 					</ul>

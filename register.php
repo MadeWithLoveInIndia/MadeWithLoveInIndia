@@ -69,7 +69,7 @@
 
 	}
 
-	getHeader("Page", "Register");
+	getHeader("Register", "Register");
 ?>
 <main id="content">
 	<div class="container pt-4 mt-4 pb-4">

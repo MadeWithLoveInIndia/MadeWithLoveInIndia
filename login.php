@@ -14,7 +14,7 @@
 			$wrongPass = "Incorrect email or password.";
 		}
 	}
-	getHeader("Page", "Login");
+	getHeader("Login", "Login");
 ?>
 <main id="content">
 	<div class="container pt-4 mt-4 pb-4">

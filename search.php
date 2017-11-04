@@ -56,7 +56,7 @@
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups")["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else if ($currentURL[3] == "industry") {
-		$startups = DB::query("SELECT * FROM startups WHERE industry LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$startups = DB::query("SELECT * FROM startups WHERE industry LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", (unurlify($currentURL[4])), $startupsPerPage, ($page - 1) * $startupsPerPage);
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE industry LIKE %ss", unurlify($currentURL[4]))["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else {

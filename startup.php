@@ -76,12 +76,21 @@
 								if ($nFounders == 0) { ?>
 								<div class="text-muted text-center p-4">
 									<h4 class="h6">There are no founders listed.</h4>
-									<p>Do you know who founded <?php echo $profile["name"]; ?>? <a href="#">Tell us.</a></p>
+									<p>
+										<?php if ($profile["badge_verified"] == 0) { ?>
+											<a href="/claim/<?php echo $profile["slug"]; ?>">Claim this page</a> to add a founder.
+										<?php } else {
+											if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
+											<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> too add founders!
+										<?php } else { ?>
+											<a href="#">Suggest a change</a> if you know who founded this startup.
+										<?php } } ?>
+									</p>
 								</div>
 								<?php } ?>
 							</div>
 						</div>
-						<div class="card mb-4">
+						<!-- <div class="card mb-4">
 							<div class="card-body pb-0">
 								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Reviews</h4>
 							</div>
@@ -129,7 +138,6 @@
 									<p>Have an experience to share? <a href="#">Write a review!</a></p>
 								</div>
 								<?php } ?>
-								<!-- <p class="mt-4 mb-1"><a href="#">Log in</a> or <a href="#">register</a> to add your review of Shoppingo</p> -->
 							</div>
 							<?php $commentsPerPage = 3;
 							if ($nComments > $commentsPerPage) { ?>
@@ -137,7 +145,7 @@
 								<h3 class="h6 mb-0">View <?php echo numberify($nComments, $commentsPerPage); ?> more reviews<i class="ion ion-ios-arrow-down ml-2"></i></h3>
 							</a>
 							<?php } ?>
-						</div>
+						</div> -->
 						<div class="card mb-4">
 							<div class="card-body pb-1">
 								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">News</h4>
@@ -167,13 +175,27 @@
 								<?php } if ($nNews == 0) { ?>
 								<div class="text-muted text-center p-4">
 									<?php display('<h4 class="h6">There is no news about %s.</h4>', $profile["name"]) ?>
-									<p>Have an article to share? <a href="#">Add it here.</a></p>
+									<p>
+										<?php if ($profile["badge_verified"] == 0) { ?>
+											<a href="/claim/<?php echo $profile["slug"]; ?>">Claim this page</a> to add a news article.
+										<?php } else {
+											if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
+											<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> too add a news article!
+										<?php } else { ?>
+											<a href="#">Suggest an article</a> to add here.
+										<?php } } ?>
+									</p>
 								</div>
 								<?php } ?>
 							</div>
 						</div>
 					</div>
 					<aside class="col-md-4">
+						<?php if (isset($_SESSION["user"])) { display('<span style="display: none">%s</span><a href="/edit/%s" class="btn btn-danger btn-block btn-visit-website text-left p-3 mb-3">
+							<div class="text-truncate">Edit Your Page</div>
+							<div class="text-lighter small mt-1 text-truncate">Only you can see this</div>
+							<i class="ion ion-md-create text-lighter"></i>
+						</a>', boolify($profile["owner"] == $_SESSION["user"]["id"]), $profile["slug"]); } ?>
 						<?php display('<a target="_blank" href="%sref=Made+with+Love+in+India" class="btn btn-primary btn-block btn-visit-website text-left p-3 mb-3">
 							<div class="text-truncate">Visit %s</div>
 							<div class="text-lighter small mt-1 text-truncate">%s</div>
@@ -299,7 +321,19 @@
 										</div>
 									</div>
 								</a>', boolify($profile["badge_verified"])); ?>
-								<?php if (!(boolify($profile["badge_offers"]) || boolify($profile["badge_verified"]) || boolify($profile["badge_newsworthy"]) || boolify($profile["badge_featured"]) || boolify($profile["badge_addedbadge"]))) { ?>
+								<?php display('<a href="#" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-lock bg-success"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Secured Website</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify(parse_url($profile["url"])["scheme"] == "https")); ?>
+								<?php if (!(boolify($profile["badge_offers"]) || boolify(parse_url($profile["url"])["scheme"] == "https") || boolify($profile["badge_verified"]) || boolify($profile["badge_newsworthy"]) || boolify($profile["badge_featured"]) || boolify($profile["badge_addedbadge"]))) { ?>
 								<div class="text-center p-4 text-muted">
 									<?php display('<h4 class="h6">%s has not earned any badges so far.</h4>', $profile["name"]) ?>
 									<p>Want to learn how to earn badges? <a href="#">Get started now!</a></p>

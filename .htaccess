@@ -22,6 +22,8 @@ RewriteRule ^city/(.*)$/(.*)$ list.php?slug=$1&type=city&page=$2
 RewriteRule ^technology/(.*)$/(.*)$ list.php?slug=$1&type=technology&page=$2
 RewriteRule ^institute/(.*)$/(.*)$ list.php?slug=$1&type=university&page=$2
 
+RewriteRule ^sitemap.xml sitemap.php
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)/$ http://mwlii:8888/$1 [R=301,L]
 

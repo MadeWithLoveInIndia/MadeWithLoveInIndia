@@ -520,6 +520,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/academic.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5704,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/academic.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/academic.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/accessibility-technology.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -982,6 +993,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/ios.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4773,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ios.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ios.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/jaipur.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1411,6 +1433,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/symbian.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5264,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/symbian.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/symbian.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/technology.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1506,6 +1539,17 @@
 		"initialSize": 1070,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/a2-cricket.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/a2-cricket.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/anand-chowdhary.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1187,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/anand-chowdhary.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/anand-chowdhary.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2078,6 +2122,17 @@
 		"initialSize": 123297,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/a2-cricket.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/a2-cricket.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/anand-chowdhary.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 111633,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/anand-chowdhary.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/anand-chowdhary.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2789,6 +2844,69 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/pages\/a11y.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/a11y.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/about.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/about.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/badges.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/badges.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/cookies.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/cookies.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/privacy.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/privacy.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/responsibilities.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/responsibilities.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/terms.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/terms.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/preview.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2839,6 +2957,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/search.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sitemap.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sitemap.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
