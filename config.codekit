@@ -11,6 +11,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/addstory.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/addstory.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/css\/design.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -423,6 +432,17 @@
 		"initialSize": 759,
 		"inputAbbreviatedPath": "\/assets\/icons\/mstile-70x70.png",
 		"outputAbbreviatedPath": "\/assets\/icons\/mstile-70x70.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/cover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37549,
+		"inputAbbreviatedPath": "\/assets\/images\/cover.png",
+		"outputAbbreviatedPath": "\/assets\/images\/cover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1048,6 +1068,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/m.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5532,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/m.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/m.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/madurai.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1121,6 +1152,17 @@
 		"initialSize": 4816,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mobiles.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11200,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobiles.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mobiles.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1352,6 +1394,17 @@
 		"initialSize": 5635,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/research-development.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/research-development.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/s.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4767,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/s.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/s.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2790,6 +2843,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/edit.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/edit.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/header.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2930,6 +2992,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/publish.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/refreshstory.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/refreshstory.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

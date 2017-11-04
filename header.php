@@ -67,7 +67,6 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css" integrity="sha384-+iqgM+tGle5wS+uPwXzIjZS5v6VkqCUV7YQ/e/clzRHAxYbzpUJ+nldylmtBWCP0" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700|Hind:300,400,500,600,700" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/css/design.css">
 
@@ -224,7 +223,17 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuiZevIb1G87KAoLRSECEdWNBQ06JCMjU&libraries=places&callback=initMap" async defer></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>
+		<script>
+			function initMap() {
+				if ($(".cityAutoComplete")[0]) {
+					var options = {
+						types: ["(cities)"],
+						componentRestrictions: {country: "in"}
+					}
+					var autocomplete = new google.maps.places.Autocomplete($(".cityAutoComplete")[0], options);
+				}
+			}
+		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
 		<script src="/assets/js/download.js"></script>
 		<script>
@@ -246,14 +255,20 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 			$("#technology").easyAutocomplete({
 				url: "/assets/json/tech.json"
 			});
-			function initMap() {
-				if ($(".cityAutoComplete")[0]) {
-					var options = {
-						types: ["(cities)"],
-						componentRestrictions: {country: "in"}
-					}
-					var autocomplete = new google.maps.places.Autocomplete($(".cityAutoComplete")[0], options);
-				}
+			function addStory() {
+				var publication = $("#publication_name").val();
+				var link = $("#publication_link").val();
+				var startup = $("#publication_startup").val();
+			}
+			function deleteStory(id) {
+				$.get("/addstory.php?id=" + id).always(function() {
+					$("form").submit();
+				});
+			}
+			function refreshShots(id) {
+				$.get("/refreshstory.php?id=" + id).always(function() {
+					$("form").submit();
+				});
 			}
 		</script>
 

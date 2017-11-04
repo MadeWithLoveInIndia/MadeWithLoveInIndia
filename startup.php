@@ -18,7 +18,7 @@
 								<h2 class="h5 mb-1">
 									<?php display('<span>%s</span>', $profile["name"]); ?>
 									<span class="badges">
-										<?php display('<a href="#" data-toggle="tooltip" data-placement="top" title="Verified page"><i class="ion ion-md-checkmark-circle ml-1 checkbox-icon text-success"></i></a>', boolify($profile["badge_verified"])); ?>
+										<?php display('<a href="/badges" data-toggle="tooltip" data-placement="top" title="Verified page" target="_blank"><i class="ion ion-md-checkmark-circle ml-1 checkbox-icon text-success"></i></a>', boolify($profile["badge_verified"])); ?>
 									</span>
 								</h2>
 								<?php display('<p class="text-muted mb-1">%s</p>', $profile["tagline"]); ?>
@@ -81,7 +81,7 @@
 											<a href="/claim/<?php echo $profile["slug"]; ?>">Claim this page</a> to add a founder.
 										<?php } else {
 											if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
-											<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> too add founders!
+											<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> to add founders!
 										<?php } else { ?>
 											<a href="#">Suggest a change</a> if you know who founded this startup.
 										<?php } } ?>
@@ -180,7 +180,7 @@
 											<a href="/claim/<?php echo $profile["slug"]; ?>">Claim this page</a> to add a news article.
 										<?php } else {
 											if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
-											<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> too add a news article!
+											<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> to add a news article!
 										<?php } else { ?>
 											<a href="#">Suggest an article</a> to add here.
 										<?php } } ?>
@@ -243,13 +243,13 @@
 							<div class="card-body pb-1">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller d-flex justify-content-between">
 									<span>Badges Earned</span>
-									<a href="#" class="text-muted" data-toggle="tooltip" data-placement="top" title="About Badges">
+									<a href="/badges" class="text-muted" data-toggle="tooltip" data-placement="top" title="About Badges">
 										<i class="ion ion-md-help-circle"></i>
 									</a>
 								</h4>
 							</div>
 							<div class="list-group" style="margin-top: -15px">
-								<?php display('<a href="#" class="list-group-item list-group-item-action">
+								<?php display('<a href="/badges#unicorn" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
 											<i class="ion ion-md-trophy bg-dark"></i>
@@ -261,7 +261,7 @@
 										</div>
 									</div>
 								</a>', boolify($profile["badge_unicorn"])); ?>
-								<?php display('<a href="#" class="list-group-item list-group-item-action">
+								<?php display('<a href="/badges#featured" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
 											<i class="ion ion-md-ribbon bg-warning"></i>
@@ -273,7 +273,7 @@
 										</div>
 									</div>
 								</a>', boolify($profile["badge_featured"])); ?>
-								<?php display('<a href="#" class="list-group-item list-group-item-action">
+								<?php display('<a href="/badges#newsworthy" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
 											<i class="ion ion-md-paper bg-secondary"></i>
@@ -285,7 +285,7 @@
 										</div>
 									</div>
 								</a>', boolify($profile["badge_newsworthy"])); ?>
-								<?php display('<a href="#" class="list-group-item list-group-item-action">
+								<?php display('<a href="/badges#offers" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
 											<i class="ion ion-md-ice-cream bg-info"></i>
@@ -297,7 +297,7 @@
 										</div>
 									</div>
 								</a>', boolify($profile["badge_offers"])); ?>
-								<?php display('<a href="#" class="list-group-item list-group-item-action">
+								<?php display('<a href="/badges#addedbadge" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
 											<i class="ion ion-md-flag bg-tomato"></i>
@@ -309,19 +309,19 @@
 										</div>
 									</div>
 								</a>', boolify($profile["badge_addedbadge"])); ?>
-								<?php display('<a href="#" class="list-group-item list-group-item-action">
+								<?php display('<a href="/badges#verified" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
-											<i class="ion ion-md-checkmark bg-success"></i>
+											<i class="ion ion-md-checkmark bg-primary"></i>
 										</div>
 										<div class="badges-info d-flex align-items-center">
 											<div>
-												<h3 class="h6 mb-1">Verified Startup</h3>
+												<h3 class="h6 mb-1">Verified Profile</h3>
 											</div>
 										</div>
 									</div>
 								</a>', boolify($profile["badge_verified"])); ?>
-								<?php display('<a href="#" class="list-group-item list-group-item-action">
+								<?php display('<a href="/badges#secured" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
 											<i class="ion ion-md-lock bg-success"></i>
@@ -336,7 +336,7 @@
 								<?php if (!(boolify($profile["badge_offers"]) || boolify(parse_url($profile["url"])["scheme"] == "https") || boolify($profile["badge_verified"]) || boolify($profile["badge_newsworthy"]) || boolify($profile["badge_featured"]) || boolify($profile["badge_addedbadge"]))) { ?>
 								<div class="text-center p-4 text-muted">
 									<?php display('<h4 class="h6">%s has not earned any badges so far.</h4>', $profile["name"]) ?>
-									<p>Want to learn how to earn badges? <a href="#">Get started now!</a></p>
+									<p>Want to learn how to earn badges? <a href="/badges">Get started now!</a></p>
 								</div>
 								<?php } ?>
 							</div>
@@ -509,10 +509,10 @@
 								<p class="card-text small text-muted">You can, however, <a href="#">suggest a change</a> to this page and we will get back to you.</p>
 							</div>
 						</div>', boolify($profile["badge_verified"]), $profile["name"]); ?>
-						<nav class="nav small">
+						<!-- <nav class="nav small">
 							<a class="nav-link text-muted pl-0 pr-3" href="#">Flag Page</a>
 							<a class="nav-link text-muted pl-3 pr-0" href="#" rel="nofollow">Update Screenshot</a>
-						</nav>
+						</nav> -->
 					</aside>
 				</div>
 			</div>

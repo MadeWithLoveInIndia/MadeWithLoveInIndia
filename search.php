@@ -55,6 +55,10 @@
 		$startups = DB::query("SELECT * FROM startups ORDER BY $orderBy LIMIT %d OFFSET %d", $startupsPerPage, ($page - 1) * $startupsPerPage);
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups")["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
+	} else if ($currentURL[3] == "search") {
+		$startups = DB::query("SELECT * FROM startups WHERE name LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", (unurlify($currentURL[4])), $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE industry LIKE %ss", unurlify($currentURL[4]))["a"]);
+		$nPages = ceil($nStartups / $startupsPerPage);
 	} else if ($currentURL[3] == "industry") {
 		$startups = DB::query("SELECT * FROM startups WHERE industry LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", (unurlify($currentURL[4])), $startupsPerPage, ($page - 1) * $startupsPerPage);
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE industry LIKE %ss", unurlify($currentURL[4]))["a"]);
@@ -65,7 +69,7 @@
 		$nPages = ceil($nStartups / $startupsPerPage);
 	}
 
-	if ($page < 1 || $page > $nPages) {
+	if ($page < 1 || $page > ($nPages + 1)) {
 		header("Location: /404");
 	}
 
@@ -85,7 +89,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md">
-				<?php if ($currentURL[4] != "all") { ?><div class="card card-body city-card mb-4">
+				<?php if ($currentURL[4] != "all" && $currentURL[3] != "search" && $nStartups > 0) { ?><div class="card card-body city-card mb-4">
 					<div class="before" style="background-image: url('/assets/uploads/cities/4f4b914d6db35e19101ff003c4e7ea3a_<?php echo slugify($currentURL[4]); ?>.jpg')">
 						<span class="no-opacity">There are <?php echo $nStartups; ?> startups in New Delhi on Made with Love in India. Find and connect with Made in India startups, founders, and programs.</span>
 					</div>
@@ -140,7 +144,7 @@
 						<?php } } if (sizeof($startups) == 0) { ?>
 						<div class="text-muted text-center p-4">
 							<h4 class="h6">There are no startups listed.</h4>
-							<p>Know about a startup <?php echo $type == "technology" ? "using" : "in"; ?> <?php echo $city["name"]; ?>? <a href="#">Tell us</a>.</p>
+							<p>Know of a startup? <a href="#">Tell us</a>.</p>
 						</div>
 						<?php } ?>
 					</div>
@@ -176,6 +180,14 @@
 					<?php } ?>
 			</div>
 			<div class="col-md-4">
+				<form onsubmit="window.location.href = '/search/' + encodeURIComponent(document.querySelector('.searchinput').value); return false" class="mb-4">
+				<div class="input-group">
+					<input type="text" class="form-control searchinput border-secondary" placeholder="Search for startups..." value="<?php echo urldecode($currentURL[4]) === "all" || $currentURL[3] != "search" ? "" : urldecode($currentURL[4]); ?>"<?php echo $currentURL[3] == "search" ? "autofocus" : ""; ?>>
+					<span class="input-group-btn">
+						<button class="btn border-secondary border-left-0" type="submit"><i class="ion ion-md-search" aria-label="Search"></i></button>
+					</span>
+				</div>
+			</form>
 				<div class="card mb-4">
 					<div class="card-body">
 						<?php display('<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Share%s %s%s</h4>', $type == "city" ? " Startups in " : " ", $city["name"], $type == "city" ? "" : " Startups"); ?>
@@ -209,7 +221,7 @@
 					</div>
 				</div>
 				<?php
-					if ($currentURL[4] != "all") {
+					if ($currentURL[4] != "all" && $currentURL[3] != "search") {
 						$info = DB::queryFirstRow("SELECT intro FROM descriptions WHERE title=%s", $currentURL[4])["intro"];
 						if (!$info) {
 							$apiURL = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" . ucfirst(str_replace("-", "+", $currentURL[4]));
@@ -220,6 +232,9 @@
 									$info = trim(preg_replace("/\([^)]+\)/","", explode(".", $val->extract)[0])) . ".";
 									$info = str_replace("()", "", $info);
 									$info = str_replace(" ,", ",", $info);
+									if (strpos($info, "From a related word or phrase") == false) {
+										$info = ".";
+									}
 									DB::insert("descriptions", [
 										"title" => $currentURL[4],
 										"intro" => $info

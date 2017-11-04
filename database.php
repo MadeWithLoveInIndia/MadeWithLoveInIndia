@@ -1109,13 +1109,13 @@ function getEmployeesRanges($choice) {
     case 1:
       return "1 &ndash; 10";
       break;
-    case 1:
+    case 2:
       return "10 &ndash; 100";
       break;
-    case 1:
+    case 3:
       return "100 &ndash; 1,000";
       break;
-    case 1:
+    case 4:
       return "1,000 &ndash; 10,000";
       break;
     default:

@@ -31,7 +31,7 @@
 	<div class="container pt-4 mt-4 pb-4">
 		<div class="row justify-content-center text-center">
 			<div class="col-md-6">
-				<p class="lead">Made with Love in India is an initiative is a movement to celebrate, promote, and build a brand &mdash; India.</p>
+				<p class="lead">Made with Love in India is a movement to celebrate, promote, and build a brand &mdash; India.</p>
 				<p>Find startups using the Made with Love in India badge, connect with entrepreneurs, and share your startup story.</p>
 				<div class="mt-3">
 					<?php if (isset($_SESSION["user"])) { ?>
