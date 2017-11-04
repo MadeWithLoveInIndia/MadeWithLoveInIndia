@@ -25,7 +25,7 @@
 								<div class="startup-tags">
 									<?php display('<a href="/city/%s" class="badge badge-light">%s</a>', slugify($profile["city"]), $profile["city"]); ?>
 									<?php display('<a href="/industry/%s" class="badge badge-light">%s</a>', slugify($profile["industry"]), $profile["industry"]); ?>
-									<?php display('<a href="/technology/%s" class="badge badge-light">%s</a>', json_decode($profile["tag1"])[0], json_decode($profile["tag1"])[0]); ?>
+									<?php display('<a href="/startups/%s" class="badge badge-light">%s</a>', json_decode($profile["tag1"])[0], json_decode($profile["tag1"])[0]); ?>
 								</div>
 							</header>
 						</div>
@@ -427,7 +427,7 @@
 										</div>
 									</div>
 								</a>', slugify($profile["industry"]), md5($profile["industry"]), $profile["industry"], $profile["industry"], $profile["industry"], $profile["industry"], slugify($profile["industry"])); ?>
-								<?php display('<a href="/technology/%s" class="list-group-item list-group-item-action">
+								<?php display('<a href="/startups/%s" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="education-image mr-3">
 											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">

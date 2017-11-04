@@ -41,7 +41,7 @@ p:last-of-type {
   padding: 60px; }
 
 .city-card {
-  padding: 75px 60px; }
+  padding: 50px; }
 
 .profile-card, .city-card {
   overflow: hidden;
@@ -532,3 +532,12 @@ a.card {
 
 .card {
   overflow: hidden; }
+
+.absolute-select {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-align: right;
+  background-color: transparent;
+  width: auto;
+  border: none; }

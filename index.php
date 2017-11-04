@@ -39,7 +39,7 @@
 					<?php } else { ?>
 						<a href="/register" class="btn btn-danger">Register Now</a>
 					<?php } ?>
-					<a href="#" class="btn btn-outline-danger ml-2">Explore Startups</a>
+					<a href="/startups/all/1" class="btn btn-outline-danger ml-2">Explore Startups</a>
 				</div>
 			</div>
 		</div>

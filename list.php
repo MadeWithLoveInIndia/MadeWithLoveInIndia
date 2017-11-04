@@ -29,7 +29,10 @@
 			$nPages += $nResults % $startupsPerPage > 0 ? 1 : 0;
 			$myStartups = DB::query("SELECT * FROM startups WHERE industry=%s", unurlify($currentURL[4]));
 			$city = DB::queryFirstRow("SELECT * FROM industries WHERE slug=%s", $currentURL[4]);
-			if (!$city) { header("Location: /404"); }
+			if (!$city) { $city = [
+				"name" => unurlify($currentURL[4]),
+				"slug" => $currentURL[4]
+			]; }
 			getHeader("Startups", $city["name"]);
 			break;
 		case "technology":

@@ -1,5 +1,5 @@
 <?php
-function getHeader($cat = null, $title = null) {
+function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 		if ($cat == "Cities") {
 			$title = "Startups in " . $title;
 		} else if ($cat == "Technologies") {
@@ -43,6 +43,12 @@ function getHeader($cat = null, $title = null) {
 
 		<meta property="og:url" content="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
 		<link rel="canonical" href="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
+
+		<?php if ($next) { ?>
+		<link rel="next" href="<?php echo $next; ?>">
+		<?php } if ($prev) { ?>
+		<link rel="prev" href="<?php echo $prev; ?>">
+		<?php } ?>
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">

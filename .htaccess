@@ -11,12 +11,14 @@ RewriteRule ^assets/uploads/logo/(.*)$ iconify.php?q=$1
 RewriteRule ^startup/(.*)$ startup.php?slug=$1
 RewriteRule ^profile/(.*)$ profile.php?username=$1
 
+RewriteRule ^startups search.php
+RewriteRule ^industry/(.*)$ search.php?page=$1
+RewriteRule ^startups/(.*)$ search.php?page=$1
+
 RewriteRule ^city/(.*)$ list.php?slug=$1&type=city
-RewriteRule ^industry/(.*)$ list.php?slug=$1&type=industry
 RewriteRule ^technology/(.*)$ list.php?slug=$1&type=technology
 RewriteRule ^institute/(.*)$ list.php?slug=$1&type=university
 RewriteRule ^city/(.*)$/(.*)$ list.php?slug=$1&type=city&page=$2
-RewriteRule ^industry/(.*)$/(.*)$ list.php?slug=$1&type=industry&page=$2
 RewriteRule ^technology/(.*)$/(.*)$ list.php?slug=$1&type=technology&page=$2
 RewriteRule ^institute/(.*)$/(.*)$ list.php?slug=$1&type=university&page=$2
 
