@@ -531,6 +531,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/accessories.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10161,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/accessories.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/accessories.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/agriculture.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -560,6 +571,17 @@
 		"initialSize": 3875,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/all.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/all.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/analytics.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7397,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/analytics.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/analytics.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -696,6 +718,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/crowdfunding.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3868,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/crowdfunding.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/crowdfunding.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/delhi.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -773,6 +806,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/event.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3468,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/event.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/event.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/events.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -824,6 +868,17 @@
 		"initialSize": 10628,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/food-tech.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/food-tech.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/food.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8609,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/food.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/food.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1059,6 +1114,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/musician.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7540,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/musician.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/musician.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/musicians.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1114,6 +1180,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/non-profit-organization.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6719,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/non-profit-organization.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/non-profit-organization.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/non-profit.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1121,6 +1198,17 @@
 		"initialSize": 4859,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/non-profit.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/non-profit.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/nonprofit.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4237,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/nonprofit.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/nonprofit.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1136,6 +1224,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/platform.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8625,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/platform.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/platform.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/pune.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1143,6 +1242,17 @@
 		"initialSize": 10986,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/pune.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/pune.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/r-d.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8420,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/r-d.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/r-d.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1180,6 +1290,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/research-.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7951,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/research-.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/research-.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/research-and-development.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5635,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/research-and-development.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/research-and-development.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/research-development.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5635,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/research-development.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/research-development.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/security.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1198,6 +1341,17 @@
 		"initialSize": 12750,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/service-industries.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/service-industries.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/services.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5098,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/services.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/services.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

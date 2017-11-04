@@ -20,7 +20,7 @@
 			$title .= " (Page $page)";
 		}
 	} else {
-		$title = ucfirst($type) . " Startups";
+		$title = unurlify($currentURL[4]) . " Startups";
 		if ($page > 1) {
 			$title .= " (Page $page)";
 		}
@@ -33,8 +33,8 @@
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups")["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else if ($currentURL[3] == "industry") {
-		$startups = DB::query("SELECT * FROM startups WHERE industry LIKE %ss LIMIT %d OFFSET %d", $currentURL[4], $startupsPerPage, ($page - 1) * $startupsPerPage);
-		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE industry LIKE %ss", $currentURL[4])["a"]);
+		$startups = DB::query("SELECT * FROM startups WHERE industry LIKE %ss LIMIT %d OFFSET %d", unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE industry LIKE %ss", unurlify($currentURL[4]))["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else {
 		$startups = DB::query("SELECT * FROM startups WHERE tag1 LIKE %ss LIMIT %d OFFSET %d", $currentURL[4], $startupsPerPage, ($page - 1) * $startupsPerPage);
@@ -62,7 +62,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md">
-				<div class="card card-body city-card mb-4">
+				<?php if ($currentURL[4] != "all") { ?><div class="card card-body city-card mb-4">
 					<div class="before" style="background-image: url('/assets/uploads/cities/4f4b914d6db35e19101ff003c4e7ea3a_<?php echo slugify($currentURL[4]); ?>.jpg')">
 						<span class="no-opacity">There are <?php echo $nStartups; ?> startups in New Delhi on Made with Love in India. Find and connect with Made in India startups, founders, and programs.</span>
 					</div>
@@ -73,13 +73,13 @@
 							</div>
 							<div class="col-md ml-2 text-white d-flex align-items-center">
 								<header>
-									<h2 class="h4 mb-0"><?php echo ucfirst($currentURL[4]); ?></h2>
+									<h2 class="h4 mb-0"><?php echo unurlify($currentURL[4]); ?></h2>
 									<p><?php echo $nStartups; ?> startups</p>
 								</header>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><?php } ?>
 				<div class="card mb-4">
 					<div class="card-body pb-1">
 						<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><?php echo $title; ?></h4>
@@ -185,6 +185,35 @@
 						</div>
 					</div>
 				</div>
+				<?php
+					if ($currentURL[4] != "all") {
+						$info = DB::queryFirstRow("SELECT intro FROM descriptions WHERE title=%s", $currentURL[4])["intro"];
+						if (!$info) {
+							$apiURL = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" . ucfirst(str_replace("-", "+", $currentURL[4]));
+							$content = json_decode(file_get_contents($apiURL));
+							$a = 0;
+							foreach ($content->query->pages as $page => $val) {
+								if ($a == 0) {
+									$info = trim(preg_replace("/\([^)]+\)/","", explode(".", $val->extract)[0])) . ".";
+									$info = str_replace("()", "", $info);
+									$info = str_replace(" ,", ",", $info);
+									DB::insert("descriptions", [
+										"title" => $currentURL[4],
+										"intro" => $info
+									]);
+									$a++;
+								}
+							}
+						}
+						if ($info != ".") {
+				?>
+				<div class="card mb-4">
+					<div class="card-body">
+						<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">About this Topic</h4>
+						<?php echo "<p>" . $info . "</p>"; ?>
+						<p class="card-text small text-muted">Content licensed <a target="_blank" class="text-dark" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a> from <a target="_blank" class="text-dark" href="https://en.wikipedia.org/w/index.php?search=<?php echo $currentURL[4]; ?>">Wikipedia</a>.</p>
+					</div>
+				</div> <?php } } ?>
 				<div class="card mb-4">
 					<div class="card-body">
 						<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Community Page</h4>
