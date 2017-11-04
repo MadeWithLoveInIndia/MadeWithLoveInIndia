@@ -235,6 +235,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuiZevIb1G87KAoLRSECEdWNBQ06JCMjU&libraries=places&callback=initMap" async defer></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
+		<script src="/assets/js/download.js"></script>
 		<script>
 			// $(".startup-image img").on("load", function() {
 			// 	var vibrant = new Vibrant($(".startup-image img")[0]);

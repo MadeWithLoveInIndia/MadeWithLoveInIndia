@@ -287,7 +287,19 @@
 										</div>
 									</div>
 								</a>', boolify($profile["badge_addedbadge"])); ?>
-								<?php if (!(boolify($profile["badge_offers"]) || boolify($profile["badge_newsworthy"]) || boolify($profile["badge_featured"]) || boolify($profile["badge_addedbadge"]))) { ?>
+								<?php display('<a href="#" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-checkmark bg-success"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Verified Startup</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify($profile["badge_verified"])); ?>
+								<?php if (!(boolify($profile["badge_offers"]) || boolify($profile["badge_verified"]) || boolify($profile["badge_newsworthy"]) || boolify($profile["badge_featured"]) || boolify($profile["badge_addedbadge"]))) { ?>
 								<div class="text-center p-4 text-muted">
 									<?php display('<h4 class="h6">%s has not earned any badges so far.</h4>', $profile["name"]) ?>
 									<p>Want to learn how to earn badges? <a href="#">Get started now!</a></p>
@@ -449,13 +461,13 @@
 								<?php } ?>
 							</div>
 						</div>
-						<?php display('<div class="card mb-4">
+						<?php display('<div class="card mb-4"><span style="display: none">%s</span>
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Community Page</h4>
-								<p class="card-text">This profile is owned by the community. To modify or add to the information, you can <a href="#">suggest a change</a> or <a href="#">claim this page</a>.</p>
+								<p class="card-text">This profile is owned by the community. To modify or add to the information, you can <a href="#">suggest a change</a> or <a href="/claim/%s">claim this page</a>.</p>
 								<p class="card-text small text-muted">This page is not affiliated with or endorsed by anyone associated with the topic.</p>
 							</div>
-						</div>', boolify(!$profile["badge_verified"])); ?>
+						</div>', boolify(!$profile["badge_verified"]), $profile["name"]); ?>
 						<?php display('<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Verified Page</h4>

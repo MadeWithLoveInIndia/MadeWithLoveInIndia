@@ -12,6 +12,29 @@
 
 	$page = $currentURL[5];
 	$type = $currentURL[4];
+	$sort = str_replace("sort=", "", explode("?", $_SERVER[REQUEST_URI])[1]);
+	if (!$sort) {
+		$sort = "oldest";
+		$suffix = null;
+	} else {
+		$suffix = "?sort=" . $sort;
+		$page = explode("?", $page)[0];
+		$currentURL[5] = explode("?", $currentURL[5])[0];
+	}
+	switch ($sort) {
+		case "recent":
+			$orderBy = "id DESC";
+			break;
+		case "az":
+			$orderBy = "name ASC";
+			break;
+		case "za":
+			$orderBy = "name DESC";
+			break;
+		default:
+			$orderBy = "id ASC";
+			break;
+	}
 	
 	$title = null;
 	if ($type == "all") {
@@ -29,30 +52,30 @@
 	if ($type == "all") { $type = "startups"; }
 
 	if ($currentURL[4] == "all") {
-		$startups = DB::query("SELECT * FROM startups LIMIT %d OFFSET %d", $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$startups = DB::query("SELECT * FROM startups ORDER BY $orderBy LIMIT %d OFFSET %d", $startupsPerPage, ($page - 1) * $startupsPerPage);
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups")["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else if ($currentURL[3] == "industry") {
-		$startups = DB::query("SELECT * FROM startups WHERE industry LIKE %ss LIMIT %d OFFSET %d", unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$startups = DB::query("SELECT * FROM startups WHERE industry LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE industry LIKE %ss", unurlify($currentURL[4]))["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else {
-		$startups = DB::query("SELECT * FROM startups WHERE tag1 LIKE %ss LIMIT %d OFFSET %d", $currentURL[4], $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$startups = DB::query("SELECT * FROM startups WHERE tag1 LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", $currentURL[4], $startupsPerPage, ($page - 1) * $startupsPerPage);
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE tag1 LIKE %ss", $currentURL[4])["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	}
 
-	// if ($page < 1 || $page > $nPages) {
-	// 	header("Location: /404");
-	// }
+	if ($page < 1 || $page > $nPages) {
+		header("Location: /404");
+	}
 
 	$nextLink = null;
 	$prevLink = null;
 	if ($page < $nPages) {
-		$nextLink = "/$currentURL[3]/$currentURL[4]/" . ($page + 1);
+		$nextLink = "/$currentURL[3]/$currentURL[4]/" . ($page + 1) . $suffix;
 	}
 	if ($page > 1) {
-		$prevLink = "/$currentURL[3]/$currentURL[4]/" . ($page - 1);
+		$prevLink = "/$currentURL[3]/$currentURL[4]/" . ($page - 1) . $suffix;
 	}
 
 	getHeader(null, $title, $nextLink, $prevLink);
@@ -83,11 +106,11 @@
 				<div class="card mb-4">
 					<div class="card-body pb-1">
 						<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><?php echo $title; ?></h4>
-						<select class="form-control absolute-select">
-							<option>Oldest First</option>
-							<option>Most Recent First</option>
-							<option>A to Z</option>
-							<option>Z to A</option>
+						<select class="form-control absolute-select" onchange="window.location.href = '<?php echo "/$currentURL[3]/$currentURL[4]/$currentURL[5]"; ?>' + this.value">
+							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=oldest") { echo " selected"; } ?> value="?sort=oldest">Oldest First</option>
+							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=recent") { echo " selected"; } ?> value="?sort=recent">Most Recent First</option>
+							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=az") { echo " selected"; } ?> value="?sort=az">A to Z</option>
+							<option<?php if ("?" . explode("?", $_SERVER[REQUEST_URI])[1] == "?sort=za") { echo " selected"; } ?> value="?sort=za">Z to A</option>
 						</select>
 					</div>
 					<div class="list-group">
@@ -129,22 +152,22 @@
 						</li><?php } ?>
 						<?php if ($nPages > 3) { ?>
 							<?php if ($page == 3) { ?>
-								<li><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4]; ?>"><?php echo 1; ?></a></li>
+								<li><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4] . "/1" . $suffix; ?>"><?php echo 1; ?></a></li>
 							<?php } ?>
 							<?php if ($page > 3) { ?>
-								<li><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4]; ?>"><?php echo 1; ?></a></li>
+								<li><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4] . "/1" . $suffix; ?>"><?php echo 1; ?></a></li>
 								<li>&nbsp;&nbsp;&nbsp;&middot; &middot; &middot;&nbsp;&nbsp;&nbsp;</li>
 							<?php } ?>
 							<?php for ($x = max($page - 2, 0); $x < min($page + 2, $nPages); $x++) { ?>
-							<li<?php if ($x + 1 == $page) { echo " class='active'"; } ?>><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4]; ?>/<?php echo $x + 1; ?>"><?php echo ($x + 1); ?></a></li>
+							<li<?php if ($x + 1 == $page) { echo " class='active'"; } ?>><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4]; ?>/<?php echo ($x + 1) . $suffix; ?>"><?php echo ($x + 1); ?></a></li>
 							<?php } ?>
 							<?php if ($page < $nPages - 2) { ?>
 								<li>&nbsp;&nbsp;&nbsp;&middot; &middot; &middot;&nbsp;&nbsp;&nbsp;</li>
-								<li><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4]; ?>/<?php echo $nPages; ?>"><?php echo ($nPages); ?></a></li>
+								<li><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4]; ?>/<?php echo $nPages . $suffix; ?>"><?php echo ($nPages); ?></a></li>
 							<?php } ?>
 						<?php } else { ?>
 						<?php for ($x = 0; $x < $nPages; $x++) { ?>
-						<li<?php if ($x + 1 == $page) { echo " class='active'"; } ?>><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4]; ?>/<?php echo $x + 1; ?>"><?php echo ($x + 1); ?></a></li>
+						<li<?php if ($x + 1 == $page) { echo " class='active'"; } ?>><a href="/<?php echo $currentURL[3]; ?>/<?php echo $currentURL[4]; ?>/<?php echo ($x + 1) . $suffix; ?>"><?php echo ($x + 1); ?></a></li>
 						<?php } } ?>
 						<?php if ($nextLink) { ?><li>
 							<a href="<?php echo $nextLink; ?>"><i class="ion ion-ios-arrow-forward"></i></a>
