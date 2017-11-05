@@ -315,3 +315,14 @@ a.card {
 	width: auto;
 	border: none;
 }
+
+.easy-autocomplete {
+	width: auto !important;
+}
+
+.easy-autocomplete-container ul li div {
+	display: flex !important;
+}
+.easy-autocomplete-container ul li div.startup-info {
+	display: block !important;
+}

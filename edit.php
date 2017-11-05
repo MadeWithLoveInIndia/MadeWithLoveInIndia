@@ -53,7 +53,10 @@
 				]);
 			}
 		}
-		$startup = DB::queryFirstRow("SELECT * FROM startups WHERE slug=%s", $currentURL[4]);
+		$startup = DB::queryFirstRow("SELECT * FROM startups WHERE slug=%s", $_POST["slug"]);
+		if ($startup["slug"] != $currentURL[4]) {
+			header("Location: /edit/" . $startup["slug"]);
+		}
 	}
 	getHeader("Page", "Edit " . $startup["name"]);
 ?>
@@ -89,7 +92,7 @@
 								<div class="form-group">
 									<label for="slug">Startup Username</label>
 									<div class="input-group">
-										<span class="input-group-addon" id="basic-addon3">madewithlove.org.in/</span>
+										<span class="input-group-addon" id="basic-addon3">madewithlove.org.in/startup/</span>
 										<input type="slug" class="form-control" name="slug" id="slug" placeholder="Enter your startup slug" value="<?php echo $startup["slug"]; ?>" aria-describedby="slugHelp" required>
 									</div>
 									<small id="slugHelp" class="form-text text-muted">For SEO purposes, we don&rsquo;t recommend changing this username.</small>
@@ -307,6 +310,47 @@
 									<input type="url" class="form-control" name="publication_link" id="publication_link" placeholder="Enter the link to the story">
 								</div>
 								<button class="btn btn-secondary" type="submit">Add Story</button>
+							</div>
+						</div>
+						<div class="card" style="overflow: visible; height: 100vh">
+							<div class="card-header" role="tab" id="headingFive">
+								<h5 class="mb-0">
+									<a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+										Founders
+									</a>
+								</h5>
+							</div>
+							<div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+								<div class="card-body">
+									<div class="form-group">
+										<label for="founder1">Founder 1</label>
+										<input type="text" class="form-control userAutocomplete" name="founder1" id="founder1" placeholder="Enter a founder" value="<?php echo $startup["founder1"]; ?>">
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="form-group">
+										<label for="founder2">Founder 2</label>
+										<input type="text" class="form-control userAutocomplete" name="founder2" id="founder2" placeholder="Enter a founder" value="<?php echo $startup["founder2"]; ?>">
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="form-group">
+										<label for="founder3">Founder 3</label>
+										<input type="text" class="form-control userAutocomplete" name="founder3" id="founder3" placeholder="Enter a founder" value="<?php echo $startup["founder3"]; ?>">
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="form-group">
+										<label for="founder4">Founder 4</label>
+										<input type="text" class="form-control userAutocomplete" name="founder4" id="founder4" placeholder="Enter a founder" value="<?php echo $startup["founder4"]; ?>">
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="form-group">
+										<label for="founder5">Founder 5</label>
+										<input type="text" class="form-control userAutocomplete" name="founder5" id="founder5" placeholder="Enter a founder" value="<?php echo $startup["founder5"]; ?>">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

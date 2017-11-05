@@ -37,21 +37,35 @@
 	}
 	
 	$title = null;
-	if ($type == "all") {
+	$typeTitle = null;
+	if ($currentURL[3] == "people") {
+		$title = "People";
+		$typeTitle = "People";
+	} else if ($currentURL[3] == "search") {
+		$title = unurlify($currentURL[4]) . " Startups";
+		$typeTitle = "Startups";
+	} else if ($type == "all") {
 		$title = "Startups";
-		if ($page > 1) {
-			$title .= " (Page $page)";
-		}
+		$typeTitle = "Startups";
 	} else {
 		$title = unurlify($currentURL[4]) . " Startups";
-		if ($page > 1) {
-			$title .= " (Page $page)";
-		}
+	}
+	if ($page > 1) {
+		$title .= " (Page $page)";
 	}
 
 	if ($type == "all") { $type = "startups"; }
 
-	if ($currentURL[4] == "all") {
+	if ($currentURL[3] == "people") {
+		if ($currentURL[4] == "all") {
+			$startups = DB::query("SELECT * FROM users ORDER BY $orderBy LIMIT %d OFFSET %d", $startupsPerPage, ($page - 1) * $startupsPerPage);
+			$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM users")["a"]);
+		} else {
+			$startups = DB::query("SELECT * FROM users WHERE name LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
+			$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM users WHERE name LIKE %ss", unurlify($currentURL[4]))["a"]);
+		}
+		$nPages = ceil($nStartups / $startupsPerPage);
+	} else if ($currentURL[4] == "all") {
 		$startups = DB::query("SELECT * FROM startups ORDER BY $orderBy LIMIT %d OFFSET %d", $startupsPerPage, ($page - 1) * $startupsPerPage);
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups")["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
@@ -82,14 +96,14 @@
 		$prevLink = "/$currentURL[3]/$currentURL[4]/" . ($page - 1) . $suffix;
 	}
 
-	getHeader(null, $title, $nextLink, $prevLink);
+	getHeader($typeTitle, $title, $nextLink, $prevLink);
 
 ?>
 <main id="content" class="pt-4 pb-4">
 	<div class="container">
 		<div class="row">
 			<div class="col-md">
-				<?php if ($currentURL[4] != "all" && $currentURL[3] != "search" && $nStartups > 0) { ?><div class="card card-body city-card mb-4">
+				<?php if ($currentURL[4] != "all" && $currentURL[3] != "search" && $nStartups > 0 && $currentURL[3] != "people") { ?><div class="card card-body city-card mb-4">
 					<div class="before" style="background-image: url('/assets/uploads/cities/4f4b914d6db35e19101ff003c4e7ea3a_<?php echo slugify($currentURL[4]); ?>.jpg')">
 						<span class="no-opacity">There are <?php echo $nStartups; ?> startups in New Delhi on Made with Love in India. Find and connect with Made in India startups, founders, and programs.</span>
 					</div>
@@ -120,6 +134,26 @@
 					<div class="list-group">
 						<?php
 						for ($i = 0; $i < sizeof($startups); $i++) { if ($startups[$i]) { ?>
+						<?php if ($currentURL[3] == "people") { ?>
+						<a href="/profile/<?php echo urlify($startups[$i]["username"]); ?>" class="list-group-item list-group-item-action p-4">
+							<div class="d-flex flex-row">
+								<div class="startup-image mr-3">
+									<img class="rounded-circle" alt="Anand Chowdhary" src="<?php echo avatarUrl($startups[$i]["email"]); ?>">
+								</div>
+								<div class="startup-info">
+									<h3 class="h5 mb-1">
+										<?php display('<span>%s</span>', $startups[$i]["name"]); ?>
+									</h3>
+									<?php display('<p class="text-muted mb-1">%s</p>', $startups[$i]["shortbio"]); ?>
+									<div class="startup-tags">
+										<?php display('<span class="badge badge-light">%s</span>', $startups[$i]["city"]); ?>
+										<?php display('<span class="badge badge-light">%s</span>', json_decode($startups[$i]["hobbies"])[0]); ?>
+										<?php display('<span class="badge badge-light">%s</span>', json_decode($startups[$i]["hobbies"])[1]); ?>
+									</div>
+								</div>
+							</div>
+						</a>
+						<?php } else { ?>
 						<a href="/startup/<?php echo urlify($startups[$i]["slug"]); ?>" class="list-group-item list-group-item-action p-4">
 							<div class="d-flex flex-row">
 								<div class="startup-image mr-3">
@@ -141,7 +175,7 @@
 								</div>
 							</div>
 						</a>
-						<?php } } if (sizeof($startups) == 0) { ?>
+						<?php } } } if (sizeof($startups) == 0) { ?>
 						<div class="text-muted text-center p-4">
 							<h4 class="h6">There are no startups listed.</h4>
 							<p>Know of a startup? <a href="#">Tell us</a>.</p>
@@ -180,14 +214,25 @@
 					<?php } ?>
 			</div>
 			<div class="col-md-4">
+				<?php if ($currentURL[3] == "people") { ?>
+				<form action="/people" onsubmit="window.location.href = '/people/' + encodeURIComponent(document.querySelector('.searchinput').value); return false" class="mb-4">
+					<div class="input-group">
+						<input type="text" class="form-control searchinput border-secondary" placeholder="Search for people..." value="<?php echo urldecode($currentURL[4]) === "all" || $currentURL[3] != "people" ? "" : urldecode($currentURL[4]); ?>"<?php echo $currentURL[3] == "people" ? "autofocus" : ""; ?>>
+						<span class="input-group-btn">
+							<button class="btn border-secondary border-left-0" type="submit"><i class="ion ion-md-search" aria-label="Search"></i></button>
+						</span>
+					</div>
+				</form>	
+				<?php } else { ?>
 				<form onsubmit="window.location.href = '/search/' + encodeURIComponent(document.querySelector('.searchinput').value); return false" class="mb-4">
-				<div class="input-group">
-					<input type="text" class="form-control searchinput border-secondary" placeholder="Search for startups..." value="<?php echo urldecode($currentURL[4]) === "all" || $currentURL[3] != "search" ? "" : urldecode($currentURL[4]); ?>"<?php echo $currentURL[3] == "search" ? "autofocus" : ""; ?>>
-					<span class="input-group-btn">
-						<button class="btn border-secondary border-left-0" type="submit"><i class="ion ion-md-search" aria-label="Search"></i></button>
-					</span>
-				</div>
-			</form>
+					<div class="input-group">
+						<input type="text" class="form-control searchinput border-secondary" placeholder="Search for startups..." value="<?php echo urldecode($currentURL[4]) === "all" || $currentURL[3] != "search" ? "" : urldecode($currentURL[4]); ?>"<?php echo $currentURL[3] == "search" ? "autofocus" : ""; ?>>
+						<span class="input-group-btn">
+							<button class="btn border-secondary border-left-0" type="submit"><i class="ion ion-md-search" aria-label="Search"></i></button>
+						</span>
+					</div>
+				</form>
+				<?php } ?>
 				<div class="card mb-4">
 					<div class="card-body">
 						<?php display('<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Share%s %s%s</h4>', $type == "city" ? " Startups in " : " ", $city["name"], $type == "city" ? "" : " Startups"); ?>

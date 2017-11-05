@@ -20,6 +20,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/api\/people.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/people.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/css\/design.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -606,6 +615,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/aizawl.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12022,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/aizawl.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/aizawl.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/all.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -624,6 +644,17 @@
 		"initialSize": 7397,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/analytics.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/analytics.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/anand.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5819,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/anand.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/anand.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -683,6 +714,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/central-university-of-orissa-koraput-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10637,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/central-university-of-orissa-koraput-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/central-university-of-orissa-koraput-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/central-university-of-south-bihar-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13738,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/central-university-of-south-bihar-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/central-university-of-south-bihar-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/chandigarh.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -690,6 +743,17 @@
 		"initialSize": 5099,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/chandigarh.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/chandigarh.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/chaudhary-charan-singh-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10390,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/chaudhary-charan-singh-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/chaudhary-charan-singh-university-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -925,6 +989,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/gaya.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8222,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/gaya.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/gaya.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/ghaziabad.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1002,6 +1077,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/indira-gandhi-national-open-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6551,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/indira-gandhi-national-open-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/indira-gandhi-national-open-university-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/indira-gandhi-national-tribal-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11921,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/indira-gandhi-national-tribal-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/indira-gandhi-national-tribal-university-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/information-services.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1031,6 +1128,17 @@
 		"initialSize": 12302,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/jaipur.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/jaipur.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/jamia-millia-islamia-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11906,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/jamia-millia-islamia-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/jamia-millia-islamia-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1079,6 +1187,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/madhya-pradesh-bhoj-open-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6173,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/madhya-pradesh-bhoj-open-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/madhya-pradesh-bhoj-open-university-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/madurai.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1097,6 +1216,17 @@
 		"initialSize": 7039,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/manipal.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/manipal.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mizoram-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13702,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mizoram-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mizoram-university-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1453,6 +1583,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/sikkim-manipal-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4866,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/sikkim-manipal-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/sikkim-manipal-university-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/social-media.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1541,6 +1682,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/university-of-allahabad-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17797,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-allahabad-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-allahabad-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/university-of-twente-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1548,6 +1700,17 @@
 		"initialSize": 6030,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-twente-square-logo.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-twente-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/uttar-pradesh-technical-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13935,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/uttar-pradesh-technical-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/uttar-pradesh-technical-university-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3028,6 +3191,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/search.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/settings.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/settings.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

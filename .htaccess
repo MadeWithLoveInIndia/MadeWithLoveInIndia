@@ -11,9 +11,11 @@ RewriteRule ^assets/uploads/logo/(.*)$ iconify.php?q=$1
 RewriteRule ^startup/(.*)$ startup.php?slug=$1
 RewriteRule ^profile/(.*)$ profile.php?username=$1
 
+RewriteRule ^people search.php
 RewriteRule ^startups search.php
 RewriteRule ^industry/(.*)$ search.php?page=$1
 RewriteRule ^startups/(.*)$ search.php?page=$1
+RewriteRule ^people/(.*)$ search.php?page=$1
 RewriteRule ^search/(.*)$ search.php?page=$1
 
 RewriteRule ^city/(.*)$ list.php?slug=$1&type=city

@@ -23,13 +23,13 @@
 									<div class="col-md ml-2 text-white d-flex align-items-center">
 										<header>
 											<?php display('<h2 class="h4 mb-2">%s</h2>', $profile["name"]); ?>
-											<?php display('<p class="h6 mb-0">CEO, Oswald Foundation</p>', $profile["shortbio"]); ?>
+											<?php display('<p class="h6 mb-0">%s</p>', $profile["shortbio"]); ?>
 										</header>
 									</div>
 									<div class="col-md-2 d-flex align-items-center flex-row-reverse profile-links">
-										<?php display('<a target="_blank" title="LinkedIn profile" href="%s"><i class="ion ion-logo-linkedin"></i></a>', socialMediaLink($profile["link_linkedin"])); ?>
-										<?php display('<a target="_blank" title="Facebook profile" href="%s"><i class="ion ion-logo-facebook"></i></a>', socialMediaLink($profile["link_facebook"])); ?>
-										<?php display('<a target="_blank" title="Twitter profile" href="%s"><i class="ion ion-logo-twitter"></i></a>', socialMediaLink($profile["link_twitter"])); ?>
+										<?php display('<a target="_blank" title="LinkedIn profile" href="%s"><i class="ion ion-logo-linkedin"></i></a>', "https://www.linkedin.com/in/" . ($profile["link_linkedin"] . "/")); ?>
+										<?php display('<a target="_blank" title="Facebook profile" href="%s"><i class="ion ion-logo-facebook"></i></a>', "https://www.facebook.com/" . ($profile["link_facebook"])); ?>
+										<?php display('<a target="_blank" title="Twitter profile" href="%s"><i class="ion ion-logo-twitter"></i></a>', "https://twitter.com/" . ($profile["link_twitter"])); ?>
 									</div>
 								</div>
 							</div>
@@ -92,7 +92,7 @@
 												</div>
 											</div>
 										</div>
-									</a>', urlify($profile["university" . ($i + 1)]), md5($profile["university" . ($i + 1)]), slugify($profile["university" . ($i + 1)]), $profile["university" . ($i + 1)], $profile["course" . ($i + 1)]);
+									</a>', urlencode($profile["university" . ($i + 1)]), md5($profile["university" . ($i + 1)]), slugify($profile["university" . ($i + 1)]), $profile["university" . ($i + 1)], $profile["course" . ($i + 1)]);
 								} if ($nUnis == 0) { ?>
 								<div class="text-muted text-center p-4">
 									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not added his education.</h4>
@@ -102,11 +102,16 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<a href="#" class="btn btn-primary btn-block btn-visit-website text-left p-3 mb-4">
+						<?php if (isset($_SESSION["user"])) { display('<span style="display: none">%s</span><a href="/settings" class="btn btn-danger btn-block btn-visit-website text-left p-3 mb-3">
+							<div class="text-truncate">Edit Your Profile</div>
+							<div class="text-lighter small mt-1 text-truncate">Only you can see this</div>
+							<i class="ion ion-md-create text-lighter"></i>
+						</a>', boolify($profile["id"] == $_SESSION["user"]["id"])); } ?>
+						<!-- <a href="#" class="btn btn-primary btn-block btn-visit-website text-left p-3 mb-4">
 							<div>Message <?php echo explode(" ", $profile["name"])[0]; ?></div>
 							<div class="text-lighter small mt-1">Available for messages</div>
 							<i class="ion ion-md-arrow-forward text-lighter"></i>
-						</a>
+						</a> -->
 						<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Share Profile</h4>

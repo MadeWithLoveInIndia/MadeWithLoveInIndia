@@ -11,7 +11,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 				$title = null;
 			}
 		} else if ($cat == "People") {
-			$title .= "&rsquo;s Profile";
+			// $title .= "&rsquo;s Profile";
 		}
 		if (isset($title)) {
 			$title .= " &middot; Made with Love in India";
@@ -104,6 +104,10 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
 							<a class="nav-link" href="/cities">Cities</a>
 						</li>
+						<?php $listItem = "People"; ?>
+						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
+							<a class="nav-link" href="/people">People</a>
+						</li>
 						<?php $listItem = "About"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
 							<a class="nav-link" href="/about">About</a>
@@ -124,6 +128,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 								<a class="dropdown-item" href="/badges">Badges</a>
 								<a class="dropdown-item" href="/industries">Industries</a>
 								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/settings">Settings</a>
 								<a class="dropdown-item" href="<?php echo "/logout?returnto=$_SERVER[REQUEST_URI]"; ?>">Logout</a>
 							</div>
 						</li>
@@ -132,7 +137,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 					<ul class="navbar-nav">
 						<?php $listItem = "Login"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
-							<a class="nav-link" href="/login">Login</a>
+							<a class="nav-link" href="<?php echo "/login?returnto=$_SERVER[REQUEST_URI]"; ?>">Login</a>
 						</li>
 						<?php $listItem = "Register"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
@@ -167,7 +172,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 							<p>If you use the <em>Made with Love in India</em> badge in your startup&rsquo;s website or products, submit it and get featured on our platform.</p>
 							<p>Copy and paste the following code in your footer:</p>
 							<input data-placement="top" title="Copied!" data-clipboard-target="#joinCode" id="joinCode" class="form-control mt-2" onclick="this.setSelectionRange(0, this.value.length)" readonly type="text" value='&lt;a href="https://madewithlove.org.in" target="_blank"&gt;Made with &lt;span style="color: #e74c3c"&gt;&amp;hearts;&lt;/span&gt; in India&lt;/a&gt;'>
-							<a href="#" class="btn btn-outline-danger mt-3">Submit Startup <i class="ion ion-md-arrow-forward ml-1"></i></a>
+							<a href="/submit" class="btn btn-outline-danger mt-3">Submit Startup <i class="ion ion-md-arrow-forward ml-1"></i></a>
 						</div>
 					</div>
 				</div>
@@ -232,6 +237,15 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 					}
 					var autocomplete = new google.maps.places.Autocomplete($(".cityAutoComplete")[0], options);
 				}
+				initMap2();
+			}
+			function initMap2() {
+				if ($(".schoolAutoComplete")[0]) {
+					var options = {
+						types: ["establishment"],
+					}
+					var autocomplete = new google.maps.places.Autocomplete($(".schoolAutoComplete")[0], options);
+				}
 			}
 		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
@@ -270,6 +284,50 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 					$("form").submit();
 				});
 			}
+		</script>
+
+		<script>
+			(function () {
+				var options = {
+					url: function(q) {
+						return "api/people?q=" + q;
+					},
+					getValue: "id",
+					cssClasses: "sheroes",
+					// template: {
+					// 	type: "iconLeft",
+					// 	fields: {
+					// 		iconSrc: "icon"
+					// 	}
+					// },
+					template: {
+						type: "custom",
+						method: function(value, item) {
+							return '<div class="row">' + 
+								'<div class="startup-image ml-3 mr-3">' + 
+									'<img class="rounded-circle" alt="Anand Chowdhary" src="' + item.icon + '" style="height: 50px; width: 50px">' +
+								'</div>' + 
+								'<div class="startup-info col">' + 
+									'<h3 class="h5 mb-1" style="width: 100%">' + item.name + '</h3>' + 
+									'<p class="text-muted mb-1" style="width: 100%">' + item.shortbio + '</p>' +
+								'</div>' + 
+							'</div>';
+						}
+					},
+					list: {
+						onChooseEvent: function(x) {
+							console.log(x);
+						},
+						showAnimation: {
+							type: "slide"
+						},
+						hideAnimation: {
+							type: "slide"
+						}
+					}
+				};
+				$(".userAutocomplete").easyAutocomplete(options);
+			})();
 		</script>
 
 	</body>

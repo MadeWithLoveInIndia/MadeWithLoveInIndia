@@ -33,7 +33,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md" style="max-width: 713px">
-						<?php display('<div class="card card-body mb-4">
+						<?php display('<div class="card mb-4">
 							<img alt="" src="/assets/uploads/screenshot/%s_%s.jpg">
 						</div>', md5($profile["slug"]), $profile["slug"]); ?>
 						<div class="card mb-4">
@@ -373,47 +373,47 @@
 													<td style="vertical-align: top">Profiles</td>
 													<td>
 														<?php display('<div>
-															<a target="_blank" href="%s">
+															<a target="_blank" href="https://www.facebook.com/%s">
 																<i class="ion ion-logo-facebook larger-icon text-dark fixed-width-icon"></i>
 																<span>Facebook</span>
 															</a>
-														</div>', socialMediaLink($profile["link_facebook"])); ?>
+														</div>', ($profile["link_facebook"])); ?>
 														<?php display('<div>
-															<a target="_blank" href="%s">
+															<a target="_blank" href="https://twitter.com/%s">
 																<i class="ion ion-logo-twitter larger-icon text-dark fixed-width-icon"></i>
 																<span>Twitter</span>
 															</a>
-														</div>', socialMediaLink($profile["link_twitter"])); ?>
+														</div>', ($profile["link_twitter"])); ?>
 														<?php display('<div>
-															<a target="_blank" href="%s">
+															<a target="_blank" href="https://plus.google.com/+%s">
 																<i class="ion ion-logo-googleplus larger-icon text-dark fixed-width-icon"></i>
 																<span>Google+</span>
 															</a>
-														</div>', socialMediaLink($profile["link_googleplus"])); ?>
+														</div>', ($profile["link_googleplus"])); ?>
 														<?php display('<div>
-															<a target="_blank" href="%s">
+															<a target="_blank" href="https://www.linkedin.com/company/%s">
 																<i class="ion ion-logo-linkedin larger-icon text-dark fixed-width-icon"></i>
 																<span>LinkedIn</span>
 															</a>
-														</div>', socialMediaLink($profile["link_linkedin"])); ?>
+														</div>', ($profile["link_linkedin"])); ?>
 														<?php display('<div>
-															<a target="_blank" href="%s">
+															<a target="_blank" href="https://www.youtube.com/user/%s">
 																<i class="ion ion-logo-youtube larger-icon text-dark fixed-width-icon"></i>
 																<span>YouTube</span>
 															</a>
-														</div>', socialMediaLink($profile["link_youtube"])); ?>
+														</div>', ($profile["link_youtube"])); ?>
 														<?php display('<div>
-															<a target="_blank" href="%s">
+															<a target="_blank" href="https://www.f6s.com/%s">
 																<i class="ion ion-md-link larger-icon text-dark fixed-width-icon"></i>
 																<span>F6S</span>
 															</a>
-														</div>', socialMediaLink($profile["link_f6s"])); ?>
+														</div>', ($profile["link_f6s"])); ?>
 														<?php display('<div>
-															<a target="_blank" href="%s">
+															<a target="_blank" href="https://angel.co/%s">
 																<i class="ion ion-md-link larger-icon text-dark fixed-width-icon"></i>
 																<span>AngelList</span>
 															</a>
-														</div>', socialMediaLink($profile["link_angellist"])); ?>
+														</div>', ($profile["link_angellist"])); ?>
 													</td>
 												</tr>
 												<?php } ?>
