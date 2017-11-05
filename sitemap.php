@@ -43,6 +43,11 @@
 	<?php foreach ($tagsArray as $tag) { ?>
 	<url><loc><?php echo $siteURL; ?>/startups/<?php echo urlencode($tag); ?></loc></url>
 	<?php } ?>
+	<?php foreach (DB::query("SELECT username as a FROM users") as $profile) { if ($profile["a"]) { ?>
+	<url><loc><?php echo $siteURL; ?>/profile/<?php echo urlencode($profile["a"]); ?></loc></url>
+	<url><loc><?php echo $siteURL; ?>/profile/<?php echo urlencode($profile["a"]); ?>/startups</loc></url>
+	<url><loc><?php echo $siteURL; ?>/profile/<?php echo urlencode($profile["a"]); ?>/education</loc></url>
+	<?php } } ?>
 	<?php foreach (DB::query("SELECT university1 as a FROM users GROUP BY university1") as $institute) { if ($institute["a"]) { ?>
 	<url><loc><?php echo $siteURL; ?>/institute/<?php echo urlencode($institute["a"]); ?></loc></url>
 	<?php } } ?>

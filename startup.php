@@ -17,8 +17,36 @@
 		die();
 		exit();
 	}
-	getHeader("Startups", $profile["name"]);
+	if (!$page) {
+		$page = "profile";
+	}
+	if (!$profile || !in_array($page, ["profile", "about", "founders", "news", "lists", "badges"])) {
+		header("HTTP/1.0 404 Not Found");
+		getHeader("Page", "404 Error");
 ?>
+<main id="content" class="pt-4">
+	<div class="container text-center mt-5 mb-5 pb-5">
+		<h1>404 Error</h1>
+		<p>This page doesn't exist.</p>
+	</div>
+</main>
+<?php
+		getFooter();
+		die();
+		exit();
+	}
+	$description = "View the startup profile, founders, and details of " . $profile["name"];
+	if ($profile["tagline"]) {
+		$description .= " (";
+		$description .= $profile["tagline"];
+		$description .= ")";
+	}
+	$description .= " on Made with Love in India";
+	$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
+	getHeader("Startups", $profile["name"], null, null, $description);
+?>
+
+<?php if ($page == "profile") { ?>
 
 		<main id="content" class="pt-4 pb-4">
 			<div class="container">
@@ -53,7 +81,7 @@
 						</div>', md5($profile["slug"]), $profile["slug"]); ?>
 						<div class="card mb-4">
 							<div class="card-body pb-0">
-								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">About</h4>
+								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><a href="/startup/<?php echo $profile["slug"]; ?>/about" class="text-dark">About</a></h4>
 							</div>
 							<div class="card-body pt-3">
 								<?php display('%s', $profile["about"]); ?>
@@ -68,7 +96,7 @@
 						</div>
 						<div class="card mb-4">
 							<div class="card-body pb-1">
-								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Founders</h4>
+								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><a href="/startup/<?php echo $profile["slug"]; ?>/founders" class="text-dark">Founders</a></h4>
 							</div>
 							<div class="list-group">
 								<?php $nFounders = 0; for ($i = 0; $i < 5; $i++) {
@@ -165,7 +193,7 @@
 						</div> -->
 						<div class="card mb-4">
 							<div class="card-body pb-1">
-								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">News</h4>
+								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><a href="/startup/<?php echo $profile["slug"]; ?>/news" class="text-dark">News</a></h4>
 							</div>
 							<?php $news = get3News($profile["id"]);
 							$nNews = getnNews($profile["id"]); ?>
@@ -260,7 +288,7 @@
 						<div class="card mb-4">
 							<div class="card-body pb-1">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller d-flex justify-content-between">
-									<span>Badges Earned</span>
+									<a href="/startup/<?php echo $profile["slug"]; ?>/badges" class="text-dark">Badges Earned</a>
 									<a href="/badges" class="text-muted" data-toggle="tooltip" data-placement="top" title="About Badges">
 										<i class="ion ion-md-help-circle"></i>
 									</a>
@@ -463,7 +491,9 @@
 						<?php } ?>
 						<div class="card mb-4">
 							<div class="card-body pb-1">
-								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Featured in Lists</h4>
+								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">
+									<a href="/startup/<?php echo $profile["slug"]; ?>/lists" class="text-dark">Featured in Lists</a>
+								</h4>
 							</div>
 							<div class="list-group" style="margin-top: -15px">
 							<?php display('<a href="/city/%s" class="list-group-item list-group-item-action">
@@ -536,5 +566,11 @@
 				</div>
 			</div>
 		</main>
+
+		<?php } else { ?>
+
+			this is the else
+
+		<?php } ?>
 
 <?php getFooter(); ?>

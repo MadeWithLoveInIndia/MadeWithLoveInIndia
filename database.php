@@ -1207,16 +1207,34 @@ function listify($ar) {
   return $r;
 }
 
-function sendAnEmail($to, $subject, $body) {
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require "vendor/autoload.php";
+
+function sendAnEmail($to, $subject, $body, $fromName = "Made with Love in India", $replyTo = "hello@madewithlove.org.in") {
   $hostname = "{imap.zoho.com:993/imap/ssl}INBOX";
   $username = "hello@madewithlove.org.in";
   include "emailpassword.php";
-  
-  $inbox = imap_open($hostname,$username,$password) or die("Cannot connect to Email server: " . imap_last_error());
-  
-  imap_mail($to, $subject, $body);
-  
-  imap_close($inbox);
+
+  $mail = new PHPMailer(true);
+  try {
+    $mail->isSMTP();
+    $mail->Host = 'smtp.zoho.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = $username;
+    $mail->Password = $password;
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+    $mail->setFrom('hello@madewithlove.org.in', $fromName);
+    $mail->addAddress($to);
+    $mail->addReplyTo($replyTo, $fromName);
+    $mail->Subject = $subject;
+    $mail->Body = $body;
+    $mail->send();
+  } catch (Exception $e) {
+    // echo 'Message could not be sent.';
+    // echo 'Mailer Error: ' . $mail->ErrorInfo;
+  }
 }
 
 function obfuscate_email($email)

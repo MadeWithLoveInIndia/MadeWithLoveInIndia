@@ -3720,6 +3720,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/composer.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/composer.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/composer-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/data\/cities.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -3900,6 +3911,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
+		},
+	"\/message.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/message.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/mstile-144x144.png": {
 		"fileType": 32768,
@@ -4144,6 +4164,589 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/autoload.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/autoload.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/composer\/autoload_classmap.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/composer\/autoload_classmap.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/composer\/autoload_namespaces.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/composer\/autoload_namespaces.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/composer\/autoload_psr4.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/composer\/autoload_psr4.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/composer\/autoload_real.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/composer\/autoload_real.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/composer\/autoload_static.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/composer\/autoload_static.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/composer\/ClassLoader.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/composer\/ClassLoader.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/composer\/installed.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/composer\/installed.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/vendor\/composer\/installed-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/vendor\/phpmailer\/phpmailer\/composer.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/composer.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/composer-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/vendor\/phpmailer\/phpmailer\/get_oauth_token.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/get_oauth_token.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-am.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-am.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ar.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ar.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-az.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-az.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ba.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ba.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-be.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-be.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-bg.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-bg.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ca.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ca.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ch.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ch.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-cs.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-cs.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-da.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-da.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-de.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-de.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-el.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-el.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-eo.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-eo.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-es.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-es.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-et.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-et.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-fa.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-fa.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-fi.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-fi.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-fo.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-fo.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-fr.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-fr.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-gl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-gl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-he.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-he.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-hr.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-hr.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-hu.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-hu.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-id.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-id.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-it.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-it.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ja.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ja.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ka.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ka.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ko.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ko.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-lt.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-lt.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-lv.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-lv.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ms.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ms.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-nb.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-nb.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-nl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-nl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-pl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-pl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-pt.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-pt.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-pt_br.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-pt_br.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ro.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ro.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-rs.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-rs.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ru.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-ru.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-sk.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-sk.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-sl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-sl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-sv.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-sv.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-tr.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-tr.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-uk.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-uk.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-vi.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-vi.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-zh.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-zh.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-zh_cn.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/language\/phpmailer.lang-zh_cn.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/src\/Exception.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/src\/Exception.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/src\/OAuth.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/src\/OAuth.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/src\/PHPMailer.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/src\/PHPMailer.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/src\/POP3.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/src\/POP3.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/src\/SMTP.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/src\/SMTP.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/phpmailer\/phpmailer\/UPGRADING.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/UPGRADING.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/vendor\/phpmailer\/phpmailer\/UPGRADING.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/verify.php": {
 		"fileType": 8192,

@@ -114,6 +114,16 @@
 											<label for="email">Email</label>
 											<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" value="<?php echo $profile["email"]; ?>" required>
 										</div>
+										<div class="form-group">
+											<label for="picture">Profile Picture</label>
+											<div class="row mt-2">
+												<div class="col-md-2"><div><img class="rounded-circle" alt="" src="<?php echo avatarUrl($profile["email"]); ?>"></div></div>
+												<div class="col">
+													<p class="mb-2">We use your profile picture from <a target="_blank" href="https://en.gravatar.com/">Gravatar</a>. You can visit Gravatar to change your profile picture, and it will automatically be updated here.</p>
+													<p><a target="_blank" href="https://en.gravatar.com/">Change Profile Picture<i class="ion ion-md-arrow-forward ml-2"></i></a></p>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

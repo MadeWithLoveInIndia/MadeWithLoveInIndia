@@ -1,5 +1,5 @@
 <?php
-function getHeader($cat = null, $title = null, $next = null, $prev = null) {
+function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoDescription = null) {
 		if ($cat == "Cities") {
 			$title = "Startups in " . $title;
 		} else if ($cat == "Technologies") {
@@ -18,7 +18,11 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 		} else {
 			$title = "Made with Love in India";
 		}
-		$metaDescription = "Founded in April 2013, the Made with Love in India initiative is a movement to celebrate, promote, and build a brand &mdash; India."
+		$metaDescription = "Founded in April 2013, the Made with Love in India initiative is a movement to celebrate, promote, and build a brand &mdash; India.";
+		if ($seoDescription) {
+			$metaDescription = $seoDescription;
+		}
+		var_dump($metaDescription);
 ?>
 <!doctype html>
 <html lang="en" ng-app="love">

@@ -2,7 +2,11 @@
 	require_once "database.php";
 	include "header.php";
 	$profile = DB::queryFirstRow("SELECT * FROM users WHERE username=%s", $currentURL[4]);
-	if (!$profile) {
+	$page = $currentURL[5];
+	if (!$page) {
+		$page = "profile";
+	}
+	if (!$profile || !in_array($page, ["profile", "startups", "education", "skills", "message"])) {
 		header("HTTP/1.0 404 Not Found");
 		getHeader("Page", "404 Error");
 ?>
@@ -17,10 +21,74 @@
 		die();
 		exit();
 	}
-	getHeader("People", $profile["name"]);
 	$nStartups = getnStartups($profile["id"]);
+	$error = null;
+	if ($page == "message") {
+		if (!isset($_SESSION["user"])) {
+			header("Location: /login?returnto=$_SERVER[REQUEST_URI]&message=Please+log+in+to+message+" . urlencode($profile["name"]) . ".");
+		}
+		if ($_SESSION["user"]["id"] == $profile["id"]) {
+			$error = "You cannot message yourself.";
+		}
+		if ($profile["emailverified"] == 0) {
+			$error = "You cannot message a community profile.";
+		}
+		$title = "Message " . $profile["name"];
+	} else {
+		$title = $profile["name"] . "&rsquo;s " . ucfirst($page);
+	}
+	$description = null;
+	if ($page == "startups") {
+		$description = "View " . $profile["name"] . "&rsquo;s profile and the startups ";
+		$description .= $profile["gender"] == "M" ? "he" : "she";
+		$description .= " founded on Made with Love in India";
+		$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
+		if ($nStartups > 0) {
+			$description .= $profile["gender"] == "M" ? " He" : " She";
+			$description .= " has founded " . $nStartups . " startups.";
+		}
+	} else if ($page == "education") {
+		$description = "View " . $profile["name"] . "&rsquo;s profile and ";
+		$description .= $profile["gender"] == "M" ? "his" : "her";
+		$description .= " education on Made with Love in India";
+		$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
+		if ($profile["university1"]) {
+			$description .= $profile["gender"] == "M" ? " He" : " She";
+			$description .= " studied at " . $profile["university1"];
+			if ($profile["course1"]) {
+				$description .= " (" . $profile["course1"] . ")";
+			}
+			$description .= ".";
+		}
+	} else {
+		$description = "View " . $profile["name"] . "&rsquo;s profile on Made with Love in India.";
+		if ($profile["city"] || $nStartups) {
+			$description .= " " . explode(" ", $profile["name"])[0];
+		}
+		if ($profile["city"]) {
+			$description .= " is from " . $profile["city"];
+		}
+		if ($profile["city"] && $nStartups > 0) {
+			$description .= " and";
+		}
+		if ($nStartups > 0) {
+			$description .= " has founded " . $nStartups . " startups";
+		}
+		$description .= ".";
+		if ($profile["university1"]) {
+			$description .= $profile["gender"] == "M" ? " He" : " She";
+			$description .= " studied at " . $profile["university1"];
+			if ($profile["course1"]) {
+				$description .= " (" . $profile["course1"] . ")";
+			}
+			$description .= ".";
+		}
+		$description .= " Made with Love in India is a movement to celebrate, promote, and build a brand &mdash; India.";
+	}
+	getHeader("People", $title, null, null, $description);
 ?>
 
+		<?php if ($page == "profile") { ?>
 		<main id="content" class="pt-4 pb-4">
 			<div class="container">
 				<?php display('<div class="alert alert-info mb-4">Welcome to your new profile! Please <strong>verify your email</strong> to claim this profile. Otherwise, your profile will display a &ldquo;Community Profile&rdquo; notice.</div>', ($profile["emailverified"] == 0 && $_SESSION["user"]["id"] == $profile["id"])); ?>
@@ -51,7 +119,7 @@
 						</div>
 						<div class="card mb-4">
 							<div class="card-body pb-1">
-								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Startups</h4>
+								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><a href="/profile/<?php echo $profile["username"]; ?>/startups" class="text-dark">Startups</a></h4>
 							</div>
 							<div class="list-group">
 								<?php
@@ -82,14 +150,13 @@
 								<div class="text-muted text-center p-4">
 									<h1><i class="ion ion-ios-briefcase bigger"></i></h1>
 									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not founded any startups yet.</h4>
-									<!-- <p>Do you want to get in touch with <?php echo explode(" ", $profile["name"])[0]; ?>? <a href="#">Message now.</a></p> -->
 								</div>
 								<?php } ?>
 							</div>
 						</div>
 						<div class="card mb-4">
 							<div class="card-body pb-1">
-								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Education</h4>
+							<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><a href="/profile/<?php echo $profile["username"]; ?>/education" class="text-dark">Education</a></h4>
 							</div>
 							<div class="list-group">
 								<?php $nUnis = 0; for ($i = 0; $i < 5; $i++) {
@@ -119,16 +186,16 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<?php if (isset($_SESSION["user"])) { display('<span style="display: none">%s</span><a href="/settings" class="btn btn-danger btn-block btn-visit-website text-left p-3 mb-3">
+						<?php if (isset($_SESSION["user"])) { display('<span style="display: none">%s</span><a href="/settings" class="btn btn-danger btn-block btn-visit-website text-left p-3 mb-4">
 							<div class="text-truncate">Edit Your Profile</div>
 							<div class="text-lighter small mt-1 text-truncate">Only you can see this</div>
 							<i class="ion ion-md-create text-lighter"></i>
 						</a>', boolify($profile["id"] == $_SESSION["user"]["id"])); } ?>
-						<!-- <a href="#" class="btn btn-primary btn-block btn-visit-website text-left p-3 mb-4">
-							<div>Message <?php echo explode(" ", $profile["name"])[0]; ?></div>
+						<?php display('<span style="display: none">%s</span><a href="/profile/%s/message" class="btn btn-primary btn-block btn-visit-website text-left p-3 mb-4">
+							<div>Message %s</div>
 							<div class="text-lighter small mt-1">Available for messages</div>
 							<i class="ion ion-md-arrow-forward text-lighter"></i>
-						</a> -->
+						</a>', $_SESSION["user"]["id"] != $profile["id"] && $profile["emailverified"] == 1, $profile["username"], explode(" ", $profile["name"])[0]); ?>
 						<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Share Profile</h4>
@@ -225,4 +292,131 @@
 			</div>
 		</main>
 
-		<?php getFooter(); ?>
+		<?php } else { ?>
+
+		<main id="content">
+			<div class="container pt-4 mt-4 pb-4">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div class="card card-body profile-card mb-4">
+							<div class="before" style='background-image: url("<?php echo avatarUrl($profile["email"]); ?>")'>
+								<span class="no-opacity">View <?php display('%s', $profile["name"]); ?>'s Profile on Made with Love in India, including startups founded, education, and more.</span>
+							</div>
+							<div class="container">
+								<div class="row">
+									<div class="col-md-3">
+										<a href="/profile/<?php echo $profile["username"]; ?>">
+											<img class="rounded-circle" alt="Anand Chowdhary" src="<?php echo avatarUrl($profile["email"]); ?>"	>
+										</a>
+									</div>
+									<div class="col-md ml-2 text-white d-flex align-items-center">
+										<header>
+											<?php display('<h2 class="h4 mb-2">%s</h2>', $profile["name"]); ?>
+											<?php display('<p class="h6 mb-0"><a href="/profile/%s" class="text-light"><i class="ion ion-md-arrow-back mr-2"></i>%s</a></p>', $profile["username"], "Back to Profile"); ?>
+										</header>
+									</div>
+								</div>
+							</div>
+						</div>
+						<?php if ($error) { ?>
+						<?php display('<div class="alert alert-danger mt-4" role="alert"><strong>Error: </strong>%s</div>', $error); ?>
+						<?php } else { ?>
+						<?php if ($currentURL[5] == "startups") { ?>
+						<div class="card mb-4">
+							<div class="card-body pb-1">
+								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Startups</h4>
+							</div>
+							<div class="list-group">
+								<?php
+								$myStartups = DB::query("SELECT * FROM startups WHERE founder1 = %s OR founder2 = %s OR founder3 = %s OR founder4 = %s OR founder5 = %s", $profile["id"], $profile["id"], $profile["id"], $profile["id"], $profile["id"]);
+								for ($i = 0; $i < sizeof($myStartups); $i++) { if ($myStartups[$i]) { ?>
+								<a href="/startup/<?php echo $myStartups[$i]["slug"]; ?>" class="list-group-item list-group-item-action p-4">
+									<div class="d-flex flex-row">
+										<div class="startup-image mr-3">
+											<?php display('<img alt="%s" src="/assets/uploads/logo/%s_%s.jpg">', $myStartups[$i]["name"], md5($myStartups[$i]["slug"]), $myStartups[$i]["slug"]); ?>
+										</div>
+										<div class="startup-info">
+											<h3 class="h5 mb-1">
+												<?php display('<span>%s</span>', $myStartups[$i]["name"]); ?>
+												<span class="badges">
+													<?php display('<span data-toggle="tooltip" data-placement="top" title="Verified page"><i class="ion ion-md-checkmark-circle ml-1 checkbox-icon text-success"></i></span>', boolify($myStartups[$i]["badge_verified"])); ?>
+												</span>
+											</h3>
+											<?php display('<p class="text-muted mb-1">%s</p>', $myStartups[$i]["tagline"]); ?>
+											<div class="startup-tags">
+												<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["city"]); ?>
+												<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["industry"]); ?>
+												<?php display('<span class="badge badge-light">%s</span>', json_decode($myStartups[$i]["tag1"])[0]); ?>
+											</div>
+										</div>
+									</div>
+								</a>
+								<?php } } if (sizeof($myStartups) == 0) { ?>
+								<div class="text-muted text-center p-4">
+									<h1><i class="ion ion-ios-briefcase bigger"></i></h1>
+									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not founded any startups yet.</h4>
+								</div>
+								<?php } ?>
+							</div>
+						</div>
+						<?php } if ($currentURL[5] == "message") { ?>
+						<div class="card mb-4">
+							<div class="card-body pb-1">
+								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Message</h4>
+								<form class="mt-3 mb-3" action="/message" method="post">
+									<div class="form-group">
+										<label for="email">Your Email</label>
+										<input type="text" class="form-control" value="<?php echo $_SESSION["user"]["email"]; ?>" placeholder="Enter your email" disabled>
+									</div>
+									<div class="form-group">
+										<label for="subject">Subject</label>
+										<input type="text" class="form-control" name="subject" id="subject" placeholder="Enter a subject for this message" required>
+									</div>
+									<div class="form-group">
+										<label for="message">Message</label>
+										<textarea class="form-control" name="message" id="message" placeholder="Enter your message" rows="10" required></textarea>
+									</div>
+									<input type="hidden" name="to" value="<?php echo $profile["id"]; ?>">
+									<div class="g-recaptcha" data-sitekey="6LdExBIUAAAAAPB6nhoIar2LDZQDEpJb2eDCopUu"></div>
+									<button type="submit" class="btn btn-danger mt-3">Send Message</button>
+								</form>
+							</div>
+						</div>
+						<?php } if ($currentURL[5] == "education") { ?>
+						<div class="card mb-4">
+							<div class="card-body pb-1">
+								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Education</h4>
+							</div>
+							<div class="list-group">
+								<?php $nUnis = 0; for ($i = 0; $i < 5; $i++) {
+									if ($profile["university" . $i]) {
+										$nUnis++;
+									}
+									display('<a href="/institute/%s" class="list-group-item list-group-item-action">
+										<div class="d-flex flex-row">
+											<div class="education-image mr-3">
+												<img alt="Startup Name" src="/assets/uploads/institutes/%s_%s.jpg">
+											</div>
+											<div class="startup-info d-flex align-items-center">
+												<div>
+													<h3 class="h6 mb-1">%s</h3>
+													<p class="text-muted mb-1">%s</p>
+												</div>
+											</div>
+										</div>
+									</a>', urlencode($profile["university" . ($i + 1)]), md5($profile["university" . ($i + 1)]), slugify($profile["university" . ($i + 1)]), $profile["university" . ($i + 1)], $profile["course" . ($i + 1)]);
+								} if ($nUnis == 0) { ?>
+								<div class="text-muted text-center p-4">
+									<h1><i class="ion ion-ios-school bigger"></i></h1>
+									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not added <?php echo $profile["gender"] == "M" ? "his" : "her"; ?> education yet.</h4>
+								</div>
+								<?php } ?>
+							</div>
+						</div>
+						<?php } } ?>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<?php } getFooter(); ?>
