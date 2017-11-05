@@ -50,29 +50,24 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 		<link rel="prev" href="<?php echo $prev; ?>">
 		<?php } ?>
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="194x194" href="/assets/icons/favicon-194x194.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-chrome-192x192.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-		<link rel="manifest" href="/manifest.json">
-		<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#f44336">
-		<link rel="shortcut icon" href="/assets/icons/favicon.ico">
-		<meta name="apple-mobile-web-app-title" content="Made with ❤ in India">
-		<meta name="application-name" content="Made with ❤ in India">
-		<meta name="msapplication-TileColor" content="#f44336">
-		<meta name="msapplication-TileImage" content="/assets/icons/mstile-144x144.png">
-		<meta name="msapplication-config" content="/browserconfig.xml">
-		<meta name="theme-color" content="#fafafa">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=ngkxyOrw9y">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=ngkxyOrw9y">
+		<link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png?v=ngkxyOrw9y">
+		<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?v=ngkxyOrw9y">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=ngkxyOrw9y">
+		<link rel="manifest" href="/manifest.json?v=ngkxyOrw9y">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg?v=ngkxyOrw9y" color="#dc3545">
+		<link rel="shortcut icon" href="/favicon.ico?v=ngkxyOrw9y">
+		<meta name="apple-mobile-web-app-title" content="Made with Love in India">
+		<meta name="application-name" content="Made with Love in India">
+		<meta name="msapplication-TileColor" content="#dc3545">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png?v=ngkxyOrw9y">
+		<meta name="theme-color" content="#dc3545">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css" integrity="sha384-+iqgM+tGle5wS+uPwXzIjZS5v6VkqCUV7YQ/e/clzRHAxYbzpUJ+nldylmtBWCP0" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700|Hind:300,400,500,600,700" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/css/design.css">
-
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-		<script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
-		<script src="/app.js"></script> -->
 
 		<script src="https://www.google.com/recaptcha/api.js"></script>
 
@@ -219,116 +214,16 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 			</div>
 		</footer>
 
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-			<script> $(function () {
-				$('[data-toggle="tooltip"]').tooltip();
-			}) </script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuiZevIb1G87KAoLRSECEdWNBQ06JCMjU&libraries=places&callback=initMap" async defer></script>
-		<script>
-			function initMap() {
-				if ($(".cityAutoComplete")[0]) {
-					var options = {
-						types: ["(cities)"],
-						componentRestrictions: {country: "in"}
-					}
-					var autocomplete = new google.maps.places.Autocomplete($(".cityAutoComplete")[0], options);
-				}
-				initMap2();
-			}
-			function initMap2() {
-				if ($(".schoolAutoComplete")[0]) {
-					var options = {
-						types: ["establishment"],
-					}
-					var autocomplete = new google.maps.places.Autocomplete($(".schoolAutoComplete")[0], options);
-				}
-			}
-		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
-		<script src="/assets/js/download.js"></script>
-		<script>
-			// $(".startup-image img").on("load", function() {
-			// 	var vibrant = new Vibrant($(".startup-image img")[0]);
-			// 	var swatches = vibrant.swatches();
-			// 	$(".btn-visit-website").css("background-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
-			// 	$(".btn-visit-website").css("border-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
-			// });
-			var clipboard = new Clipboard("#joinCode");
-			clipboard.on("success", function() {
-				$("#joinCode").attr("data-toggle", "tooltip");
-				$("#joinCode").tooltip();
-				$("#joinCode").tooltip("show");
-			});
-			$("#industry").easyAutocomplete({
-				url: "/assets/json/industries.json"
-			});
-			$("#technology").easyAutocomplete({
-				url: "/assets/json/tech.json"
-			});
-			function addStory() {
-				var publication = $("#publication_name").val();
-				var link = $("#publication_link").val();
-				var startup = $("#publication_startup").val();
-			}
-			function deleteStory(id) {
-				$.get("/addstory.php?id=" + id).always(function() {
-					$("form").submit();
-				});
-			}
-			function refreshShots(id) {
-				$.get("/refreshstory.php?id=" + id).always(function() {
-					$("form").submit();
-				});
-			}
-		</script>
-
-		<script>
-			(function () {
-				var options = {
-					url: function(q) {
-						return "api/people?q=" + q;
-					},
-					getValue: "id",
-					cssClasses: "sheroes",
-					// template: {
-					// 	type: "iconLeft",
-					// 	fields: {
-					// 		iconSrc: "icon"
-					// 	}
-					// },
-					template: {
-						type: "custom",
-						method: function(value, item) {
-							return '<div class="row">' + 
-								'<div class="startup-image ml-3 mr-3">' + 
-									'<img class="rounded-circle" alt="Anand Chowdhary" src="' + item.icon + '" style="height: 50px; width: 50px">' +
-								'</div>' + 
-								'<div class="startup-info col">' + 
-									'<h3 class="h5 mb-1" style="width: 100%">' + item.name + '</h3>' + 
-									'<p class="text-muted mb-1" style="width: 100%">' + item.shortbio + '</p>' +
-								'</div>' + 
-							'</div>';
-						}
-					},
-					list: {
-						onChooseEvent: function(x) {
-							console.log(x);
-						},
-						showAnimation: {
-							type: "slide"
-						},
-						hideAnimation: {
-							type: "slide"
-						}
-					}
-				};
-				$(".userAutocomplete").easyAutocomplete(options);
-			})();
-		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
+		<script src="/assets/js/min/download-min.js"></script>
+		<script src="/assets/js/min/app-min.js"></script>
 
 	</body>
 

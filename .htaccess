@@ -15,6 +15,7 @@ RewriteRule ^people search.php
 RewriteRule ^startups search.php
 RewriteRule ^industry/(.*)$ search.php?page=$1
 RewriteRule ^startups/(.*)$ search.php?page=$1
+RewriteRule ^institute/(.*)$ search.php?page=$1
 RewriteRule ^people/(.*)$ search.php?page=$1
 RewriteRule ^search/(.*)$ search.php?page=$1
 
@@ -23,7 +24,6 @@ RewriteRule ^technology/(.*)$ list.php?slug=$1&type=technology
 RewriteRule ^institute/(.*)$ list.php?slug=$1&type=university
 RewriteRule ^city/(.*)$/(.*)$ list.php?slug=$1&type=city&page=$2
 RewriteRule ^technology/(.*)$/(.*)$ list.php?slug=$1&type=technology&page=$2
-RewriteRule ^institute/(.*)$/(.*)$ list.php?slug=$1&type=university&page=$2
 
 RewriteRule ^sitemap.xml sitemap.php
 

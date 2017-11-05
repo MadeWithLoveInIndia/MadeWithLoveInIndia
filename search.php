@@ -41,6 +41,9 @@
 	if ($currentURL[3] == "people") {
 		$title = "People";
 		$typeTitle = "People";
+	} else if ($currentURL[3] == "institute") {
+		$title = unurlify($currentURL[4]) . " Alums";
+		$typeTitle = "Alums";
 	} else if ($currentURL[3] == "search") {
 		$title = unurlify($currentURL[4]) . " Startups";
 		$typeTitle = "Startups";
@@ -63,6 +66,15 @@
 		} else {
 			$startups = DB::query("SELECT * FROM users WHERE name LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
 			$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM users WHERE name LIKE %ss", unurlify($currentURL[4]))["a"]);
+		}
+		$nPages = ceil($nStartups / $startupsPerPage);
+	} else if ($currentURL[3] == "institute") {
+		if ($currentURL[4] == "all") {
+			$startups = DB::query("SELECT * FROM users ORDER BY $orderBy LIMIT %d OFFSET %d", $startupsPerPage, ($page - 1) * $startupsPerPage);
+			$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM users")["a"]);
+		} else {
+			$startups = DB::query("SELECT * FROM users WHERE university1 LIKE %ss OR university2 LIKE %ss OR university3 LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", unurlify($currentURL[4]), unurlify($currentURL[4]), unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
+			$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM users WHERE university1 LIKE %ss OR university2 LIKE %ss OR university3 LIKE %ss", unurlify($currentURL[4]), unurlify($currentURL[4]), unurlify($currentURL[4]))["a"]);
 		}
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else if ($currentURL[4] == "all") {
@@ -104,18 +116,18 @@
 		<div class="row">
 			<div class="col-md">
 				<?php if ($currentURL[4] != "all" && $currentURL[3] != "search" && $nStartups > 0 && $currentURL[3] != "people") { ?><div class="card card-body city-card mb-4">
-					<div class="before" style="background-image: url('/assets/uploads/cities/4f4b914d6db35e19101ff003c4e7ea3a_<?php echo slugify($currentURL[4]); ?>.jpg')">
-						<span class="no-opacity">There are <?php echo $nStartups; ?> startups in New Delhi on Made with Love in India. Find and connect with Made in India startups, founders, and programs.</span>
+					<div class="before" style="background-image: url('/assets/uploads/<?php echo $currentURL[3] == "institute" ? "institutes" : "cities"; ?>/4f4b914d6db35e19101ff003c4e7ea3a_<?php echo slugify(urldecode($currentURL[4])); ?>.jpg')">
+						<span class="no-opacity">.</span>
 					</div>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-3">
-								<img class="rounded-circle" alt="Startup Name" src="/assets/uploads/cities/4f4b914d6db35e19101ff003c4e7ea3a_<?php echo slugify($currentURL[4]); ?>.jpg">
+								<img class="rounded-circle" alt="Startup Name" src="/assets/uploads/<?php  echo $currentURL[3] == "institute" ? "institutes" : "cities";?>/4f4b914d6db35e19101ff003c4e7ea3a_<?php echo slugify(urldecode($currentURL[4])); ?>.jpg">
 							</div>
 							<div class="col-md ml-2 text-white d-flex align-items-center">
 								<header>
 									<h2 class="h4 mb-0"><?php echo unurlify($currentURL[4]); ?></h2>
-									<p><?php echo $nStartups; ?> startups</p>
+									<p><?php echo $nStartups; ?> <?php echo $typeTitle; ?></p>
 								</header>
 							</div>
 						</div>
@@ -134,7 +146,7 @@
 					<div class="list-group">
 						<?php
 						for ($i = 0; $i < sizeof($startups); $i++) { if ($startups[$i]) { ?>
-						<?php if ($currentURL[3] == "people") { ?>
+						<?php if ($currentURL[3] == "people" || $currentURL[3] == "institute") { ?>
 						<a href="/profile/<?php echo urlify($startups[$i]["username"]); ?>" class="list-group-item list-group-item-action p-4">
 							<div class="d-flex flex-row">
 								<div class="startup-image mr-3">
@@ -277,7 +289,10 @@
 									$info = trim(preg_replace("/\([^)]+\)/","", explode(".", $val->extract)[0])) . ".";
 									$info = str_replace("()", "", $info);
 									$info = str_replace(" ,", ",", $info);
-									if (strpos($info, "From a related word or phrase") == false) {
+									if (strpos($info, "From a related word or phrase") != false) {
+										$info = ".";
+									}
+									if (strpos($info, "This is a redirect from a page that has been moved") != false) {
 										$info = ".";
 									}
 									DB::insert("descriptions", [

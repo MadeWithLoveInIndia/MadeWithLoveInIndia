@@ -135,7 +135,7 @@
 											<select class="form-control" name="founded_day">
 												<option value="">Day</option>
 												<?php for ($day = 1; $day <= 31; $day++) { ?>
-													<option><?php echo $day; ?></option>
+													<option<?php echo $startup["founded_day"] == $day ? " selected" : ""; ?>><?php echo $day; ?></option>
 												<?php } ?>
 											</select>
 										</div>
@@ -143,7 +143,7 @@
 											<select class="form-control" name="founded_month">
 												<option value="">Month</option>
 												<?php foreach (["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] as $monthN => $month) { ?>
-													<option value="<?php echo ($monthN + 1); ?>"><?php echo $month; ?></option>
+													<option<?php echo $startup["founded_month"] == $monthN + 1 ? " selected" : ""; ?> value="<?php echo ($monthN + 1); ?>"><?php echo $month; ?></option>
 												<?php } ?>
 											</select>
 										</div>
@@ -151,7 +151,7 @@
 											<select class="form-control" name="founded_year">
 												<option value="">Year</option>
 												<?php for ($year = 2000; $year <= intval(date("Y")); $year++) { ?>
-													<option><?php echo $year; ?></option>
+													<option<?php echo $startup["founded_year"] == $year ? " selected" : ""; ?>><?php echo $year; ?></option>
 												<?php } ?>
 											</select>
 										</div>
