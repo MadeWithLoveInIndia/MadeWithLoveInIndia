@@ -46,61 +46,29 @@
 		<section>
 			<h2 class="h6 text-uppercase mt-5 mb-3">Recently Featured</h2>
 			<div class="row">
+				<?php
+					$recentlyFeatured = DB::query("SELECT * FROM startups WHERE badge_verified = '1' ORDER BY id DESC LIMIT 3");
+					foreach ($recentlyFeatured as $startup) { ?>
 				<div class="col-md-4 d-flex mb-4 mb-md-0">
-					<a href="/startup/oswald-labs" class="card">
-						<img alt="" class="card-img-top" src="/assets/uploads/cached/screenshots/oswald-labs.png">
+					<a href="/startup/<?php echo $startup["slug"]; ?>" class="card">
+						<?php display('<img alt="%s" src="/assets/uploads/screenshot/%s_%s.jpg" class="card-img-top">', $startup["name"], md5($startup["slug"]), $startup["slug"]); ?>
 						<div class="card-body d-flex flex-column">
 							<h3 class="h5 mb-1">
-								<span>Oswald Labs</span>
+								<?php display('<span>%s</span>', $startup["name"]); ?>
 								<span class="badges">
 									<span data-toggle="tooltip" data-placement="top" title="" data-original-title="Verified page"><i class="ion ion-md-checkmark-circle ml-1 checkbox-icon text-success"></i></span>
 								</span>
 							</h3>
-							<p class="text-muted mb-2">Accessibility technology for the next billion users</p>
+							<?php display('<p class="text-muted mb-2">%s</p>', $startup["tagline"]); ?>
 							<div class="startup-tags mt-auto">
-								<span class="badge badge-light">Delhi</span>
-								<span class="badge badge-light">Accessibility</span>
-								<span class="badge badge-light">Mobile</span>
+								<?php display('<span class="badge badge-light">%s</span>', $startup["city"]); ?>
+								<?php display('<span class="badge badge-light">%s</span>', $startup["industry"]); ?>
+								<?php display('<span class="badge badge-light">%s</span>', json_decode($startup["tag1"])[0]); ?>
 							</div>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4 d-flex mb-4 mb-md-0">
-					<a href="/startup/oswald-labs" class="card">
-						<img alt="" class="card-img-top" src="/assets/uploads/cached/screenshots/undercult.png">
-						<div class="card-body d-flex flex-column">
-							<h3 class="h5 mb-1">
-								<span>Undercult</span>
-								<span class="badges"></span>
-							</h3>
-							<p class="text-muted mb-2">Indie music collective for charity</p>
-							<div class="startup-tags mt-auto">
-								<span class="badge badge-light">Delhi</span>
-								<span class="badge badge-light">Accessibility</span>
-								<span class="badge badge-light">Mobile</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 d-flex mb-4 mb-md-0">
-					<a href="/startup/oswald-labs" class="card">
-						<img alt="" class="card-img-top" src="/assets/uploads/cached/screenshots/flairlift.png">
-						<div class="card-body d-flex flex-column">
-							<h3 class="h5 mb-1">
-								<span>Flairlift</span>
-								<span class="badges">
-									<span data-toggle="tooltip" data-placement="top" title="" data-original-title="Verified page"><i class="ion ion-md-checkmark-circle ml-1 checkbox-icon text-success"></i></span>
-								</span>
-							</h3>
-							<p class="text-muted mb-2">Accessibility technology for the next billion users</p>
-							<div class="startup-tags mt-auto">
-								<span class="badge badge-light">Delhi</span>
-								<span class="badge badge-light">Accessibility</span>
-								<span class="badge badge-light">Mobile</span>
-							</div>
-						</div>
-					</a>
-				</div>
+				<?php } ?>
 			</div>
 		</section>
 		<section>

@@ -2,13 +2,28 @@
 	require_once "database.php";
 	include "header.php";
 	$profile = DB::queryFirstRow("SELECT * FROM users WHERE username=%s", $currentURL[4]);
-	if (!$profile) { header("Location: /404"); }
+	if (!$profile) {
+		header("HTTP/1.0 404 Not Found");
+		getHeader("Page", "404 Error");
+?>
+<main id="content" class="pt-4">
+	<div class="container text-center mt-5 mb-5 pb-5">
+		<h1>404 Error</h1>
+		<p>This page doesn't exist.</p>
+	</div>
+</main>
+<?php
+		getFooter();
+		die();
+		exit();
+	}
 	getHeader("People", $profile["name"]);
 	$nStartups = getnStartups($profile["id"]);
 ?>
 
 		<main id="content" class="pt-4 pb-4">
 			<div class="container">
+				<?php display('<div class="alert alert-info mb-4">Welcome to your new profile! Please <strong>verify your email</strong> to claim this profile. Otherwise, your profile will display a &ldquo;Community Profile&rdquo; notice.</div>', boolify($_SESSION["user"]["emailVerified"] == 0 && $_SESSION["user"]["id"] == $profile["id"])); ?>
 				<div class="row">
 					<div class="col-md">
 						<div class="card card-body profile-card mb-4">
@@ -27,9 +42,9 @@
 										</header>
 									</div>
 									<div class="col-md-2 d-flex align-items-center flex-row-reverse profile-links">
-										<?php display('<a target="_blank" title="LinkedIn profile" href="%s"><i class="ion ion-logo-linkedin"></i></a>', "https://www.linkedin.com/in/" . ($profile["link_linkedin"] . "/")); ?>
-										<?php display('<a target="_blank" title="Facebook profile" href="%s"><i class="ion ion-logo-facebook"></i></a>', "https://www.facebook.com/" . ($profile["link_facebook"])); ?>
-										<?php display('<a target="_blank" title="Twitter profile" href="%s"><i class="ion ion-logo-twitter"></i></a>', "https://twitter.com/" . ($profile["link_twitter"])); ?>
+										<?php display('<a target="_blank" title="LinkedIn profile" href="https://www.linkedin.com/in/%s/"><i class="ion ion-logo-linkedin"></i></a>', ($profile["link_linkedin"])); ?>
+										<?php display('<a target="_blank" title="Facebook profile" href="https://www.facebook.com/%s"><i class="ion ion-logo-facebook"></i></a>', ($profile["link_facebook"])); ?>
+										<?php display('<a target="_blank" title="Twitter profile" href="https://twitter.com/%s"><i class="ion ion-logo-twitter"></i></a>', ($profile["link_twitter"])); ?>
 									</div>
 								</div>
 							</div>
@@ -155,28 +170,28 @@
 												<td><a target="_blank" href="%s">%s</a></td>
 											</tr>', $profile["link_website"], websiteify($profile["link_website"])); ?>
 											<?php display('<tr>
-												<td>City</td>
+												<td style="width: 40%%">City</td>
 												<td><a href="/city/%s">%s</a></td>
 											</tr>', urlify($profile["city"]), $profile["city"]); ?>
 											<?php display('<tr>
-												<td>Gender</td>
+												<td style="width: 40%%">Gender</td>
 												<td>%s</td>
 											</tr>', genderify($profile["gender"])); ?>
 											<?php if ($profile["show_age"] == 2) { ?>
 											<?php display('<tr>
-												<td style="vertical-align: top">Birthday</td>
+												<td style="vertical-align: top; width: 40%%">Birthday</td>
 												<td>%s %s, %s<br>(%s years old)</td>
 											</tr>', monthify($profile["bd_month"]), $profile["bd_day"], $profile["bd_year"], ageify($profile["bd_day"], $profile["bd_month"], $profile["bd_year"])); ?>
 											<?php } else if ($profile["show_age"] == 1) { ?>
 											<?php display('<tr>
-												<td>Age</td>
+												<td style="width: 40%%">Age</td>
 												<td>%s years</td>
 											</tr>', ageify($profile["bd_day"], $profile["bd_month"], $profile["bd_year"])); ?>
 											<?php } ?>
 											<?php display('<tr>
-												<td style="vertical-align: top">Hobbies</td>
+												<td style="vertical-align: top; width: 40%%">Skills</td>
 												<td>%s</td>
-											</tr>', $profile["hobbies"]); ?>
+											</tr>', listify($profile["hobbies"])); ?>
 											<tr>
 												<td>Founded</td>
 												<td><?php echo $nStartups; ?> startup<?php display('s', $nStartups != 1) ?></td>
@@ -186,6 +201,15 @@
 								</div>
 							</div>
 						</div>
+						<?php if ($profile["emailverified"] == 1) { ?>
+						<div class="card mb-4">
+							<div class="card-body">
+								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Verified Profile</h4>
+								<p class="card-text"><span class="d-none">%s</span>This a verified profile and only its owner can make changes to it.</p>
+								<p class="card-text small text-muted">You can, however, <a href="#">suggest a change</a> to this page and we will get back to you.</p>
+							</div>
+						</div>
+						<?php } else { ?>
 						<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Community Profile</h4>
@@ -193,6 +217,7 @@
 								<p class="card-text small text-muted">This profile is not affiliated with or endorsed by anyone associated with the topic.</p>
 							</div>
 						</div>
+						<?php } ?>
 					</div>
 				</div>
 			</div>

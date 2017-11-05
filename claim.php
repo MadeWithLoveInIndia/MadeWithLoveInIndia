@@ -52,6 +52,10 @@
 						<input type="hidden" name="verifymethod" value="email">
 						<button class="btn btn-primary" type="submit">Verify Ownership</button>
 					</form> -->
+					<hr class="mt-5 mb-5">
+					<h3 class="bigger">Option 2: Manual Email Verification</h3>
+					<p>If you cannot the file upload method, send us  an email to <a href="mailto:hello@madewithlove.org.in">hello@madewithlove.org.in</a> with your Made with Love in India profile username, startup name, and we will manually verify you.</p>
+					<p>It can take up to 48 hours to verify your profile.</p>
 				</div>
 			</div>
 		</div>

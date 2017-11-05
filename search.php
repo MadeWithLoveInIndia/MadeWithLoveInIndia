@@ -51,6 +51,7 @@
 		$title = "Startups";
 		$typeTitle = "Startups";
 	} else {
+		$typeTitle = "Startups";
 		$title = unurlify($currentURL[4]) . " Startups";
 	}
 	if ($page > 1) {
@@ -96,8 +97,20 @@
 	}
 
 	if ($page < 1 || $page > ($nPages + 1)) {
-		header("Location: /404");
-	}
+			header("HTTP/1.0 404 Not Found");
+			getHeader("Page", "404 Error");
+	?>
+	<main id="content" class="pt-4">
+		<div class="container text-center mt-5 mb-5 pb-5">
+			<h1>404 Error</h1>
+			<p>This page doesn't exist.</p>
+		</div>
+	</main>
+	<?php
+			getFooter();
+			die();
+			exit();
+		}
 
 	$nextLink = null;
 	$prevLink = null;
@@ -127,7 +140,7 @@
 							<div class="col-md ml-2 text-white d-flex align-items-center">
 								<header>
 									<h2 class="h4 mb-0"><?php echo unurlify($currentURL[4]); ?></h2>
-									<p><?php echo $nStartups; ?> <?php echo $typeTitle; ?></p>
+									<p><?php echo $nStartups; ?> <?php echo $nStartups == 1 ? substr($typeTitle, 0, -1) : $typeTitle; ?></p>
 								</header>
 							</div>
 						</div>
@@ -150,7 +163,7 @@
 						<a href="/profile/<?php echo urlify($startups[$i]["username"]); ?>" class="list-group-item list-group-item-action p-4">
 							<div class="d-flex flex-row">
 								<div class="startup-image mr-3">
-									<img class="rounded-circle" alt="Anand Chowdhary" src="<?php echo avatarUrl($startups[$i]["email"]); ?>">
+									<img class="rounded-circle" alt="<?php echo $startups[$i]["name"]; ?>" src="<?php echo avatarUrl($startups[$i]["email"]); ?>">
 								</div>
 								<div class="startup-info">
 									<h3 class="h5 mb-1">

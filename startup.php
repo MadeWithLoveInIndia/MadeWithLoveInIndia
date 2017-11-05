@@ -2,12 +2,27 @@
 	require_once "database.php";
 	include "header.php";
 	$profile = DB::queryFirstRow("SELECT * FROM startups WHERE slug=%s", $currentURL[4]);
-	if (!$profile) { header("Location: /404"); }
+	if (!$profile) {
+		header("HTTP/1.0 404 Not Found");
+		getHeader("Page", "404 Error");
+?>
+<main id="content" class="pt-4">
+	<div class="container text-center mt-5 mb-5 pb-5">
+		<h1>404 Error</h1>
+		<p>This page doesn't exist.</p>
+	</div>
+</main>
+<?php
+		getFooter();
+		die();
+		exit();
+	}
 	getHeader("Startups", $profile["name"]);
 ?>
 
 		<main id="content" class="pt-4 pb-4">
 			<div class="container">
+				<?php display('<span style="display: none">%s</span><div class="alert alert-info mb-4">Congrats on publishing your startup! You now have to <a href="/claim/%s">claim this page</a> to add founders or make any changes.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>', boolify($_SESSION["user"]["justPublished"] == $profile["name"]), $profile["slug"]); ?>
 				<div class="mb-4 pb-2 pt-2">
 					<div class="row">
 						<div class="pl-3 mr-2 mb-3 mb-md-0 startup-image">
@@ -196,17 +211,17 @@
 							<div class="text-lighter small mt-1 text-truncate">Only you can see this</div>
 							<i class="ion ion-md-create text-lighter"></i>
 						</a>', boolify($profile["owner"] == $_SESSION["user"]["id"]), $profile["slug"]); } ?>
-						<?php display('<a target="_blank" href="%sref=Made+with+Love+in+India" class="btn btn-primary btn-block btn-visit-website text-left p-3 mb-3">
+						<?php display('<a target="_blank" href="%sref=Made+with+Love+in+India" class="btn btn-primary btn-block btn-visit-website text-left btn-out p-3 mb-3">
 							<div class="text-truncate">Visit %s</div>
 							<div class="text-lighter small mt-1 text-truncate">%s</div>
 							<i class="ion ion-md-arrow-forward text-lighter"></i>
 						</a>', $profile["url"] . (strpos($profile["url"], "?") == false ? "?" : "&"), $profile["name"], websiteify($profile["url"])); ?>
-						<?php display('<a href="/message/%s" class="btn btn-secondary btn-block mb-4">
+						<!-- <?php display('<a href="/message/%s" class="btn btn-secondary btn-block mb-4">
 							<div class="text-truncate">
 								<i class="ion ion-ios-mail mr-2 larger-icon"></i>
 								<span>Send Message</span>
 							</div>
-						</a>', $profile["slug"]); ?>
+						</a>', $profile["slug"]); ?> -->
 						<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Share Startup</h4>

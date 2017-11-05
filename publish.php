@@ -11,5 +11,6 @@
 		"email" => $_POST["email"],
 		"tag1" => $_POST["technology"]
 	]);
+	$_SESSION["user"]["justPublished"] = urlify($_POST["startupname"]);
 	header("Location: /startup/" . urlify($_POST["startupname"]));
 ?>

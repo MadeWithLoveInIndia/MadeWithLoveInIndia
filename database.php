@@ -1027,8 +1027,8 @@ function monthify($monthNum) {
 }
 
 function avatarUrl($email) {
-  if (file_exists("uploads/manual/" . md5($email))) {
-    return "uploads/manual/" . md5($email);
+  if (file_exists("assets/uploads/manual/" . md5($email) . ".png")) {
+    return "assets/uploads/manual/" . md5($email) . ".png";
   } else {
     // return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( "https://unsplash.it/128/128" ) . "&s=" . 128;
     return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=identicon&s=" . 128;
@@ -1195,6 +1195,16 @@ function slugify($text) {
   }
 
   return $text;
+}
+
+function listify($ar) {
+  $ar = json_decode($ar);
+  $r = "";
+  foreach ($ar as $rlt) {
+    $r .= $rlt . ", ";
+  }
+  $r = substr($r, 0, -2);
+  return $r;
 }
 
 session_name("madeWithLoveAuth");

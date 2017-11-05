@@ -6,7 +6,19 @@
 		header("Location: /login?returnto=$_SERVER[REQUEST_URI]&message=You+have+to+log+in+to+edit+this+profile.");
 	}
 	if ($startup["owner"] != $_SESSION["user"]["id"]) {
-		header("Location: /404");
+			header("HTTP/1.0 404 Not Found");
+			getHeader("Page", "404 Error");
+	?>
+	<main id="content" class="pt-4">
+		<div class="container text-center mt-5 mb-5 pb-5">
+			<h1>404 Error</h1>
+			<p>This page doesn't exist.</p>
+		</div>
+	</main>
+	<?php
+			getFooter();
+			die();
+			exit();
 	}
 	if (isset($_POST["name"])) {
 		if (isset($_POST["deleteStartup"])) {
