@@ -9,6 +9,10 @@
 		header("Location: /404");
 	}
 	if (isset($_POST["name"])) {
+		if (isset($_POST["deleteStartup"])) {
+			DB::delete("startups", "id=%s", $startup["id"]);
+			header("Location: /profile/" . $_SESSION["user"]["username"]);
+		}
 		DB::update("startups", [
 			"name" => $_POST["name"],
 			"tagline" => $_POST["subtitle"],
@@ -28,7 +32,12 @@
 			"link_googlemaps" => $_POST["link_googlemaps"],
 			"link_googleplus" => $_POST["link_googleplus"],
 			"link_angellist" => $_POST["link_angellist"],
-			"link_f6s" => $_POST["link_f6s"]
+			"link_f6s" => $_POST["link_f6s"],
+			"founder1" => $_POST["founder1"],
+			"founder2" => $_POST["founder2"],
+			"founder3" => $_POST["founder3"],
+			"founder4" => $_POST["founder4"],
+			"founder5" => $_POST["founder5"]
 		], "id=%s", $startup["id"]);
 		DB::insert("log", [
 			"datetime" => time(),
@@ -312,7 +321,7 @@
 								<button class="btn btn-secondary" type="submit">Add Story</button>
 							</div>
 						</div>
-						<div class="card" style="overflow: visible; height: 100vh">
+						<div class="card">
 							<div class="card-header" role="tab" id="headingFive">
 								<h5 class="mb-0">
 									<a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -350,6 +359,22 @@
 										<label for="founder5">Founder 5</label>
 										<input type="text" class="form-control userAutocomplete" name="founder5" id="founder5" placeholder="Enter a founder" value="<?php echo $startup["founder5"]; ?>">
 									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="headingSix">
+								<h5 class="mb-0">
+									<a class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+										Delete Startup
+									</a>
+								</h5>
+							</div>
+							<div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+								<div class="card-body">
+									<p><strong>Danger Zone:</strong> Do you want to delete this startup from the Made with Love in India platform?</p>
+									<p>This action cannot be reversed.</p>
+									<p><button onclick='var x = confirm("Are you sure you want to delete your startup? This cannot be reversed."); if (!x) { return false; }' type="submit" name="deleteStartup" class="btn btn-danger">Delete <?php echo $startup["name"]; ?></button></p>
 								</div>
 							</div>
 						</div>

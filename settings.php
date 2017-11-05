@@ -257,6 +257,51 @@
 										</div>
 									</div>
 								</div>
+								<div class="card">
+									<div class="card-header" role="tab" id="headingFive">
+										<h5 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+												Verified Startups
+											</a>
+										</h5>
+									</div>
+									<div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+										<div class="card-body">
+											<p>These are the startups you have claimed and verified:</p>
+											<div class="list-group">
+												<?php
+												$myStartups = DB::query("SELECT * FROM startups WHERE owner=%s", $profile["id"]);
+												for ($i = 0; $i < 3; $i++) { if ($myStartups[$i]) { ?>
+												<a href="/startup/<?php echo $myStartups[$i]["slug"]; ?>" class="list-group-item list-group-item-action p-4">
+													<div class="d-flex flex-row">
+														<div class="startup-image mr-3">
+															<?php display('<img alt="%s" src="/assets/uploads/logo/%s_%s.jpg">', $myStartups[$i]["name"], md5($myStartups[$i]["slug"]), $myStartups[$i]["slug"]); ?>
+														</div>
+														<div class="startup-info">
+															<h3 class="h5 mb-1">
+																<?php display('<span>%s</span>', $myStartups[$i]["name"]); ?>
+																<span class="badges">
+																	<?php display('<span data-toggle="tooltip" data-placement="top" title="Verified page"><i class="ion ion-md-checkmark-circle ml-1 checkbox-icon text-success"></i></span>', boolify($myStartups[$i]["badge_verified"])); ?>
+																</span>
+															</h3>
+															<?php display('<p class="text-muted mb-1">%s</p>', $myStartups[$i]["tagline"]); ?>
+															<div class="startup-tags">
+																<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["city"]); ?>
+																<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["industry"]); ?>
+																<?php display('<span class="badge badge-light">%s</span>', json_decode($myStartups[$i]["tag1"])[0]); ?>
+															</div>
+														</div>
+													</div>
+												</a>
+												<?php } } if (sizeof($myStartups) == 0) { ?>
+												<div class="text-muted text-center p-4">
+													<h4 class="h6">You have not claimed any startups yet.</h4>
+												</div>
+												<?php } ?>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<button class="btn btn-primary mt-3" type="submit">Publish Changes</button>
 							<a class="btn btn-secondary mt-3 ml-2" href="/profile/<?php echo $profile["username"]; ?>">Cancel &amp; Go Back</a>

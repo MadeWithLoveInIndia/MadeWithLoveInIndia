@@ -58,12 +58,12 @@
 											<div class="startup-tags">
 												<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["city"]); ?>
 												<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["industry"]); ?>
-												<?php display('<span class="badge badge-light">%s</span>', $myStartups[$i]["tag1"]); ?>
+												<?php display('<span class="badge badge-light">%s</span>', json_decode($myStartups[$i]["tag1"])[0]); ?>
 											</div>
 										</div>
 									</div>
 								</a>
-								<?php } } if (sizeof($$myStartups) == 0) { ?>
+								<?php } } if (sizeof($myStartups) == 0) { ?>
 								<div class="text-muted text-center p-4">
 									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not founded any startups yet.</h4>
 									<p>Do you want to get in touch with <?php echo explode(" ", $profile["name"])[0]; ?>? <a href="#">Message now.</a></p>
@@ -71,7 +71,7 @@
 								<?php } ?>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card mb-4">
 							<div class="card-body pb-1">
 								<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger">Education</h4>
 							</div>
