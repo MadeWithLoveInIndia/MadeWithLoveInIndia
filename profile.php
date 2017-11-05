@@ -23,7 +23,7 @@
 
 		<main id="content" class="pt-4 pb-4">
 			<div class="container">
-				<?php display('<div class="alert alert-info mb-4">Welcome to your new profile! Please <strong>verify your email</strong> to claim this profile. Otherwise, your profile will display a &ldquo;Community Profile&rdquo; notice.</div>', boolify($_SESSION["user"]["emailVerified"] == 0 && $_SESSION["user"]["id"] == $profile["id"])); ?>
+				<?php display('<div class="alert alert-info mb-4">Welcome to your new profile! Please <strong>verify your email</strong> to claim this profile. Otherwise, your profile will display a &ldquo;Community Profile&rdquo; notice.</div>', ($profile["emailverified"] == 0 && $_SESSION["user"]["id"] == $profile["id"])); ?>
 				<div class="row">
 					<div class="col-md">
 						<div class="card card-body profile-card mb-4">
@@ -80,8 +80,9 @@
 								</a>
 								<?php } } if (sizeof($myStartups) == 0) { ?>
 								<div class="text-muted text-center p-4">
+									<h1><i class="ion ion-ios-briefcase bigger"></i></h1>
 									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not founded any startups yet.</h4>
-									<p>Do you want to get in touch with <?php echo explode(" ", $profile["name"])[0]; ?>? <a href="#">Message now.</a></p>
+									<!-- <p>Do you want to get in touch with <?php echo explode(" ", $profile["name"])[0]; ?>? <a href="#">Message now.</a></p> -->
 								</div>
 								<?php } ?>
 							</div>
@@ -110,7 +111,8 @@
 									</a>', urlencode($profile["university" . ($i + 1)]), md5($profile["university" . ($i + 1)]), slugify($profile["university" . ($i + 1)]), $profile["university" . ($i + 1)], $profile["course" . ($i + 1)]);
 								} if ($nUnis == 0) { ?>
 								<div class="text-muted text-center p-4">
-									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not added his education.</h4>
+									<h1><i class="ion ion-ios-school bigger"></i></h1>
+									<h4 class="h6"><?php echo explode(" ", $profile["name"])[0]; ?> has not added <?php echo $profile["gender"] == "M" ? "his" : "her"; ?> education yet.</h4>
 								</div>
 								<?php } ?>
 							</div>
@@ -213,7 +215,7 @@
 						<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Community Profile</h4>
-								<p class="card-text">This profile is owned by the community. <a href="#">Claim this profile</a> to modify or add to the information, or <a href="#">suggest a change</a>.</p>
+								<p class="card-text">This profile is owned by the community. <a href="/verify/user/<?php echo $profile["username"]; ?>">Claim this profile</a> to modify or add to the information, or <a href="#">suggest a change</a>.</p>
 								<p class="card-text small text-muted">This profile is not affiliated with or endorsed by anyone associated with the topic.</p>
 							</div>
 						</div>

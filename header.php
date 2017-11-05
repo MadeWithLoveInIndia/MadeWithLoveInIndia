@@ -178,33 +178,33 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null) {
 						<div class="col-6 col-md-3">
 							<h4 class="card-title pb-2 mb-0 bigger">Find Startups</h4>
 							<ul>
-								<li><a href="#">Startup Cities in India</a></li>
-								<li><a href="#">Top Startups in India</a></li>
-								<li><a href="#">Popular Industries</a></li>
-								<li><a href="#">Message Entrepreneurs</a></li>
+								<li><a href="/startups">Top Startups in India</a></li>
+								<li><a href="/cities">Startup Cities</a></li>
+								<li><a href="/industries">Popular Industries</a></li>
+								<li><a href="/tags">Tags &amp; Categories</a></li>
 							</ul>
 						</div>
 						<div class="col-6 col-md-3">
 							<h4 class="card-title pb-2 mb-0 bigger">Learn More</h4>
 							<ul>
-								<li><a href="#">About the Initiative</a></li>
-								<li><a href="#">Work with Us</a></li>
-								<li><a href="#">Responsibilities</a></li>
-								<li><a href="#">Buy Official Swag</a></li>
+								<li><a href="/about">About the Initiative</a></li>
+								<li><a href="mailto:hello@madewithlove.org.in?subject=Work@MadewithLoveinIndia">Work with Us</a></li>
+								<li><a href="/responsibilities">Responsibilities</a></li>
+								<li><a href="/badges">Earn Badges</a></li>
 							</ul>
 						</div>
 						<div class="col-6 col-md-3 mt-5 mt-md-0">
 							<h4 class="card-title pb-2 mb-0 bigger">Policies</h4>
 							<ul>
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Cookie Policy</a></li>
-								<li><a href="#">A11Y Statement</a></li>
+								<li><a href="/terms">Terms of Use</a></li>
+								<li><a href="/privacy">Privacy Policy</a></li>
+								<li><a href="/cookies">Cookie Policy</a></li>
+								<li><a href="/a11y">A11Y Statement</a></li>
 							</ul>
 						</div>
 						<div class="col-6 col-md-3 mt-5 mt-md-0">
 							<p>Founded in April 2013, the Made with Love in India initiative is a movement to celebrate, promote, and build a brand — India.</p>
-							<p><a href="#">Learn more about us <i class="ion ion-md-arrow-forward ml-1"></i></a></p>
+							<p><a href="/about">Learn more about us <i class="ion ion-md-arrow-forward ml-1"></i></a></p>
 						</div>
 					</div>
 				</div>

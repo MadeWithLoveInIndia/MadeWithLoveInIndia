@@ -6,6 +6,26 @@
 		header("Location: /login?returnto=$_SERVER[REQUEST_URI]&message=You+have+to+log+in+to+edit+your+profile.");
 	}
 	if (isset($_POST["name"])) {
+		if (isset($_POST["deleteStartup"])) {
+			if ($_POST["deleteStartup"] == 1) {
+				$error = "Incorrect password, we were not able to delete your profile.";
+				if (isset($_POST["pass"])) {
+					if (password_verify($_POST["pass"], $profile["password"])) {
+						$error = null;
+						DB::delete("users", "id=%s", $profile["id"]);
+						session_unset();
+						session_destroy();
+						header("Location: /");
+					}
+				}
+			}
+		}
+		if ($_POST["username"] != $profile["username"]) {
+			if (DB::queryFirstRow("SELECT id FROM users WHERE username=%s", $_POST["username"])) {
+				$error = "This username is already taken. Please choose a different one.";
+				$_POST["username"] = $profile["username"];
+			}
+		}
 		if ($_POST["course1A"] == "Select Program") {
 			$_POST["course1"] = null;
 		} else {
@@ -43,6 +63,15 @@
 			"university3" => explode(",", $_POST["university3"])[0],
 			"course3" => $_POST["course3"]
 		], "id=%s", $_SESSION["user"]["id"]);
+		if (($_POST["password1"] != "") && ($_POST["password2"]) != "") {
+			if (password_verify($_POST["password1"], $profile["password"])) {
+				DB::update("users", [
+					"password" => password_hash($_POST["password2"], PASSWORD_DEFAULT)
+				], "id=%s", $_SESSION["user"]["id"]);
+			} else {
+				$error = "Your current password is incorrect.";
+			}
+		}
 		$profile = DB::queryFirstRow("SELECT * FROM users WHERE id=%s", $_SESSION["user"]["id"]);
 		$_SESSION["user"] = $profile;
 	}
@@ -299,6 +328,48 @@
 												</div>
 												<?php } ?>
 											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" role="tab" id="headingSix">
+										<h5 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+												Change Password
+											</a>
+										</h5>
+									</div>
+									<div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+										<div class="card-body">
+											<div class="form-group">
+												<label for="password1">Current Password</label>
+												<input type="password" class="form-control" name="password1" id="password1" placeholder="Enter your current password">
+											</div>
+											<div class="form-group">
+												<label for="password2">New Password</label>
+												<input type="password" class="form-control" name="password2" id="password2" placeholder="Enter a new password">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" role="tab" id="headingSeven">
+										<h5 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+												Delete Profile
+											</a>
+										</h5>
+									</div>
+									<div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven" data-parent="#accordion">
+										<div class="card-body">
+											<p><strong>Danger Zone:</strong> Do you want to delete your profile from the Made with Love in India platform?</p>
+											<p>This action cannot be reversed.</p>
+											<div class="form-group">
+												<label for="pass">Password</label>
+												<input type="password" class="form-control" name="pass" id="pass" placeholder="Enter your password">
+											</div>
+											<input type="hidden" name="deleteStartup" value="0">
+											<p><button onclick='var x = confirm("Are you sure you want to delete your profile? This cannot be reversed."); if (!x) { return false; } else { $("[name=\"deleteStartup\"]").val("1"); $("form").submit(); } ' type="button" class="btn btn-danger">Delete <?php echo $profile["name"]; ?></button></p>
 										</div>
 									</div>
 								</div>

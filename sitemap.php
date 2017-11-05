@@ -41,6 +41,15 @@
 	<url><loc><?php echo $siteURL; ?>/industry/<?php echo slugify($industry["industry"]); ?></loc></url>
 	<?php } ?>
 	<?php foreach ($tagsArray as $tag) { ?>
-	<url><loc><?php echo $siteURL; ?>/startup/<?php echo urlencode($tag); ?></loc></url>
+	<url><loc><?php echo $siteURL; ?>/startups/<?php echo urlencode($tag); ?></loc></url>
 	<?php } ?>
+	<?php foreach (DB::query("SELECT university1 as a FROM users GROUP BY university1") as $institute) { if ($institute["a"]) { ?>
+	<url><loc><?php echo $siteURL; ?>/institute/<?php echo urlencode($institute["a"]); ?></loc></url>
+	<?php } } ?>
+	<?php foreach (DB::query("SELECT university2 as a FROM users GROUP BY university2") as $institute) { if ($institute["a"]) { ?>
+	<url><loc><?php echo $siteURL; ?>/institute/<?php echo urlencode($institute["a"]); ?></loc></url>
+	<?php } } ?>
+	<?php foreach (DB::query("SELECT university3 as a FROM users GROUP BY university3") as $institute) { if ($institute["a"]) { ?>
+	<url><loc><?php echo $siteURL; ?>/institute/<?php echo urlencode($institute["a"]); ?></loc></url>
+	<?php } } ?>
 </urlset>

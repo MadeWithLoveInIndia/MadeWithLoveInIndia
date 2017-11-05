@@ -19,6 +19,12 @@ RewriteRule ^institute/(.*)$ search.php?page=$1
 RewriteRule ^people/(.*)$ search.php?page=$1
 RewriteRule ^search/(.*)$ search.php?page=$1
 
+RewriteRule ^reset/(.*)$ reset.php?code=$1
+RewriteRule ^verify verify.php?code=$1
+RewriteRule ^verify/(.*)$ verify.php?code=$1
+RewriteRule ^activate activate.php?code=$1
+RewriteRule ^activate/(.*)$ activate.php?code=$1
+
 RewriteRule ^city/(.*)$ list.php?slug=$1&type=city
 RewriteRule ^technology/(.*)$ list.php?slug=$1&type=technology
 RewriteRule ^institute/(.*)$ list.php?slug=$1&type=university

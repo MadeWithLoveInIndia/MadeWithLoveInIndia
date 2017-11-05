@@ -22,10 +22,10 @@
 
 		<main id="content" class="pt-4 pb-4">
 			<div class="container">
-				<?php display('<span style="display: none">%s</span><div class="alert alert-info mb-4">Congrats on publishing your startup! You now have to <a href="/claim/%s">claim this page</a> to add founders or make any changes.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>', boolify($_SESSION["user"]["justPublished"] == $profile["name"]), $profile["slug"]); ?>
+				<?php display('<span style="display: none">%s</span><div class="alert alert-info mb-4">Congrats on publishing your startup! You now have to <a href="/claim/%s">claim this page</a> to add founders or make any changes.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>', boolify($_SESSION["user"]["justPublished"] == $profile["slug"] && $profile["badge_verified"] == 0), $profile["slug"]); ?>
 				<div class="mb-4 pb-2 pt-2">
 					<div class="row">
-						<div class="pl-3 mr-2 mb-3 mb-md-0 startup-image">
+						<div class="pl-3 mr-2 mb-3 mb-md-0 startup-image hero-pic">
 							<?php display('<img alt="%s" src="/assets/uploads/logo/%s_%s.jpg">', $profile["name"], md5($profile["slug"]), $profile["slug"]); ?>
 						</div>
 						<div class="col-md">
@@ -59,6 +59,7 @@
 								<?php display('%s', $profile["about"]); ?>
 								<?php if (!isset($profile["about"]) || $profile["about"] == "") { ?>
 								<div class="text-muted text-center p-4">
+									<h1><i class="ion ion-ios-list-box bigger"></i></h1>
 									<h4 class="h6">This section is currently empty.</h4>
 									<p>Do you know about <?php echo $profile["name"]; ?>? <a href="#">Contribute info.</a></p>
 								</div>
@@ -90,6 +91,7 @@
 								</a>', $founder["username"], avatarUrl($founder["email"]), $founder["name"], $founder["shortbio"]); }
 								if ($nFounders == 0) { ?>
 								<div class="text-muted text-center p-4">
+									<h1><i class="ion ion-ios-person bigger"></i></h1>
 									<h4 class="h6">There are no founders listed.</h4>
 									<p>
 										<?php if ($profile["badge_verified"] == 0) { ?>
@@ -189,6 +191,7 @@
 								</a>
 								<?php } if ($nNews == 0) { ?>
 								<div class="text-muted text-center p-4">
+									<h1><i class="ion ion-ios-paper bigger"></i></h1>
 									<?php display('<h4 class="h6">There is no news about %s.</h4>', $profile["name"]) ?>
 									<p>
 										<?php if ($profile["badge_verified"] == 0) { ?>
@@ -350,6 +353,7 @@
 								</a>', boolify(parse_url($profile["url"])["scheme"] == "https")); ?>
 								<?php if (!(boolify($profile["badge_offers"]) || boolify(parse_url($profile["url"])["scheme"] == "https") || boolify($profile["badge_verified"]) || boolify($profile["badge_newsworthy"]) || boolify($profile["badge_featured"]) || boolify($profile["badge_addedbadge"]))) { ?>
 								<div class="text-center p-4 text-muted">
+									<h1><i class="ion ion-ios-star bigger"></i></h1>
 									<?php display('<h4 class="h6">%s has not earned any badges so far.</h4>', $profile["name"]) ?>
 									<p>Want to learn how to earn badges? <a href="/badges">Get started now!</a></p>
 								</div>

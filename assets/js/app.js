@@ -37,7 +37,7 @@ function refreshShots(id) {
 			type: "custom",
 			method: function(value, item) {
 				return '<div class="row">' + 
-					'<div class="startup-image ml-3 mr-3">' + 
+					'<div class="startup-image.hero-pic ml-3 mr-3">' + 
 						'<img class="rounded-circle" alt="Anand Chowdhary" src="' + item.icon + '" style="height: 50px; width: 50px">' +
 					'</div>' + 
 					'<div class="startup-info col">' + 
@@ -83,9 +83,9 @@ function initMap2() {
 
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip();
-	if ($(".startup-image img").length > 0) {
-		$(".startup-image img").on("load", function() {
-			var vibrant = new Vibrant($(".startup-image img")[0]);
+	if ($(".startup-image.hero-pic img").length > 0) {
+		$(".startup-image.hero-pic img").on("load", function() {
+			var vibrant = new Vibrant($(".startup-image.hero-pic img")[0]);
 			var swatches = vibrant.swatches();
 			$(".btn-visit-website.btn-out").css("background-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
 			$(".btn-visit-website.btn-out").css("border-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");

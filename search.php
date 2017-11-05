@@ -91,8 +91,8 @@
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE industry LIKE %ss", unurlify($currentURL[4]))["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else {
-		$startups = DB::query("SELECT * FROM startups WHERE tag1 LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", $currentURL[4], $startupsPerPage, ($page - 1) * $startupsPerPage);
-		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE tag1 LIKE %ss", $currentURL[4])["a"]);
+		$startups = DB::query("SELECT * FROM startups WHERE tag1 LIKE %ss OR industry LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", $currentURL[4], $currentURL[4], $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE tag1 LIKE %ss OR industry LIKE %ss", $currentURL[4], $currentURL[4])["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	}
 
@@ -201,11 +201,19 @@
 							</div>
 						</a>
 						<?php } } } if (sizeof($startups) == 0) { ?>
+						<?php if ($typeTitle == "People") { ?>
 						<div class="text-muted text-center p-4">
-							<h4 class="h6">There are no startups listed.</h4>
-							<p>Know of a startup? <a href="#">Tell us</a>.</p>
+							<h1><i class="ion ion-ios-person bigger"></i></h1>
+							<h4 class="h6">There are no people listed.</h4>
+							<p>Know of someone? <a href="/suggest">Tell us</a>.</p>
 						</div>
-						<?php } ?>
+						<?php } else { ?>
+						<div class="text-muted text-center p-4">
+							<h1><i class="ion ion-ios-briefcase bigger"></i></h1>
+							<h4 class="h6">There are no startups listed.</h4>
+							<p>Know of a startup? <a href="/suggest">Tell us</a>.</p>
+						</div>
+						<?php } } ?>
 					</div>
 				</div>
 				<?php if ($nPages > 1) { ?>
@@ -247,7 +255,50 @@
 							<button class="btn border-secondary border-left-0" type="submit"><i class="ion ion-md-search" aria-label="Search"></i></button>
 						</span>
 					</div>
-				</form>	
+				</form>
+				<div class="card mb-4">
+					<div class="card-body pb-1">
+						<?php display('<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">%s</h4>', "Discover People"); ?>
+					</div>
+					<div class="list-group" style="margin-top: -15px">
+						<a href="/people/cities" class="list-group-item list-group-item-action">
+							<div class="d-flex flex-row">
+								<div class="badge-earned mr-3">
+									<i class="ion ion-ios-pin bg-secondary"></i>
+								</div>
+								<div class="badges-info d-flex align-items-center">
+									<div>
+										<h3 class="h6 mb-1">Cities</h3>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="/people/institutes" class="list-group-item list-group-item-action">
+							<div class="d-flex flex-row">
+								<div class="badge-earned mr-3">
+									<i class="ion ion-ios-school bg-secondary"></i>
+								</div>
+								<div class="badges-info d-flex align-items-center">
+									<div>
+										<h3 class="h6 mb-1">Institutes</h3>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="/people/skills" class="list-group-item list-group-item-action">
+							<div class="d-flex flex-row">
+								<div class="badge-earned mr-3">
+									<i class="ion ion-ios-build bg-secondary"></i>
+								</div>
+								<div class="badges-info d-flex align-items-center">
+									<div>
+										<h3 class="h6 mb-1">Skills</h3>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
 				<?php } else { ?>
 				<form onsubmit="window.location.href = '/search/' + encodeURIComponent(document.querySelector('.searchinput').value); return false" class="mb-4">
 					<div class="input-group">
@@ -260,7 +311,7 @@
 				<?php } ?>
 				<div class="card mb-4">
 					<div class="card-body">
-						<?php display('<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Share%s %s%s</h4>', $type == "city" ? " Startups in " : " ", $city["name"], $type == "city" ? "" : " Startups"); ?>
+						<?php display('<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Share %s</h4>', $typeTitle); ?>
 						<div class="row">
 							<div class="col">
 								<a target="_blank" href="https://twitter.com/share?text=<?php echo urlencode("#MadewithLoveinIndia @mwlii"); ?>&url=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" class="btn btn-twitter btn-block">

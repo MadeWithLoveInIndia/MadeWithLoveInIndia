@@ -1,6 +1,13 @@
 <?php
 	include "database.php";
 	include "header.php";
+	if (isset($_SESSION["user"]["id"])) {
+		if ($_POST["returnto"]) {
+			header("Location: " . $_POST["returnto"]);
+		} else {
+			header("Location: /profile/" . $_SESSION["user"]["username"]);
+		}
+	}
 	if (isset($_POST["email"]) && isset($_POST["password"])) {
 		$me = DB::queryFirstRow("SELECT * FROM users WHERE email=%s", $_POST["email"]);
 		if (password_verify($_POST["password"], $me["password"])) {
@@ -24,6 +31,7 @@
 				<?php display('<div class="alert alert-danger mt-4" role="alert">%s</div>', $wrongPass); ?>
 				<?php display('<div class="alert alert-info mt-4" role="alert">%s</div>', $_GET["message"]); ?>
 				<form class="mt-4" method="post">
+					<!-- <button class="btn btn-primary mb-3"><i class="ion ion-logo-facebook mr-2"></i>Login with Facebook</button> -->
 					<div class="form-group">
 						<label for="email">Email</label>
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>

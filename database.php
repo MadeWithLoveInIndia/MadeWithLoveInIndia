@@ -1207,6 +1207,27 @@ function listify($ar) {
   return $r;
 }
 
+function sendAnEmail($to, $subject, $body) {
+  $hostname = "{imap.zoho.com:993/imap/ssl}INBOX";
+  $username = "hello@madewithlove.org.in";
+  include "emailpassword.php";
+  
+  $inbox = imap_open($hostname,$username,$password) or die("Cannot connect to Email server: " . imap_last_error());
+  
+  imap_mail($to, $subject, $body);
+  
+  imap_close($inbox);
+}
+
+function obfuscate_email($email)
+{
+    $em   = explode("@",$email);
+    $name = implode(array_slice($em, 0, count($em)-1), '@');
+    $len  = floor(strlen($name)/2);
+
+    return substr($name,0, $len) . str_repeat('*', $len) . "@" . end($em);   
+}
+
 session_name("madeWithLoveAuth");
 session_start();
 

@@ -21,9 +21,24 @@
 			exit();
 	}
 	if (isset($_POST["name"])) {
+		$error = null;
 		if (isset($_POST["deleteStartup"])) {
-			DB::delete("startups", "id=%s", $startup["id"]);
-			header("Location: /profile/" . $_SESSION["user"]["username"]);
+			if ($_POST["deleteStartup"] == 1) {
+				$error = "Incorrect password, we were not able to delete this startup.";
+				if (isset($_POST["pass"])) {
+					if (password_verify($_POST["pass"], $_SESSION["user"]["password"])) {
+						$error = null;
+						DB::delete("startups", "id=%s", $startup["id"]);
+						header("Location: /profile/" . $_SESSION["user"]["username"]);
+					}
+				}
+			}
+		}
+		if ($_POST["slug"] != $startup["slug"]) {
+			if (DB::queryFirstRow("SELECT id FROM startups WHERE slug=%s", $_POST["slug"])) {
+				$error = "This username is already taken. Please choose a different one.";
+				$_POST["slug"] = $startup["slug"];
+			}
 		}
 		DB::update("startups", [
 			"name" => $_POST["name"],
@@ -58,7 +73,6 @@
 			"what" => "update_startup_profile",
 			"what_info" => $startup["id"]
 		]);
-		$error = null;
 		if ($_POST["publication_name"] != "") {
 			if ($_POST["publication_name"] == "" || $_POST["story_date"] == "" || $_POST["story_month"] == "" || $_POST["story_year"] == "" || $_POST["publication_link"] == "") {
 				$error = "Please enter all info about the news story.";
@@ -386,7 +400,13 @@
 								<div class="card-body">
 									<p><strong>Danger Zone:</strong> Do you want to delete this startup from the Made with Love in India platform?</p>
 									<p>This action cannot be reversed.</p>
-									<p><button onclick='var x = confirm("Are you sure you want to delete your startup? This cannot be reversed."); if (!x) { return false; }' type="submit" name="deleteStartup" class="btn btn-danger">Delete <?php echo $startup["name"]; ?></button></p>
+									<div class="form-group">
+										<label for="pass">Password</label>
+										<input type="password" class="form-control" name="pass" id="pass" placeholder="Enter your password">
+									</div>
+									<input type="hidden" name="deleteStartup" value="0">
+									<p><button onclick='var x = confirm("Are you sure you want to delete your startup? This cannot be reversed."); if (!x) { return false; } else { $("[name=\"deleteStartup\"]").val("1"); $("form").submit(); } ' type="button" class="btn btn-danger">Delete <?php echo $startup["name"]; ?></button></p>
+
 								</div>
 							</div>
 						</div>
