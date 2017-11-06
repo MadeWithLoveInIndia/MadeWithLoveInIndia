@@ -668,6 +668,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/angelhack-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3548,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/angelhack-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/angelhack-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/art.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -701,6 +712,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/bengaluru.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8474,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/bengaluru.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/bengaluru.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/blackberry-os.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -719,6 +741,17 @@
 		"initialSize": 5881,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/blog.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/blog.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/bw-disrupt-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4998,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/bw-disrupt-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/bw-disrupt-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -899,6 +932,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/delhi-public-school-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7498,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhi-public-school-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhi-public-school-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/delhi-university-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -994,6 +1038,17 @@
 		"initialSize": 7316,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/education.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/education.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/ef10e3ed74daae3fa88046d6e534376e.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32112,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ef10e3ed74daae3fa88046d6e534376e.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ef10e3ed74daae3fa88046d6e534376e.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1196,6 +1251,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/indian-institute-of-technology-delhi-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2577,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/indian-institute-of-technology-delhi-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/indian-institute-of-technology-delhi-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/indian-institute-of-technology-kharagpur-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14771,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/indian-institute-of-technology-kharagpur-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/indian-institute-of-technology-kharagpur-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/indira-gandhi-national-open-university-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1225,6 +1302,17 @@
 		"initialSize": 4140,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/information-services.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/information-services.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/institute-of-engineering-and-management-iem-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8470,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/institute-of-engineering-and-management-iem-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/institute-of-engineering-and-management-iem-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1280,6 +1368,17 @@
 		"initialSize": 4914,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/jawaharlal-nehru-university-delhi-square-logo.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/jawaharlal-nehru-university-delhi-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/kellogg-school-of-management-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5081,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/kellogg-school-of-management-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/kellogg-school-of-management-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1449,6 +1548,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/modern-school-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7301,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/modern-school-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/modern-school-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/mukesh-patel-school-of-technology-management-engineering-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2683,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mukesh-patel-school-of-technology-management-engineering-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/mukesh-patel-school-of-technology-management-engineering-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/mumbai.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1526,6 +1647,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/new-york-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5574,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/new-york-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/new-york-university-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/node-js.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1577,6 +1709,17 @@
 		"initialSize": 4237,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/nonprofit.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/nonprofit.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/pec-university-of-technology-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4339,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/pec-university-of-technology-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/pec-university-of-technology-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1724,6 +1867,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/samastipur.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14412,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/samastipur.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/samastipur.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/savitribai-phule-pune-university-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1731,6 +1885,17 @@
 		"initialSize": 9407,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/savitribai-phule-pune-university-square-logo.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/savitribai-phule-pune-university-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/scoopwhoop-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7394,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/scoopwhoop-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/scoopwhoop-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1775,6 +1940,17 @@
 		"initialSize": 6372,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/shopping.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/shopping.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/shri-govindram-seksaria-institute-of-technology-and-science-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7351,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/shri-govindram-seksaria-institute-of-technology-and-science-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/shri-govindram-seksaria-institute-of-technology-and-science-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1867,6 +2043,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/the-better-india-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8289,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/the-better-india-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/the-better-india-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/the-mother%27s-international-school-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1896,6 +2083,17 @@
 		"initialSize": 7410,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/the-mother-s-international-school.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/the-mother-s-international-school.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/the-wharton-school-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9413,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/the-wharton-school-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/the-wharton-school-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1944,6 +2142,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/university-of-pennsylvania-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7410,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-pennsylvania-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-pennsylvania-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/university-of-twente-drienerlolaan-drienerveld-universiteit-twente-enschede-netherlands-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1977,6 +2186,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/university-of-washington-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5233,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-washington-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-washington-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/uttar-pradesh-technical-university-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1988,6 +2208,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/uttarpara-amarendra-vidyapith-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16295,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/uttarpara-amarendra-vidyapith-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/uttarpara-amarendra-vidyapith-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/vasai-virar.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1995,6 +2226,17 @@
 		"initialSize": 9092,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/vasai-virar.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/vasai-virar.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/vellore-institute-of-technology-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8652,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/vellore-institute-of-technology-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/vellore-institute-of-technology-square-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2164,6 +2406,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/logos\/down2hub.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1273,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/down2hub.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/down2hub.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/logos\/ds-tech-blog.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2237,6 +2490,17 @@
 		"initialSize": 466,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/indian-govt-jobs-online.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/indian-govt-jobs-online.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/infotricks.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 497,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/infotricks.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/infotricks.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2472,6 +2736,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/logos\/stylebaby.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1581,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/stylebaby.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/stylebaby.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/sunday-exams.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1542,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/sunday-exams.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/sunday-exams.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/logos\/swapieze.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2611,6 +2897,17 @@
 		"initialSize": 3815,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/zcsaha.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/zcsaha.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/zybermedia.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 877,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/zybermedia.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/zybermedia.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2758,6 +3055,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/screenshots\/down2hub.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 179943,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/down2hub.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/down2hub.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/screenshots\/ds-tech-blog.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2795,7 +3103,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1308,
+		"initialSize": 62252,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/go-trending.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/go-trending.png",
 		"outputPathIsOutsideProject": 0,
@@ -2842,6 +3150,17 @@
 		"initialSize": 96571,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/indian-govt.-jobs-online.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/indian-govt.-jobs-online.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/infotricks.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73335,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/infotricks.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/infotricks.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3077,6 +3396,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/screenshots\/stylebaby.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 174045,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/stylebaby.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/stylebaby.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/sunday-exams.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 84965,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/sunday-exams.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/sunday-exams.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/screenshots\/swapieze.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3220,6 +3561,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/screenshots\/zybermedia.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 85590,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/zybermedia.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/zybermedia.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/manual\/08f455bbfdee2ab366c33272428c647c.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3260,6 +3612,17 @@
 		"initialSize": 2572,
 		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/2e610778645e0c5fb2f1e53afa136550.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/2e610778645e0c5fb2f1e53afa136550.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/manual\/2f9c95810fdaf5ae6b1d914a770d8ef5.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28628,
+		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/2f9c95810fdaf5ae6b1d914a770d8ef5.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/2f9c95810fdaf5ae6b1d914a770d8ef5.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3385,6 +3748,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/manual\/5d421edc0a3fd0a057cb067760fdd71a.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33575,
+		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/5d421edc0a3fd0a057cb067760fdd71a.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/5d421edc0a3fd0a057cb067760fdd71a.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/manual\/5de0f8096c253bf21cca72bd2d89989a.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3392,6 +3766,28 @@
 		"initialSize": 7762,
 		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/5de0f8096c253bf21cca72bd2d89989a.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/5de0f8096c253bf21cca72bd2d89989a.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/manual\/5e146ab9d9ea470686869d21db8a8ed3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28206,
+		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/5e146ab9d9ea470686869d21db8a8ed3.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/5e146ab9d9ea470686869d21db8a8ed3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/manual\/63628f993da0fdc50c4ee9a5c8ab7e87.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28698,
+		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/63628f993da0fdc50c4ee9a5c8ab7e87.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/63628f993da0fdc50c4ee9a5c8ab7e87.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3594,6 +3990,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/manual\/b215e037c102eaf8c3f9d3ae5044a8f8.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29117,
+		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/b215e037c102eaf8c3f9d3ae5044a8f8.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/b215e037c102eaf8c3f9d3ae5044a8f8.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/manual\/be1678928c51a4dd264377dc75669d16.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3722,6 +4129,17 @@
 		"initialSize": 6177,
 		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/ebeaf9a492a853e6212846d7e1d8e209.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/ebeaf9a492a853e6212846d7e1d8e209.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/manual\/ef10e3ed74daae3fa88046d6e534376e.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32112,
+		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/ef10e3ed74daae3fa88046d6e534376e.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/ef10e3ed74daae3fa88046d6e534376e.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

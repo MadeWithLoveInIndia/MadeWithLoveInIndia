@@ -129,6 +129,12 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 					</ul>
 					<?php if (isset($_SESSION["user"])) { ?>
 					<ul class="navbar-nav">
+						<?php if ($_SESSION["user"]["is_su"]) { ?>
+							<?php $listItem = "Register"; ?>
+							<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
+								<a class="nav-link" href="/register">Register</a>
+							</li>
+						<?php } ?>
 						<?php $listItem = "Login"; ?>
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
 							<a class="nav-link" href="/profile/<?php echo $_SESSION["user"]["username"]; ?>"><?php echo $_SESSION["user"]["name"]; ?></a>

@@ -10,7 +10,7 @@
 		if ($_POST["verifymethod"] == "html") {
 			// Test HTML method
 			$url = $startupInfo["url"] . "/mwlii_verify.html";
-			if (file_get_contents($url) != $code) {
+			if (trim(file_get_contents($url)) != $code) {
 				$error = "We were unable to verify that you have uploaded the file. Try again or use a different method.";
 			} else {
 				DB::update("startups", [

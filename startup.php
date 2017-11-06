@@ -305,7 +305,7 @@
 								</a>', $news[$i]["link"], $news[$i]["publication"] ? md5($news[$i]["publication"]) : null, slugify($news[$i]["publication"]), $news[$i]["publication"], timeMe($news[$i]["datetime"]), strlen($news[$i]["title"]) > 65 ? trim(mb_substr($news[$i]["title"], 0, 65)) . "&hellip;" : $news[$i]["title"]); } ?>
 								<?php $newsPerPage = 3;
 								if ($nNews > $newsPerPage) { ?>
-								<a href="#" class="list-group-item list-group-item-action text-center p-3">
+								<a href="/startup/<?php echo $profile["slug"]; ?>/news" class="list-group-item list-group-item-action text-center p-3">
 									<h3 class="h6 mb-0">View <?php echo numberify($nNews, $newsPerPage); ?> more articles<i class="ion ion-ios-arrow-down ml-2"></i></h3>
 								</a>
 								<?php } if ($nNews == 0) { ?>
@@ -437,11 +437,11 @@
 								<?php display('<a href="/badges#addedbadge" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
-											<i class="ion ion-md-flag bg-tomato"></i>
+											<i class="ion ion-md-heart bg-danger"></i>
 										</div>
 										<div class="badges-info d-flex align-items-center">
 											<div>
-												<h3 class="h6 mb-1">India&rsquo;s Pride</h3>
+												<h3 class="h6 mb-1">Added MWLII Badge</h3>
 											</div>
 										</div>
 									</div>
@@ -750,7 +750,7 @@
 										</div>
 										<?php $n = 0; $news = DB::query("SELECT * FROM news WHERE startup=%s", $profile["id"]); ?>
 										<div class="list-group">
-											<?php for ($i = 0; $i < 3; $i++) { if($news[$i]) { $n++; }
+											<?php for ($i = 0; $i < sizeof($news); $i++) { if($news[$i]) { $n++; }
 												display('<a target="_blank" href="%s" class="list-group-item list-group-item-action">
 												<div class="d-flex flex-row">
 													<div class="education-image mr-3">
@@ -889,11 +889,11 @@
 								<?php display('<a href="/badges#addedbadge" class="list-group-item list-group-item-action">
 									<div class="d-flex flex-row">
 										<div class="badge-earned mr-3">
-											<i class="ion ion-md-flag bg-tomato"></i>
+											<i class="ion ion-md-heart bg-danger"></i>
 										</div>
 										<div class="badges-info d-flex align-items-center">
 											<div>
-												<h3 class="h6 mb-1">India&rsquo;s Pride</h3>
+												<h3 class="h6 mb-1">Added MWLII Badge</h3>
 											</div>
 										</div>
 									</div>

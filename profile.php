@@ -310,6 +310,7 @@
 												<td style="width: 40%%">Gender</td>
 												<td>%s</td>
 											</tr>', genderify($profile["gender"])); ?>
+											<?php if (!($profile["bd_day"] == "1" && $profile["bd_month"] == "1" && $profile["bd_year"] == "1915")) { ?>
 											<?php if ($profile["show_age"] == 2) { ?>
 											<?php display('<tr>
 												<td style="vertical-align: top; width: 40%%">Birthday</td>
@@ -320,7 +321,7 @@
 												<td style="width: 40%%">Age</td>
 												<td>%s years</td>
 											</tr>', ageify($profile["bd_day"], $profile["bd_month"], $profile["bd_year"])); ?>
-											<?php } ?>
+											<?php } } ?>
 											<?php display('<tr>
 												<td style="vertical-align: top; width: 40%%">Skills</td>
 												<td>%s</td>

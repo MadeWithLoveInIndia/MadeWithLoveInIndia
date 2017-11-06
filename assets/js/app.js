@@ -105,5 +105,19 @@ $(function () {
 				$(".btn-visit-website.btn-out").css("border-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
 			});
 		});
+		window.onload = function() {
+			var vibrant = new Vibrant($(".startup-image.hero-pic img")[0]);
+			var swatches = vibrant.swatches();
+			$(".btn-visit-website.btn-out").css("background-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
+			$(".btn-visit-website.btn-out").css("border-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
+			$(".btn-visit-website.btn-out").mouseover(function() {
+				$(".btn-visit-website.btn-out").css("background-color", "rgb(" + Math.max(0, swatches.Vibrant.rgb[0] - 40) + ", " + Math.max(0, swatches.Vibrant.rgb[1] - 40) + ", " + Math.max(swatches.Vibrant.rgb[2] - 40) + ")");
+				$(".btn-visit-website.btn-out").css("border-color", "rgb(" + Math.max(0, swatches.Vibrant.rgb[0] - 40) + ", " + Math.max(0, swatches.Vibrant.rgb[1] - 40) + ", " + Math.max(swatches.Vibrant.rgb[2] - 40) + ")");
+			});
+			$(".btn-visit-website.btn-out").mouseout(function() {
+				$(".btn-visit-website.btn-out").css("background-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
+				$(".btn-visit-website.btn-out").css("border-color", "rgb(" + swatches.Vibrant.rgb[0] + ", " + swatches.Vibrant.rgb[1] + ", " + swatches.Vibrant.rgb[2] + ")");
+			});
+		}
 	}
 })
