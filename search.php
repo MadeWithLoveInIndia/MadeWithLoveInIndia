@@ -91,7 +91,7 @@
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE industry LIKE %ss", unurlify($currentURL[4]))["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else {
-		$startups = DB::query("SELECT * FROM startups WHERE tag1 LIKE %ss OR industry LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", $currentURL[4], $currentURL[4], $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$startups = DB::query("SELECT * FROM startups WHERE tag1 LIKE %ss OR industry LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", urldecode($currentURL[4]), urldecode($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
 		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE tag1 LIKE %ss OR industry LIKE %ss", $currentURL[4], $currentURL[4])["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	}
@@ -121,7 +121,29 @@
 		$prevLink = "/$currentURL[3]/$currentURL[4]/" . ($page - 1) . $suffix;
 	}
 
-	getHeader($typeTitle, $title, $nextLink, $prevLink);
+	$description = null;
+
+	if ($typeTitle == "Alums") {
+		$description = "View and connect with alums of " . urldecode($currentURL[4]) . " on Made with Love in India";
+		$intro = DB::queryFirstRow("SELECT intro FROM descriptions WHERE title=%s", $currentURL[4])["intro"];
+		if ($intro == ".") { $intro = null; }
+		if ($intro) {
+			$description .= ". " . $intro;
+		} else {
+			$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
+		}
+	} else if ($typeTitle == "Startups") {
+		$description = "View the startup profile, founders, and details of " . unurlify($currentURL[4]) . " startups on Made with Love in India";
+		$intro = DB::queryFirstRow("SELECT intro FROM descriptions WHERE title=%s", $currentURL[4])["intro"];
+		if ($intro == ".") { $intro = null; }
+		if ($intro) {
+			$description .= ". " . $intro;
+		} else {
+			$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
+		}
+	}
+
+	getHeader($typeTitle, $title, $nextLink, $prevLink, $description);
 
 ?>
 <main id="content" class="pt-4 pb-4">

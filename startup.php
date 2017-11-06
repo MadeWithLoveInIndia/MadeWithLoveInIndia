@@ -17,6 +17,7 @@
 		die();
 		exit();
 	}
+	$page = $currentURL[5];
 	if (!$page) {
 		$page = "profile";
 	}
@@ -35,15 +36,105 @@
 		die();
 		exit();
 	}
-	$description = "View the startup profile, founders, and details of " . $profile["name"];
-	if ($profile["tagline"]) {
-		$description .= " (";
-		$description .= $profile["tagline"];
-		$description .= ")";
+	$title = $profile["name"];
+	if ($page == "about") {
+		$title = "About " . $title;
+		$description = "Find information about " . $profile["name"];
+		if ($profile["about"]) {
+			$description .= " on Made with Love in India: ";
+			$spaceString = str_replace( '<', ' <',$profile["about"] );
+			$doubleSpace = strip_tags( $spaceString );
+			$singleSpace = str_replace( '  ', ' ', $doubleSpace );			
+			$description .= mb_substr($singleSpace, 0, 250);
+			if (strlen(strip_tags($profile["about"])) > 250) {
+				$description .= "...";
+			}
+		} else {
+			if ($profile["tagline"]) {
+				$description .= " (";
+				$description .= $profile["tagline"];
+				$description .= ")";
+			}
+			$description .= " on Made with Love in India, a movement to celebrate, promote, and build a brand &mdash; India.";
+		}
+	} else if ($page == "founders") {
+		$title = "Founders of " . $title;
+		$description = "View and connect with the founders of " . $profile["name"] . " on Made with Love in India";
+		$founders = null;
+		if ($profile["founder1"]) {
+			$founders .= DB::queryFirstRow("SELECT name FROM users WHERE id=%s", $profile["founder1"])["name"];
+		}
+		if ($profile["founder2"]) {
+			$founders .= ", " . DB::queryFirstRow("SELECT name FROM users WHERE id=%s", $profile["founder2"])["name"];
+		}
+		if ($profile["founder3"]) {
+			$founders .= ", " . DB::queryFirstRow("SELECT name FROM users WHERE id=%s", $profile["founder3"])["name"];
+		}
+		if ($profile["founder4"]) {
+			$founders .= ", " . DB::queryFirstRow("SELECT name FROM users WHERE id=%s", $profile["founder4"])["name"];
+		}
+		if ($profile["founder5"]) {
+			$founders .= ", " . DB::queryFirstRow("SELECT name FROM users WHERE id=%s", $profile["founder5"])["name"];
+		}
+		if ($founders) {
+			$founders = preg_replace('/,([^,]*)$/', ' and \1', $founders);
+			$description .= ". ";
+			$description .= $founders . " founded " . $profile["name"] . ".";
+		} else {
+			$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
+		}
+	} else if ($page == "lists") {
+		$title = $title . " Featured Lists";
+		$description = "View the lists " . $profile["name"] . " has been featured in on Made with Love in India";
+		if ($profile["city"] || $profile["industry"] || sizeof(json_decode($profile["tag1"])) > 0) {
+			if ($profile["city"]) {
+				$lists .= "Startups in " . $profile["city"] . ", ";
+			}
+			if ($profile["industry"]) {
+				$lists .= $profile["industry"] . " Startups" . ", ";
+			}
+			if (sizeof(json_decode($profile["tag1"])) > 0) {
+				foreach (json_decode($profile["tag1"]) as $tagX) {
+					$lists .= $tagX . " Startups" . ", ";
+				}
+			}
+			$lists = substr($lists, 0, -2);
+			$lists = preg_replace('/,([^,]*)$/', ' and \1', $lists);
+			$lists = str_replace("  ", " ", $lists);
+			$description .= ", including " . $lists . ".";
+		} else {
+			$description .= ".";
+		}
+	} else if ($page == "badges") {
+		$title = "Badges Earned by " . $title;
+		$description = "View the badges awarded to " . $profile["name"] . " on Made with Love in India";
+		$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
+	} else if ($page == "news") {
+		$title = "News about " . $title;
+		$description = "Read news stories and articles about " . $profile["name"] . " on Made with Love in India";
+		$news = get3News($profile["id"]);
+		foreach ($news as $new) {
+			$newsP .= $new["publication"] . ", ";
+		}
+		if (sizeof($news) > 0) {
+			$newsP = substr($newsP, 0, -2);
+			$newsP = preg_replace('/,([^,]*)$/', ' and \1', $newsP);
+			$newsP = str_replace("  ", " ", $newsP);
+			$description .= ". " . $profile["name"] . " has been featured by " . $newsP . ".";
+		} else {
+			$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
+		}
+	} else {
+		$description = "View the startup profile, founders, and details of " . $profile["name"];
+		if ($profile["tagline"]) {
+			$description .= " (";
+			$description .= $profile["tagline"];
+			$description .= ")";
+		}
+		$description .= " on Made with Love in India";
+		$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
 	}
-	$description .= " on Made with Love in India";
-	$description .= ", a movement to celebrate, promote, and build a brand &mdash; India.";
-	getHeader("Startups", $profile["name"], null, null, $description);
+	getHeader("Startups", $title, null, null, $description);
 ?>
 
 <?php if ($page == "profile") { ?>
@@ -89,7 +180,7 @@
 								<div class="text-muted text-center p-4">
 									<h1><i class="ion ion-ios-list-box bigger"></i></h1>
 									<h4 class="h6">This section is currently empty.</h4>
-									<p>Do you know about <?php echo $profile["name"]; ?>? <a href="#">Contribute info.</a></p>
+									<p>Do you know about <?php echo $profile["name"]; ?>? <a href="/suggest">Contribute info.</a></p>
 								</div>
 								<?php } ?>
 							</div>
@@ -239,9 +330,9 @@
 					<aside class="col-md-4">
 						<?php if (isset($_SESSION["user"])) { display('<span style="display: none">%s</span><a href="/edit/%s" class="btn btn-danger btn-block btn-visit-website text-left p-3 mb-3">
 							<div class="text-truncate">Edit Your Page</div>
-							<div class="text-lighter small mt-1 text-truncate">Only you can see this</div>
+							<div class="text-lighter small mt-1 text-truncate">Only admins can see this</div>
 							<i class="ion ion-md-create text-lighter"></i>
-						</a>', boolify($profile["owner"] == $_SESSION["user"]["id"]), $profile["slug"]); } ?>
+						</a>', boolify($profile["owner"] == $_SESSION["user"]["id"] || $_SESSION["user"]["is_su"] == "1"), $profile["slug"]); } ?>
 						<?php display('<a target="_blank" href="%sref=Made+with+Love+in+India" class="btn btn-primary btn-block btn-visit-website text-left btn-out p-3 mb-3">
 							<div class="text-truncate">Visit %s</div>
 							<div class="text-lighter small mt-1 text-truncate">%s</div>
@@ -569,7 +660,282 @@
 
 		<?php } else { ?>
 
-			this is the else
+		<main id="content">
+			<div class="container pt-4 mt-4 pb-4">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div class="mb-4 pb-2 pt-2">
+							<div class="row">
+								<div class="pl-3 mr-2 mb-3 mb-md-0 startup-image hero-pic">
+									<?php display('<a href="/startup/%s"><img alt="%s" src="/assets/uploads/logo/%s_%s.jpg"></a>', $profile["slug"], $profile["name"], md5($profile["slug"]), $profile["slug"]); ?>
+								</div>
+								<div class="col-md">
+									<header>
+										<h2 class="h5 mb-1">
+											<?php display('<a class="text-dark" href="/startup/%s">%s</a>', $profile["slug"], $profile["name"]); ?>
+											<span class="badges">
+												<?php display('<a href="/badges" data-toggle="tooltip" data-placement="top" title="Verified page" target="_blank"><i class="ion ion-md-checkmark-circle ml-1 checkbox-icon text-success"></i></a>', boolify($profile["badge_verified"])); ?>
+											</span>
+										</h2>
+										<?php display('<p class="text-muted mb-1">%s</p>', $profile["tagline"]); ?>
+										<div class="startup-tags">
+											<a href="/startup/<?php echo $profile["slug"]; ?>" class="text-dark"><i class="ion ion-md-arrow-back mr-2"></i>Back to Profile</a>
+										</div>
+									</header>
+								</div>
+							</div>
+						</div>
+						<?php if ($page == "about") { ?>
+							<div class="card mb-4">
+								<div class="card-body pb-0">
+									<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><a href="/startup/<?php echo $profile["slug"]; ?>/about" class="text-dark">About</a></h4>
+								</div>
+								<div class="card-body pt-3">
+									<?php display('%s', $profile["about"]); ?>
+									<?php if (!isset($profile["about"]) || $profile["about"] == "") { ?>
+									<div class="text-muted text-center p-4">
+										<h1><i class="ion ion-ios-list-box bigger"></i></h1>
+										<h4 class="h6">This section is currently empty.</h4>
+										<p>Do you know about <?php echo $profile["name"]; ?>? <a href="/suggest">Contribute info.</a></p>
+									</div>
+									<?php } ?>
+								</div>
+							</div>
+							<?php } else if ($page == "founders") { ?>
+								<div class="card mb-4">
+									<div class="card-body pb-1">
+										<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><a href="/startup/<?php echo $profile["slug"]; ?>/founders" class="text-dark">Founders</a></h4>
+									</div>
+									<div class="list-group">
+										<?php $nFounders = 0; for ($i = 0; $i < 5; $i++) {
+											$founder = getProfileById($profile["founder" . $i]);
+											if ($founder) {
+												$nFounders++;
+											}
+											display('<a href="/profile/%s" class="list-group-item list-group-item-action">
+											<div class="d-flex flex-row">
+												<div class="education-image mr-3">
+													<img alt="Startup Name" src="%s">
+												</div>
+												<div class="startup-info d-flex align-items-center">
+													<div>
+														<h3 class="h6 mb-1">%s</h3>
+														<p class="text-muted mb-1">%s</p>
+													</div>
+												</div>
+											</div>
+										</a>', $founder["username"], avatarUrl($founder["email"]), $founder["name"], $founder["shortbio"]); }
+										if ($nFounders == 0) { ?>
+										<div class="text-muted text-center p-4">
+											<h1><i class="ion ion-ios-person bigger"></i></h1>
+											<h4 class="h6">There are no founders listed.</h4>
+											<p>
+												<?php if ($profile["badge_verified"] == 0) { ?>
+													<a href="/claim/<?php echo $profile["slug"]; ?>">Claim this page</a> to add a founder.
+												<?php } else {
+													if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
+													<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> to add founders!
+												<?php } else { ?>
+													<a href="#">Suggest a change</a> if you know who founded this startup.
+												<?php } } ?>
+											</p>
+										</div>
+										<?php } ?>
+									</div>
+								</div>
+								<?php } else if ($page == "news") { ?>
+									<div class="card mb-4">
+										<div class="card-body pb-1">
+											<h4 class="card-title border pb-2 mb-0 border-top-0 border-left-0 border-right-0 bigger"><a href="/startup/<?php echo $profile["slug"]; ?>/news" class="text-dark">News</a></h4>
+										</div>
+										<?php $n = 0; $news = DB::query("SELECT * FROM news WHERE startup=%s", $profile["id"]); ?>
+										<div class="list-group">
+											<?php for ($i = 0; $i < 3; $i++) { if($news[$i]) { $n++; }
+												display('<a target="_blank" href="%s" class="list-group-item list-group-item-action">
+												<div class="d-flex flex-row">
+													<div class="education-image mr-3">
+														<img alt="Startup Name" src="/assets/uploads/news/%s_%s.jpg">
+													</div>
+													<div class="startup-info d-flex align-items-center">
+														<div class="">
+															<h3 class="h6 mb-1">%s  <span class="text-muted ml-1 mr-1">&middot;</span> <span class="text-muted font-weight-normal">%s</span></h3>
+															<p class="text-muted mb-1">%s</p>
+														</div>
+													</div>
+												</div>
+											</a>', $news[$i]["link"], $news[$i]["publication"] ? md5($news[$i]["publication"]) : null, slugify($news[$i]["publication"]), $news[$i]["publication"], timeMe($news[$i]["datetime"]), strlen($news[$i]["title"]) > 65 ? trim(mb_substr($news[$i]["title"], 0, 65)) . "&hellip;" : $news[$i]["title"]); } ?>
+											<?php if ($n == 0) { ?>
+											<div class="text-muted text-center p-4">
+												<h1><i class="ion ion-ios-paper bigger"></i></h1>
+												<?php display('<h4 class="h6">There is no news about %s.</h4>', $profile["name"]) ?>
+												<p>
+													<?php if ($profile["badge_verified"] == 0) { ?>
+														<a href="/claim/<?php echo $profile["slug"]; ?>">Claim this page</a> to add a news article.
+													<?php } else {
+														if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
+														<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> to add a news article!
+													<?php } else { ?>
+														<a href="#">Suggest an article</a> to add here.
+													<?php } } ?>
+												</p>
+											</div>
+											<?php } ?>
+										</div>
+									</div>
+						<?php } else if ($page == "lists") { ?>
+							<div class="card mb-4">
+							<div class="card-body pb-1">
+								<h4 class="card-title border pb-2 mb-4 border-top-0 border-left-0 border-right-0 bigger"><a href="/startup/<?php echo $profile["slug"]; ?>/lists" class="text-dark">Featured in Lists</a></h4>
+							</div>
+							<div class="list-group" style="margin-top: -15px">
+							<?php display('<a href="/city/%s" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="education-image mr-3">
+											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
+										</div>
+										<div class="startup-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Startups in %s</h3>
+												<p class="text-muted mb-1 smaller-caption">More startups from %s</p>
+											</div>
+										</div>
+									</div>
+								</a>', slugify($profile["city"]), md5($profile["city"]), $profile["city"], $profile["city"], $profile["city"]); ?>
+								<?php display('<a href="/industry/%s" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="education-image mr-3">
+											<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
+										</div>
+										<div class="startup-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">%s Startups</h3>
+												<p class="text-muted mb-1 smaller-caption">Find more %s startups</p>
+											</div>
+										</div>
+									</div>
+								</a>', slugify($profile["industry"]), md5($profile["industry"]), $profile["industry"], $profile["industry"], $profile["industry"], $profile["industry"], slugify($profile["industry"])); ?>
+
+								<?php foreach (json_decode($profile["tag1"]) as $listItem) { ?>
+									<?php display('<a href="/startups/%s" class="list-group-item list-group-item-action">
+										<div class="d-flex flex-row">
+											<div class="education-image mr-3">
+												<img alt="Startup Name" src="/assets/uploads/cities/%s_%s.jpg">
+											</div>
+											<div class="startup-info d-flex align-items-center">
+												<div>
+													<h3 class="h6 mb-1">%s Startups</h3>
+													<p class="text-muted mb-1 smaller-caption">Startups using %s</p>
+												</div>
+											</div>
+										</div>
+									</a>', urlencode($listItem), md5($listItem), $listItem, $listItem, $listItem, $listItem); ?>
+								<?php } ?>
+							</div>
+						</div>
+						<?php } else if ($page == "badges") { ?>
+							<div class="card mb-4">
+							<div class="card-body pb-1">
+								<h4 class="card-title border pb-2 mb-3 border-top-0 border-left-0 border-right-0 bigger"><a href="/startup/<?php echo $profile["slug"]; ?>/badges" class="text-dark">Badges Earned</a></h4>
+							</div>
+							<div class="list-group" style="margin-top: -15px">
+								<?php display('<a href="/badges#unicorn" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-trophy bg-dark"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Unicorn</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify($profile["badge_unicorn"])); ?>
+								<?php display('<a href="/badges#featured" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-ribbon bg-warning"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Featured Startup</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify($profile["badge_featured"])); ?>
+								<?php display('<a href="/badges#newsworthy" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-paper bg-secondary"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Newsworthy Startup</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify($profile["badge_newsworthy"])); ?>
+								<?php display('<a href="/badges#offers" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-ice-cream bg-info"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Exclusive Offers</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify($profile["badge_offers"])); ?>
+								<?php display('<a href="/badges#addedbadge" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-flag bg-tomato"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">India&rsquo;s Pride</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify($profile["badge_addedbadge"])); ?>
+								<?php display('<a href="/badges#verified" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-checkmark bg-primary"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Verified Profile</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify($profile["badge_verified"])); ?>
+								<?php display('<a href="/badges#secured" class="list-group-item list-group-item-action">
+									<div class="d-flex flex-row">
+										<div class="badge-earned mr-3">
+											<i class="ion ion-md-lock bg-success"></i>
+										</div>
+										<div class="badges-info d-flex align-items-center">
+											<div>
+												<h3 class="h6 mb-1">Secured Website</h3>
+											</div>
+										</div>
+									</div>
+								</a>', boolify(parse_url($profile["url"])["scheme"] == "https")); ?>
+								<?php if (!(boolify($profile["badge_offers"]) || boolify(parse_url($profile["url"])["scheme"] == "https") || boolify($profile["badge_verified"]) || boolify($profile["badge_newsworthy"]) || boolify($profile["badge_featured"]) || boolify($profile["badge_addedbadge"]))) { ?>
+								<div class="text-center p-4 text-muted">
+									<h1><i class="ion ion-ios-star bigger"></i></h1>
+									<?php display('<h4 class="h6">%s has not earned any badges so far.</h4>', $profile["name"]) ?>
+									<p>Want to learn how to earn badges? <a href="/badges">Get started now!</a></p>
+								</div>
+								<?php } ?>
+							</div>
+						</div>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
+		</main>
 
 		<?php } ?>
 

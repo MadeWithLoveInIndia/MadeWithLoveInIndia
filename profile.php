@@ -85,7 +85,71 @@
 		}
 		$description .= " Made with Love in India is a movement to celebrate, promote, and build a brand &mdash; India.";
 	}
-	getHeader("People", $title, null, null, $description);
+
+
+	$schema = [];
+	$schema["@type"] = "Person";
+	$schema["name"] = $profile["name"];
+	$schema["url"] = "https://madewithlove.org.in/profile/" . $profile["username"];
+	$schema["nationality"] = "India";
+	$schema["image"] = avatarUrl($profile["email"]);
+
+	$bd = null;
+	if ($profile["show_age"] == 2) {
+		if ($profile["bd_year"]) {
+			$bd = $profile["bd_year"];
+			if ($profile["bd_month"]) {
+				$bd .= "-" . $profile["bd_month"];
+				if ($profile["bd_day"]) {	
+					$bd .= "-" . $profile["bd_day"];
+				}
+			}
+			$schema["birthDate"] = $bd;
+		}
+	}
+
+	$gender = null;
+	if ($profile["gender"]) {
+		switch ($profile["gender"]) {
+			case "M":
+				$gender = "Male";
+				break;
+			case "F":
+				$gender = "Female";
+				break;
+			default:
+				$gender = "Other";
+				break;
+		}
+		$schema["gender"] = $gender;
+	}
+
+	if ($profile["link_website"]) {
+		$schema["sameAs"] = $profile["link_website"];
+	}
+	if ($profile["link_facebook"]) {
+		$schema["sameAs__1"] = "https://www.facebook.com/" . $profile["link_facebook"];
+	}
+	if ($profile["link_twitter"]) {
+		$schema["sameAs__2"] = "https://twitter.com/" . $profile["link_twitter"];
+	}
+	if ($profile["link_linkedin"]) {
+		$schema["sameAs__3"] = "https://www.linkedin.com/in/" . $profile["link_linkedin"] . "/";
+	}
+	$schema["sameAs__4"] = "https://madewithlove.org.in/profile/" . $profile["username"] . "/startups";
+	$schema["sameAs__5"] = "https://madewithlove.org.in/profile/" . $profile["username"] . "/education";
+
+	$myStartups = DB::query("SELECT * FROM startups WHERE founder1 = %s OR founder2 = %s OR founder3 = %s OR founder4 = %s OR founder5 = %s", $profile["id"], $profile["id"], $profile["id"], $profile["id"], $profile["id"]);
+	for ($i = 0; $i < sizeof($myStartups); $i++) { if ($myStartups[$i]) {
+		// echo "PL";
+		// this is for schema data
+	} }
+
+	// if ($profile["city"]) {
+	// 	$schema["homeLocation"] = $profile["city"];
+	// }
+
+	getHeader("People", $title, null, null, $description, $schema);
 ?>
 
 		<?php if ($page == "profile") { ?>
@@ -191,7 +255,7 @@
 							<div class="text-lighter small mt-1 text-truncate">Only you can see this</div>
 							<i class="ion ion-md-create text-lighter"></i>
 						</a>', boolify($profile["id"] == $_SESSION["user"]["id"])); } ?>
-						<?php display('<span style="display: none">%s</span><a href="/profile/%s/message" class="btn btn-primary btn-block btn-visit-website text-left p-3 mb-4">
+						<?php display('<span style="display: none">%s</span><a href="/profile/%s/message" class="btn btn-danger btn-block btn-visit-website text-left p-3 mb-4">
 							<div>Message %s</div>
 							<div class="text-lighter small mt-1">Available for messages</div>
 							<i class="ion ion-md-arrow-forward text-lighter"></i>

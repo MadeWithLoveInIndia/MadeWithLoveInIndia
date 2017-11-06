@@ -1,5 +1,5 @@
 <?php
-function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoDescription = null) {
+function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoDescription = null, $schemaData = null) {
 		if ($cat == "Cities") {
 			$title = "Startups in " . $title;
 		} else if ($cat == "Technologies") {
@@ -22,7 +22,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 		if ($seoDescription) {
 			$metaDescription = $seoDescription;
 		}
-		var_dump($metaDescription);
+		// var_dump($metaDescription);
 ?>
 <!doctype html>
 <html lang="en" ng-app="love">
@@ -74,6 +74,21 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 		<link rel="stylesheet" href="/assets/css/design.css">
 
 		<script src="https://www.google.com/recaptcha/api.js"></script>
+
+		<?php if ($schemaData) { ?>
+<script type="application/ld+json"> {
+			"@context": "http://schema.org",
+			<?php foreach ($schemaData as $schema => $schemaInfo) { $schema = explode("__", $schema)[0]; ?>
+"<?php echo $schema; ?>": "<?php echo $schemaInfo; ?>",
+		<?php } if ($cat == "People") { ?>
+			"affiliation": {
+				"@type": "Organization",
+				"url": "https://madewithlove.org.in",
+				"name": "Made with Love in India"
+			}
+		<?php } ?>
+} </script>
+		<?php } ?>
 
 	</head>
 
@@ -226,6 +241,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuiZevIb1G87KAoLRSECEdWNBQ06JCMjU&libraries=places&callback=initMap" async defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/kellym/smartquotesjs/dist/smartquotes.js"></script>
 		<script src="/assets/js/min/download-min.js"></script>
 		<script src="/assets/js/min/app-min.js"></script>
 

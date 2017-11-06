@@ -679,6 +679,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/blackberry-os.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5064,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/blackberry-os.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/blackberry-os.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/blog.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1940,6 +1951,17 @@
 		"initialSize": 6558,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/website.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/website.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/windows-phone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5100,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/windows-phone.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/windows-phone.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

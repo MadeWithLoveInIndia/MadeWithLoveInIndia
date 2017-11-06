@@ -5,7 +5,7 @@
 	if (!isset($_SESSION["user"])) {
 		header("Location: /login?returnto=$_SERVER[REQUEST_URI]&message=You+have+to+log+in+to+edit+this+profile.");
 	}
-	if ($startup["owner"] != $_SESSION["user"]["id"]) {
+	if ($startup["owner"] != $_SESSION["user"]["id"] && $_SESSION["user"]["is_su"] != "1") {
 			header("HTTP/1.0 404 Not Found");
 			getHeader("Page", "404 Error");
 	?>
@@ -19,81 +19,98 @@
 			getFooter();
 			die();
 			exit();
-	}
-	if (isset($_POST["name"])) {
-		$error = null;
-		if (isset($_POST["deleteStartup"])) {
-			if ($_POST["deleteStartup"] == 1) {
-				$error = "Incorrect password, we were not able to delete this startup.";
-				if (isset($_POST["pass"])) {
-					if (password_verify($_POST["pass"], $_SESSION["user"]["password"])) {
-						$error = null;
-						DB::delete("startups", "id=%s", $startup["id"]);
-						header("Location: /profile/" . $_SESSION["user"]["username"]);
+	} else {
+		$adminProps = ["badge_addedbadge", "owner", "badge_newsworthy", "badge_offers", "badge_verified", "badge_featured", "badge_unicorn"];
+		if (isset($_POST["name"])) {
+			$error = null;
+			if (isset($_POST["badge_addedbadge"])) {
+				if ($_SESSION["user"]["is_su"] == "1") {
+					DB::update("startups", [
+						"owner" => $_POST["owner"],
+						"badge_addedbadge" => $_POST["badge_addedbadge"],
+						"badge_newsworthy" => $_POST["badge_newsworthy"],
+						"badge_offers" => $_POST["badge_offers"],
+						"badge_verified" => $_POST["badge_verified"],
+						"badge_featured" => $_POST["badge_featured"],
+						"badge_unicorn" => $_POST["badge_unicorn"]
+					], "id=%s", $startup["id"]);
+				} else {
+					$error = "You do not have admin permissions to do this.";
+				}
+			}
+			if (isset($_POST["deleteStartup"])) {
+				if ($_POST["deleteStartup"] == 1) {
+					$error = "Incorrect password, we were not able to delete this startup.";
+					if (isset($_POST["pass"])) {
+						if (password_verify($_POST["pass"], $_SESSION["user"]["password"])) {
+							$error = null;
+							DB::delete("startups", "id=%s", $startup["id"]);
+							header("Location: /profile/" . $_SESSION["user"]["username"]);
+						}
 					}
 				}
 			}
-		}
-		if ($_POST["slug"] != $startup["slug"]) {
-			if (DB::queryFirstRow("SELECT id FROM startups WHERE slug=%s", $_POST["slug"])) {
-				$error = "This username is already taken. Please choose a different one.";
-				$_POST["slug"] = $startup["slug"];
+			if ($_POST["slug"] != $startup["slug"]) {
+				if (DB::queryFirstRow("SELECT id FROM startups WHERE slug=%s", $_POST["slug"])) {
+					$error = "This username is already taken. Please choose a different one.";
+					$_POST["slug"] = $startup["slug"];
+				}
+			}
+			DB::update("startups", [
+				"name" => $_POST["name"],
+				"tagline" => $_POST["subtitle"],
+				"slug" => $_POST["slug"],
+				"email" => $_POST["email"],
+				"founded_day" => $_POST["founded_day"],
+				"founded_month" => $_POST["founded_month"],
+				"founded_year" => $_POST["founded_year"],
+				"city" => explode(",", $_POST["city"])[0],
+				"about" => $_POST["description"],
+				"employees" => $_POST["employees"],
+				"link_blog" => $_POST["link_blog"],
+				"link_facebook" => $_POST["link_facebook"],
+				"link_twitter" => $_POST["link_twitter"],
+				"link_linkedin" => $_POST["link_linkedin"],
+				"link_youtube" => $_POST["link_youtube"],
+				"link_googlemaps" => $_POST["link_googlemaps"],
+				"link_googleplus" => $_POST["link_googleplus"],
+				"link_angellist" => $_POST["link_angellist"],
+				"link_f6s" => $_POST["link_f6s"],
+				"founder1" => $_POST["founder1"],
+				"founder2" => $_POST["founder2"],
+				"founder3" => $_POST["founder3"],
+				"founder4" => $_POST["founder4"],
+				"founder5" => $_POST["founder5"]
+			], "id=%s", $startup["id"]);
+			DB::insert("log", [
+				"datetime" => time(),
+				"who" => $_SESSION["user"]["id"],
+				"who_ip" => $_SERVER["REMOTE_ADDR"],
+				"what" => "update_startup_profile",
+				"what_info" => $startup["id"]
+			]);
+			if ($_POST["publication_name"] != "") {
+				if ($_POST["publication_name"] == "" || $_POST["story_date"] == "" || $_POST["story_month"] == "" || $_POST["story_year"] == "" || $_POST["publication_link"] == "") {
+					$error = "Please enter all info about the news story.";
+				} else {
+					DB::insert("news", [
+						"startup" => $startup["id"],
+						"datetime" => strtotime($_POST["story_date"] . " " . $_POST["story_month"] . " " . $_POST["story_year"]),
+						"title" => $_POST["story_title"],
+						"link" => $_POST["publication_link"],
+						"publication" => $_POST["publication_name"],
+						"addedon" => time(),
+						"addedby" => $_SESSION["user"]["id"],
+					]);
+				}
+			}
+			$startup = DB::queryFirstRow("SELECT * FROM startups WHERE slug=%s", $_POST["slug"]);
+			if ($startup["slug"] != $currentURL[4]) {
+				header("Location: /edit/" . $startup["slug"]);
 			}
 		}
-		DB::update("startups", [
-			"name" => $_POST["name"],
-			"tagline" => $_POST["subtitle"],
-			"slug" => $_POST["slug"],
-			"email" => $_POST["email"],
-			"founded_day" => $_POST["founded_day"],
-			"founded_month" => $_POST["founded_month"],
-			"founded_year" => $_POST["founded_year"],
-			"city" => explode(",", $_POST["city"])[0],
-			"about" => $_POST["description"],
-			"employees" => $_POST["employees"],
-			"link_blog" => $_POST["link_blog"],
-			"link_facebook" => $_POST["link_facebook"],
-			"link_twitter" => $_POST["link_twitter"],
-			"link_linkedin" => $_POST["link_linkedin"],
-			"link_youtube" => $_POST["link_youtube"],
-			"link_googlemaps" => $_POST["link_googlemaps"],
-			"link_googleplus" => $_POST["link_googleplus"],
-			"link_angellist" => $_POST["link_angellist"],
-			"link_f6s" => $_POST["link_f6s"],
-			"founder1" => $_POST["founder1"],
-			"founder2" => $_POST["founder2"],
-			"founder3" => $_POST["founder3"],
-			"founder4" => $_POST["founder4"],
-			"founder5" => $_POST["founder5"]
-		], "id=%s", $startup["id"]);
-		DB::insert("log", [
-			"datetime" => time(),
-			"who" => $_SESSION["user"]["id"],
-			"who_ip" => $_SERVER["REMOTE_ADDR"],
-			"what" => "update_startup_profile",
-			"what_info" => $startup["id"]
-		]);
-		if ($_POST["publication_name"] != "") {
-			if ($_POST["publication_name"] == "" || $_POST["story_date"] == "" || $_POST["story_month"] == "" || $_POST["story_year"] == "" || $_POST["publication_link"] == "") {
-				$error = "Please enter all info about the news story.";
-			} else {
-				DB::insert("news", [
-					"startup" => $startup["id"],
-					"datetime" => strtotime($_POST["story_date"] . " " . $_POST["story_month"] . " " . $_POST["story_year"]),
-					"title" => $_POST["story_title"],
-					"link" => $_POST["publication_link"],
-					"publication" => $_POST["publication_name"],
-					"addedon" => time(),
-					"addedby" => $_SESSION["user"]["id"],
-				]);
-			}
-		}
-		$startup = DB::queryFirstRow("SELECT * FROM startups WHERE slug=%s", $_POST["slug"]);
-		if ($startup["slug"] != $currentURL[4]) {
-			header("Location: /edit/" . $startup["slug"]);
-		}
+		getHeader("Page", "Edit " . $startup["name"]);
 	}
-	getHeader("Page", "Edit " . $startup["name"]);
 ?>
 <main id="content">
 	<div class="container pt-4 mt-4 pb-4">
@@ -410,6 +427,37 @@
 								</div>
 							</div>
 						</div>
+						<?php if ($_SESSION["user"]["is_su"] == "1") { ?>
+						<div class="card">
+							<div class="card-header" role="tab" id="headingSeven">
+								<h5 class="mb-0">
+									<a class="collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+										Superuser Settings
+									</a>
+								</h5>
+							</div>
+							<div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven" data-parent="#accordion">
+								<div class="card-body">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Property</th>
+												<th>Value</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php foreach ($adminProps as $val) { ?>
+												<tr>
+													<td><?php echo $val; ?></td>
+													<td><input type="text" value="<?php echo $startup[$val]; ?>" name="<?php echo $val; ?>" id="<?php echo $val; ?>" class="form-control"></td>
+												</tr>
+											<?php } ?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<?php } ?>
 					</div>
 					<button class="btn btn-primary mt-3" type="submit">Publish Changes</button>
 					<a class="btn btn-secondary mt-3 ml-2" href="/startup/<?php echo $startup["slug"]; ?>">Cancel &amp; Go Back</a>

@@ -31,6 +31,11 @@
 	<url><loc><?php echo $siteURL; ?>/about</loc></url>
 	<?php foreach ($startups as $startup) { ?>
 	<url><loc><?php echo $siteURL; ?>/startup/<?php echo $startup["slug"]; ?></loc></url>
+	<url><loc><?php echo $siteURL; ?>/startup/<?php echo $startup["slug"]; ?>/about</loc></url>
+	<url><loc><?php echo $siteURL; ?>/startup/<?php echo $startup["slug"]; ?>/founders</loc></url>
+	<url><loc><?php echo $siteURL; ?>/startup/<?php echo $startup["slug"]; ?>/news</loc></url>
+	<url><loc><?php echo $siteURL; ?>/startup/<?php echo $startup["slug"]; ?>/badges</loc></url>
+	<url><loc><?php echo $siteURL; ?>/startup/<?php echo $startup["slug"]; ?>/lists</loc></url>
 	<?php } ?>
 	<url><loc><?php echo $siteURL; ?>/cities</loc></url>
 	<?php foreach ($cities as $city) { ?>

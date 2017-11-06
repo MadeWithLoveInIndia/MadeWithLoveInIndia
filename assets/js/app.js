@@ -1,8 +1,15 @@
+smartquotes();
 var clipboard = new Clipboard("#joinCode");
 clipboard.on("success", function() {
 	$("#joinCode").attr("data-toggle", "tooltip");
 	$("#joinCode").tooltip();
 	$("#joinCode").tooltip("show");
+});
+var clipboard = new Clipboard("#domainCode");
+clipboard.on("success", function() {
+	$("#domainCode").attr("data-toggle", "tooltip");
+	$("#domainCode").tooltip();
+	$("#domainCode").tooltip("show");
 });
 $("#industry").easyAutocomplete({
 	url: "/assets/json/industries.json"
@@ -73,12 +80,12 @@ function initMap() {
 	initMap2();
 }
 function initMap2() {
-	if ($(".schoolAutoComplete")[0]) {
+	$(".schoolAutoComplete").each(function(b, a) {
 		var options = {
 			types: ["establishment"],
 		}
-		var autocomplete = new google.maps.places.Autocomplete($(".schoolAutoComplete")[0], options);
-	}
+		var autocomplete = new google.maps.places.Autocomplete(a, options);
+	});
 }
 
 $(function () {

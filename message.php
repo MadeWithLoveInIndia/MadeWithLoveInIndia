@@ -33,7 +33,7 @@
 		if ($result === FALSE || json_decode($result)->success == false) {
 			$error = "Invalid captcha. Please try again.";
 		} else {
-			sendAnEmail($user["email"], $_POST["subject"], $_POST["message"] .= "\r\n\r\nThis message was sent to you by " . $_SESSION["user"]["name"] . " on your Made with Love in India profile: https://madewithlove.org.in", $_SESSION["user"]["name"], $_SESSION["user"]["email"]);
+			sendAnEmail($user["email"], $_POST["subject"], $_POST["message"] .= "\r\n\r\nThis message was sent to you by " . $_SESSION["user"]["name"] . " on your Made with Love in India profile: https://madewithlove.org.in/profile/" . $user["username"], $_SESSION["user"]["name"], $_SESSION["user"]["email"]);
 			$success = "Your message to " . $user["name"] . " has been sent.";
 		}
 	}
