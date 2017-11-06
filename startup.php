@@ -641,7 +641,7 @@
 								<p class="card-text">This profile is owned by the community. To modify or add to the information, you can <a href="#">suggest a change</a> or <a href="/claim/%s">claim this page</a>.</p>
 								<p class="card-text small text-muted">This page is not affiliated with or endorsed by anyone associated with the topic.</p>
 							</div>
-						</div>', boolify(!$profile["badge_verified"]), $profile["name"]); ?>
+						</div>', boolify(!$profile["badge_verified"]), $profile["slug"]); ?>
 						<?php display('<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Verified Page</h4>

@@ -63,6 +63,7 @@
 			if (DB::queryFirstRow("SELECT username FROM users WHERE username=%s", $username)) {
 				if ($number != 0) {
 					$username .= "-" . $number;
+					$number++;
 				}
 			} else {
 				$exists = 0;
@@ -101,11 +102,11 @@
 						"link_website" => $_POST["link_website"],
 						"link_twitter" => $_POST["link_twitter"],
 						"link_linkedin" => $_POST["link_linkedin"],
-						"university1" => $_POST["university1"],
+						"university1" => explode(",", $_POST["university1"]),
 						"course1" => $_POST["course1"],
-						"university2" => $_POST["university2"],
+						"university2" => explode(",", $_POST["university2"]),
 						"course2" => $_POST["course2"],
-						"university3" => $_POST["university3"],
+						"university3" => explode(",", $_POST["university3"]),
 						"course3" => $_POST["course3"],
 						"show_age" => $_POST["show_age"],
 						"is_su" => $_POST["is_su"],
@@ -275,8 +276,8 @@
 									<td>
 										<select id="show_age" name="show_age" class="form-control">
 											<option value="0">Don&rsquo;t show age or birthday on profile</option>
-											<option value="1">Only show age on profile, not birthday</option>
-											<option value="2" selected>Show birthday and age on profile</option>
+											<option value="1" selected>Only show age on profile, not birthday</option>
+											<option value="2">Show birthday and age on profile</option>
 										</select>
 									</td>
 								</tr>

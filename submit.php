@@ -60,9 +60,13 @@
 					</div>
 					<div class="form-group">
 						<label for="technology">Technology</label>
-						<input type="text" class="form-control" name="technology" id="technology" placeholder="Enter an technology" autocomplete="new-password">
+						<input type="text" class="form-control" name="technology" id="technology" placeholder="Enter a technology" autocomplete="new-password">
 					</div>
+					<?php if ($_SESSION["user"]["is_su"] == "1") { ?>
+						
+					<?php } else { ?>
 					<div class="g-recaptcha" data-sitekey="6LdExBIUAAAAAPB6nhoIar2LDZQDEpJb2eDCopUu"></div>
+					<?php } ?>
 					<p class="mt-3">By submitting this form, you agree with our <a target="_blank" href="/terms">terms of use</a> and <a  target="_blank"href="/privacy">privacy policy</a>. You also confirm that you are an owner of this startup, use the Made with Love in India badge, and adhere to its <a target="_blank" href="/responsibilities">responsibilities</a>.</p>
 					<button class="btn btn-primary mt-3" type="submit">Continue<i class="ion ion-md-arrow-forward ml-2"></i></button>
 				</form>

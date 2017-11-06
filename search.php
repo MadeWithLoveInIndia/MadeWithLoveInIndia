@@ -364,7 +364,7 @@
 					</div>
 				</div>
 				<?php
-					if ($currentURL[4] != "all" && $currentURL[3] != "search") {
+					if ($currentURL[4] != "all" && $currentURL[3] != "search" && $currentURL[3] != "people") {
 						$info = DB::queryFirstRow("SELECT intro FROM descriptions WHERE title=%s", $currentURL[4])["intro"];
 						if (!$info) {
 							$apiURL = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" . ucfirst(str_replace("-", "+", $currentURL[4]));

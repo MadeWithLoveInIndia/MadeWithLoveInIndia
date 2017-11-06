@@ -43,7 +43,7 @@
 	<div class="container pt-4 mt-4 pb-4">
 		<div class="row justify-content-center">
 			<div class="col-md-5">
-				<h2>Message Anand</h2>
+				<h2>Message <?php echo explode(" ", $user["name"])[0]; ?></h2>
 				<?php display('<div class="alert alert-danger mt-4" role="alert"><p>%s</p><div><a href="/profile/%s/message" class="btn btn-danger mt-2">Try Again</a></div></div>', $error, $user["username"]); ?>
 				<?php display('<div class="alert alert-success mt-4" role="alert"><p>%s</p><div><a href="/profile/%s" class="btn btn-success mt-2">Back to Profile</a></div></div>', $success, $user["username"]); ?>
 			</div>

@@ -613,6 +613,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/amity-university-noida-uttar-pradesh-india-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9251,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/amity-university-noida-uttar-pradesh-india-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/amity-university-noida-uttar-pradesh-india-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/amity-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7061,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/amity-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/amity-university-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/analytics.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -877,6 +899,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/delhi-university-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10282,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhi-university-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/delhi-university-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/delhi.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1071,6 +1104,17 @@
 		"initialSize": 8489,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ghaziabad.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/ghaziabad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/common\/gurugram.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8525,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/gurugram.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/gurugram.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1900,6 +1944,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/cached\/common\/university-of-twente-drienerlolaan-drienerveld-universiteit-twente-enschede-netherlands-square-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-twente-drienerlolaan-drienerveld-universiteit-twente-enschede-netherlands-square-logo.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/common\/university-of-twente-drienerlolaan-drienerveld-universiteit-twente-enschede-netherlands-square-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/cached\/common\/university-of-twente-square-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2138,6 +2193,17 @@
 		"initialSize": 11675,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/geekshack.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/geekshack.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/logos\/go-trending.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1400,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/go-trending.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/logos\/go-trending.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2721,6 +2787,17 @@
 		"initialSize": 94679,
 		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/geekshack.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/geekshack.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/cached\/screenshots\/go-trending.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1308,
+		"inputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/go-trending.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/cached\/screenshots\/go-trending.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3440,6 +3517,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/uploads\/manual\/9603d886e40672196a9250025bac8c3a.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47120,
+		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/9603d886e40672196a9250025bac8c3a.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/9603d886e40672196a9250025bac8c3a.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/uploads\/manual\/9741b57fc27257d733237d4e997e0b48.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3700,6 +3788,17 @@
 		"initialSize": 8894,
 		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/fedc5524fd1c7e106cec9db2c9672f5e.png",
 		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/fedc5524fd1c7e106cec9db2c9672f5e.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/uploads\/manual\/fef557f587c43bdec68605cd2529f35f.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47238,
+		"inputAbbreviatedPath": "\/assets\/uploads\/manual\/fef557f587c43bdec68605cd2529f35f.png",
+		"outputAbbreviatedPath": "\/assets\/uploads\/manual\/fef557f587c43bdec68605cd2529f35f.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3997,6 +4096,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/newemail.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/newemail.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/pages\/a11y.php": {
 		"fileType": 8192,

@@ -165,7 +165,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-md-3">
-										<img class="rounded-circle" alt="Anand Chowdhary" src="<?php echo avatarUrl($profile["email"]); ?>">
+										<img class="rounded-circle" alt="<?php echo $profile["name"]; ?>" src="<?php echo avatarUrl($profile["email"]); ?>">
 									</div>
 									<div class="col-md ml-2 text-white d-flex align-items-center">
 										<header>
@@ -294,7 +294,7 @@
 						</div>
 						<div class="card mb-4">
 							<div class="card-body">
-								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">About Anand</h4>
+								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">About <?php echo explode(" ", $profile["name"])[0]; ?></h4>
 								<div class="p">
 									<table>
 										<tbody>
@@ -370,7 +370,7 @@
 								<div class="row">
 									<div class="col-md-3">
 										<a href="/profile/<?php echo $profile["username"]; ?>">
-											<img class="rounded-circle" alt="Anand Chowdhary" src="<?php echo avatarUrl($profile["email"]); ?>"	>
+											<img class="rounded-circle" alt="<?php echo $profile["name"]; ?>" src="<?php echo avatarUrl($profile["email"]); ?>"	>
 										</a>
 									</div>
 									<div class="col-md ml-2 text-white d-flex align-items-center">

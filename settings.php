@@ -26,6 +26,20 @@
 				$_POST["username"] = $profile["username"];
 			}
 		}
+		if ($_POST["email"] != $profile["email"]) {
+			if (DB::queryFirstRow("SELECT id FROM users WHERE email=%s", $_POST["email"])) {
+				$error = "This email is already in use.";
+				$_POST["email"] = $profile["email"];
+			} else {
+				$recoverCode = md5(rand());
+				DB::update("users", [
+					"emailverified" => 0,
+					"activationcode" => $recoverCode
+				], "id=%s", $_SESSION["user"]["id"]);
+				$extraMessage = "We've changed your email, but you have you verify your email again. Your will be a community account until you verify your new email.";
+				sendAnEmail($_POST["email"], "Verification - Made with Love in India", "Hey, here's the link to reset your password on Made with Love in India: https://madewithlove.org.in/newemail/" . $recoverCode);
+			}
+		}
 		if ($_POST["course1A"] == "Select Program") {
 			$_POST["course1"] = null;
 		} else {
@@ -82,8 +96,9 @@
 		<div class="row justify-content-center">
 				<form method="post" class="col-md-8">
 						<h2>Edit Your Profile</h2>
-						<?php display('<span style="display: none">%s</span><div class="alert alert-info mt-4" role="alert">Your changes have been published. <a href="/profile/%s">View your profile.</a></div>', isset($_POST["name"]), $profile["username"]); ?>
+						<?php display('<span style="display: none">%s</span><div class="alert alert-success mt-4" role="alert">Your changes have been published. <a href="/profile/%s">View your profile.</a></div>', isset($_POST["name"]), $profile["username"]); ?>
 						<?php display('<div class="alert alert-danger mt-4" role="alert">%s</div>', $error); ?>
+						<?php display('<div class="alert alert-info mt-4" role="alert">%s</div>', $extraMessage); ?>
 		
 		
 						<div id="accordion" role="tablist" class="mt-4">
@@ -254,7 +269,7 @@
 										</div>
 										<div class="form-group">
 											<label for="course1B">Specialization</label>
-											<input type="text" class="form-control schoolAutoComplete" name="course1B" id="course1B" placeholder="Enter the name of the institute" value="<?php echo explode(", " ,$profile["course1"])[1]; ?>">
+											<input type="text" class="form-control" name="course1B" id="course1B" placeholder="Enter the name of the institute" value="<?php echo explode(", " ,$profile["course1"])[1]; ?>">
 										</div>
 										<hr class="mt-4 mb-4">
 										<h4 class="h5">Academic Degree</h4>
@@ -273,7 +288,7 @@
 										</div>
 										<div class="form-group">
 											<label for="course2B">Specialization</label>
-											<input type="text" class="form-control schoolAutoComplete" name="course2B" id="course2B" placeholder="Enter the name of the institute" value="<?php echo explode(", " ,$profile["course2"])[1]; ?>">
+											<input type="text" class="form-control" name="course2B" id="course2B" placeholder="Enter the name of the institute" value="<?php echo explode(", " ,$profile["course2"])[1]; ?>">
 										</div>
 										<hr class="mt-4 mb-4">
 										<h4 class="h5">Academic Degree</h4>
@@ -292,7 +307,7 @@
 										</div>
 										<div class="form-group">
 											<label for="course3B">Specialization</label>
-											<input type="text" class="form-control schoolAutoComplete" name="course3B" id="course3B" placeholder="Enter the name of the institute" value="<?php echo explode(", " ,$profile["course3"])[1]; ?>">
+											<input type="text" class="form-control" name="course3B" id="course3B" placeholder="Enter the name of the institute" value="<?php echo explode(", " ,$profile["course3"])[1]; ?>">
 										</div>
 									</div>
 								</div>

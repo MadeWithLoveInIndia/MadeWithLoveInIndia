@@ -45,7 +45,7 @@
 				<?php display('<div class="alert alert-danger mt-4" role="alert">%s</div>', $error); ?>
 				<?php display('<div class="alert alert-success mt-4" role="alert">%s</div>', $success); ?>
 				<?php if (!$error || $error == "Sorry, this is not the right email. Please try again or <a href='/about'>get in touch</a> with us.") { ?><form class="mt-4" method="post">
-					<p>To verify that you are <?php echo $user["name"]; ?>, please enter your email as in our records: <strong><?php echo obfuscate_email($user["email"]); ?></strong>.</p>
+					<p>To verify that you are <?php echo $user["name"]; ?>, please enter your email as per our records: <strong><?php echo obfuscate_email($user["email"]); ?></strong>.</p>
 					<p>If this is not your email, <a href="/about">get in touch</a> with us and we will help you verify your profile.</p>
 					<div class="form-group mt-3">
 						<label for="email">Email</label>
