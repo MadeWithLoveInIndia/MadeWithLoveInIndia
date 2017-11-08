@@ -340,14 +340,14 @@
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Verified Profile</h4>
 								<p class="card-text"><span class="d-none">%s</span>This a verified profile and only its owner can make changes to it.</p>
-								<p class="card-text small text-muted">You can, however, <a href="#">suggest a change</a> to this page and we will get back to you.</p>
+								<p class="card-text small text-muted">You can, however, <a href="/contribute">suggest a change</a> to this page and we will get back to you.</p>
 							</div>
 						</div>
 						<?php } else { ?>
 						<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Community Profile</h4>
-								<p class="card-text">This profile is owned by the community. <a href="/verify/user/<?php echo $profile["username"]; ?>">Claim this profile</a> to modify or add to the information, or <a href="#">suggest a change</a>.</p>
+								<p class="card-text">This profile is owned by the community. <a href="/verify/user/<?php echo $profile["username"]; ?>">Claim this profile</a> to modify or add to the information, or <a href="/contribute">suggest a change</a>.</p>
 								<p class="card-text small text-muted">This profile is not affiliated with or endorsed by anyone associated with the topic.</p>
 							</div>
 						</div>

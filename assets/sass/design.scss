@@ -326,3 +326,14 @@ a.card {
 .easy-autocomplete-container ul li div.startup-info {
 	display: block !important;
 }
+
+blockquote {
+	margin-top: 1.5rem;
+	border-left: 3px solid $red;
+	padding-left: 1.5rem;
+	font-style: italic;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+	background-color: $red;
+}

@@ -67,7 +67,7 @@
 								<div class="text-muted text-center p-4">
 									<h1><i class="ion ion-ios-briefcase bigger"></i></h1>
 									<h4 class="h6">There are no startups listed.</h4>
-									<p>Know about a startup <?php echo $type == "technology" ? "using" : "in"; ?> <?php echo $city["name"]; ?>? <a href="#">Tell us</a>.</p>
+									<p>Know about a startup <?php echo $type == "technology" ? "using" : "in"; ?> <?php echo $city["name"]; ?>? <a href="/contribute">Tell us</a>.</p>
 								</div>
 								<?php } ?>
 							</div>

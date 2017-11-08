@@ -219,7 +219,7 @@
 											if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
 											<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> to add founders!
 										<?php } else { ?>
-											<a href="#">Suggest a change</a> if you know who founded this startup.
+											<a href="/contribute">Suggest a change</a> if you know who founded this startup.
 										<?php } } ?>
 									</p>
 								</div>
@@ -319,7 +319,7 @@
 											if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
 											<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> to add a news article!
 										<?php } else { ?>
-											<a href="#">Suggest an article</a> to add here.
+											<a href="/contribute">Suggest an article</a> to add here.
 										<?php } } ?>
 									</p>
 								</div>
@@ -638,7 +638,7 @@
 						<?php display('<div class="card mb-4"><span style="display: none">%s</span>
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Community Page</h4>
-								<p class="card-text">This profile is owned by the community. To modify or add to the information, you can <a href="#">suggest a change</a> or <a href="/claim/%s">claim this page</a>.</p>
+								<p class="card-text">This profile is owned by the community. To modify or add to the information, you can <a href="/contribute">suggest a change</a> or <a href="/claim/%s">claim this page</a>.</p>
 								<p class="card-text small text-muted">This page is not affiliated with or endorsed by anyone associated with the topic.</p>
 							</div>
 						</div>', boolify(!$profile["badge_verified"]), $profile["slug"]); ?>
@@ -646,7 +646,7 @@
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Verified Page</h4>
 								<p class="card-text"><span class="d-none">%s</span>This startup page is verified by %s. Only company employees can make changes to this page.</p>
-								<p class="card-text small text-muted">You can, however, <a href="#">suggest a change</a> to this page and we will get back to you.</p>
+								<p class="card-text small text-muted">You can, however, <a href="/contribute">suggest a change</a> to this page and we will get back to you.</p>
 							</div>
 						</div>', boolify($profile["badge_verified"]), $profile["name"]); ?>
 						<!-- <nav class="nav small">
@@ -736,7 +736,7 @@
 													if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
 													<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> to add founders!
 												<?php } else { ?>
-													<a href="#">Suggest a change</a> if you know who founded this startup.
+													<a href="/contribute">Suggest a change</a> if you know who founded this startup.
 												<?php } } ?>
 											</p>
 										</div>
@@ -775,7 +775,7 @@
 														if ($profile["owner"] == $_SESSION["user"]["id"]) { ?>
 														<a href="/edit/<?php echo $profile["slug"]; ?>">Edit your page</a> to add a news article!
 													<?php } else { ?>
-														<a href="#">Suggest an article</a> to add here.
+														<a href="/contribute">Suggest an article</a> to add here.
 													<?php } } ?>
 												</p>
 											</div>

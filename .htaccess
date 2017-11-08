@@ -18,6 +18,7 @@ RewriteRule ^startups/(.*)$ search.php?page=$1
 RewriteRule ^institute/(.*)$ search.php?page=$1
 RewriteRule ^people/(.*)$ search.php?page=$1
 RewriteRule ^search/(.*)$ search.php?page=$1
+RewriteRule ^city/(.*)$ search.php?page=$1
 
 RewriteRule ^reset/(.*)$ reset.php?code=$1
 RewriteRule ^verify verify.php?code=$1
@@ -26,11 +27,19 @@ RewriteRule ^newemail/(.*)$ newemail.php?code=$1
 RewriteRule ^activate activate.php?code=$1
 RewriteRule ^activate/(.*)$ activate.php?code=$1
 
-RewriteRule ^city/(.*)$ list.php?slug=$1&type=city
 RewriteRule ^technology/(.*)$ list.php?slug=$1&type=technology
 RewriteRule ^institute/(.*)$ list.php?slug=$1&type=university
-RewriteRule ^city/(.*)$/(.*)$ list.php?slug=$1&type=city&page=$2
 RewriteRule ^technology/(.*)$/(.*)$ list.php?slug=$1&type=technology&page=$2
+
+RewriteRule ^a11y pages/a11y.php
+RewriteRule ^about pages/about.php
+RewriteRule ^badges pages/badges.php
+RewriteRule ^cookies pages/cookies.php
+RewriteRule ^badges pages/badges.php
+RewriteRule ^privacy pages/privacy.php
+RewriteRule ^terms pages/terms.php
+RewriteRule ^responsibilities pages/responsibilities.php
+RewriteRule ^contribute pages/contribute.php
 
 RewriteRule ^sitemap.xml sitemap.php
 

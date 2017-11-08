@@ -122,10 +122,6 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
 							<a class="nav-link" href="/people">People</a>
 						</li>
-						<?php $listItem = "About"; ?>
-						<li class="nav-item<?php if ($listItem == $current) { echo " active"; } ?>">
-							<a class="nav-link" href="/about">About</a>
-						</li>
 					</ul>
 					<?php if (isset($_SESSION["user"])) { ?>
 					<ul class="navbar-nav">
@@ -168,6 +164,7 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 								<i class="ion ion-ios-more zoomer"></i>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item<?php if ("About" == $current) { echo " active"; } ?>" href="/about">About</a>
 								<a class="dropdown-item" href="/responsibilities">Responsibilities</a>
 								<a class="dropdown-item" href="/badges">Badges</a>
 								<a class="dropdown-item" href="/industries">Industries</a>
@@ -250,6 +247,16 @@ function getHeader($cat = null, $title = null, $next = null, $prev = null, $seoD
 		<script src="https://cdn.jsdelivr.net/gh/kellym/smartquotesjs/dist/smartquotes.js"></script>
 		<script src="/assets/js/min/download-min.js"></script>
 		<script src="/assets/js/min/app-min.js"></script>
+		<script src="https://www.googletagmanager.com/gtag/js?id=UA-58910975-1" async></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "UA-58910975-1");
+		</script>
+
 
 	</body>
 

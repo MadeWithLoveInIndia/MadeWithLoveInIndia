@@ -47,6 +47,9 @@
 	} else if ($currentURL[3] == "search") {
 		$title = unurlify($currentURL[4]) . " Startups";
 		$typeTitle = "Startups";
+	} else if ($currentURL[3] == "city") {
+		$title = "Startups in " . unurlify($currentURL[4]);
+		$typeTitle = "Startups";
 	} else if ($type == "all") {
 		$title = "Startups";
 		$typeTitle = "Startups";
@@ -77,6 +80,10 @@
 			$startups = DB::query("SELECT * FROM users WHERE university1 LIKE %ss OR university2 LIKE %ss OR university3 LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", unurlify($currentURL[4]), unurlify($currentURL[4]), unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
 			$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM users WHERE university1 LIKE %ss OR university2 LIKE %ss OR university3 LIKE %ss", unurlify($currentURL[4]), unurlify($currentURL[4]), unurlify($currentURL[4]))["a"]);
 		}
+		$nPages = ceil($nStartups / $startupsPerPage);
+	} else if ($currentURL[3] == "city") {
+		$startups = DB::query("SELECT * FROM startups WHERE city LIKE %ss ORDER BY $orderBy LIMIT %d OFFSET %d", unurlify($currentURL[4]), $startupsPerPage, ($page - 1) * $startupsPerPage);
+		$nStartups = intval(DB::queryFirstRow("SELECT COUNT(*) as a FROM startups WHERE city LIKE %ss", unurlify($currentURL[4]))["a"]);
 		$nPages = ceil($nStartups / $startupsPerPage);
 	} else if ($currentURL[4] == "all") {
 		$startups = DB::query("SELECT * FROM startups ORDER BY $orderBy LIMIT %d OFFSET %d", $startupsPerPage, ($page - 1) * $startupsPerPage);
@@ -401,7 +408,7 @@
 				<div class="card mb-4">
 					<div class="card-body">
 						<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Community Page</h4>
-						<p class="card-text">This page is owned by the community. To modify or add to the information, you can <a href="#">suggest a change</a>.</p>
+						<p class="card-text">This page is owned by the community. To modify or add to the information, you can <a href="/contribute">suggest a change</a>.</p>
 						<p class="card-text small text-muted">This page generated based on what Made with Love in India users are talking about.</p>
 					</div>
 				</div>

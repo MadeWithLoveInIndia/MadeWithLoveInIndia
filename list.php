@@ -109,7 +109,7 @@
 								<div class="text-muted text-center p-4">
 									<h1><i class="ion ion-ios-briefcase bigger"></i></h1>
 									<h4 class="h6">There are no startups listed.</h4>
-									<p>Know about a startup <?php echo $type == "technology" ? "using" : "in"; ?> <?php echo $city["name"]; ?>? <a href="#">Tell us</a>.</p>
+									<p>Know about a startup <?php echo $type == "technology" ? "using" : "in"; ?> <?php echo $city["name"]; ?>? <a href="/contribute">Tell us</a>.</p>
 								</div>
 								<?php } ?>
 							</div>
@@ -211,7 +211,7 @@
 						<div class="card mb-4">
 							<div class="card-body">
 								<h4 class="card-title border pb-2 border-top-0 border-left-0 border-right-0 text-uppercase smaller">Community Page</h4>
-								<p class="card-text">This page is owned by the community. To modify or add to the information, you can <a href="#">suggest a change</a>.</p>
+								<p class="card-text">This page is owned by the community. To modify or add to the information, you can <a href="/contribute">suggest a change</a>.</p>
 								<p class="card-text small text-muted">This page is not affiliated with or endorsed by anyone associated with the topic.</p>
 							</div>
 						</div>
