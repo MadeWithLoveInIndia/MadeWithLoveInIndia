@@ -191,11 +191,11 @@ export function Speakers() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-semibold tracking-tighter text-blue-600 sm:text-5xl"
+            className="font-display text-4xl font-semibold tracking-tighter text-rose-600 sm:text-5xl"
           >
             Speakers
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
+          <p className="mt-4 font-display text-2xl tracking-tight text-rose-900">
             Learn from the experts on the cutting-edge of deception at the most
             sinister companies.
           </p>
@@ -216,7 +216,7 @@ export function Speakers() {
                         className={clsx(
                           'absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block',
                           dayIndex === selectedIndex
-                            ? 'fill-blue-600 stroke-blue-600'
+                            ? 'fill-rose-600 stroke-rose-600'
                             : 'fill-transparent stroke-slate-400',
                         )}
                       />
@@ -225,7 +225,7 @@ export function Speakers() {
                           className={clsx(
                             'font-mono text-sm',
                             dayIndex === selectedIndex
-                              ? 'text-blue-600'
+                              ? 'text-rose-600'
                               : 'text-slate-500',
                           )}
                         >
@@ -236,7 +236,7 @@ export function Speakers() {
                         </div>
                         <time
                           dateTime={day.dateTime}
-                          className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900"
+                          className="mt-1.5 block text-2xl font-semibold tracking-tight text-rose-900"
                         >
                           {day.date}
                         </time>
@@ -260,15 +260,11 @@ export function Speakers() {
                       <div
                         className={clsx(
                           'absolute bottom-6 left-0 right-4 top-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
-                          [
-                            'border-blue-300',
-                            'border-indigo-300',
-                            'border-sky-300',
-                          ][speakerIndex % 3],
+                          ['border-rose-300'][speakerIndex % 3],
                         )}
                       />
                       <div
-                        className="absolute inset-0 bg-indigo-50"
+                        className="absolute inset-0 bg-rose-50"
                         style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
                       >
                         <Image

@@ -240,10 +240,10 @@ function ScheduleTabbed() {
 function DaySummary({ day }: { day: Day }) {
   return (
     <>
-      <h3 className="text-2xl font-semibold tracking-tight text-blue-900">
+      <h3 className="text-2xl font-semibold tracking-tight text-rose-900">
         <time dateTime={day.dateTime}>{day.date}</time>
       </h3>
-      <p className="mt-1.5 text-base tracking-tight text-blue-900">
+      <p className="mt-1.5 text-base tracking-tight text-rose-900">
         {day.summary}
       </p>
     </>
@@ -256,7 +256,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
       role="list"
       className={clsx(
         className,
-        'space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur',
+        'space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-rose-900/5 backdrop-blur',
       )}
     >
       {day.timeSlots.map((timeSlot, timeSlotIndex) => (
@@ -265,13 +265,13 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
           aria-label={`${timeSlot.name} talking about ${timeSlot.description} at ${timeSlot.start} - ${timeSlot.end} PST`}
         >
           {timeSlotIndex > 0 && (
-            <div className="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
+            <div className="mx-auto mb-8 h-px w-48 bg-rose-500/10" />
           )}
-          <h4 className="text-lg font-semibold tracking-tight text-blue-900">
+          <h4 className="text-lg font-semibold tracking-tight text-rose-900">
             {timeSlot.name}
           </h4>
           {timeSlot.description && (
-            <p className="mt-1 tracking-tight text-blue-900">
+            <p className="mt-1 tracking-tight text-rose-900">
               {timeSlot.description}
             </p>
           )}
@@ -309,14 +309,15 @@ export function Schedule() {
     <section id="schedule" aria-label="Schedule" className="py-20 sm:py-32">
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-          <h2 className="font-display text-4xl font-semibold tracking-tighter text-blue-600 sm:text-5xl">
-            Our three day schedule is jam-packed with brilliant, creative, evil
-            geniuses.
+          <h2 className="font-display text-4xl font-semibold tracking-tighter text-rose-600 sm:text-5xl">
+            Join the movement.
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            The worst people in our industry giving the best talks you’ve ever
-            seen. Nothing will be recorded and every attendee has to sign an NDA
-            to watch the talks.
+          <p className="mt-4 font-display text-2xl tracking-tight text-rose-900">
+            If you use the Made with Love in India badge in your startup’s
+            website or products, submit it and get featured on our platform.
+          </p>
+          <p className="mt-4 font-display text-2xl tracking-tight text-rose-900">
+            Copy and paste the following code in your footer:
           </p>
         </div>
       </Container>

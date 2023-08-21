@@ -25,7 +25,7 @@ export default {
         '5xl': '2.5rem',
       },
       fontFamily: {
-        sans: 'var(--font-hind)',
+        sans: 'var(--font-dm-sans)',
         display: 'var(--font-dm-sans)',
       },
       maxWidth: {

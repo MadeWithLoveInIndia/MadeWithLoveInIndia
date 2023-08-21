@@ -9,13 +9,13 @@ export default function NotFound() {
       <div className="relative flex h-full items-center py-20 sm:py-36">
         <BackgroundImage className="-top-36 bottom-0" />
         <Container className="relative flex w-full flex-col items-center">
-          <p className="font-display text-2xl tracking-tight text-blue-900">
+          <p className="font-display text-2xl tracking-tight text-rose-900">
             404
           </p>
-          <h1 className="mt-4 font-display text-4xl font-semibold tracking-tighter text-blue-600 sm:text-5xl">
+          <h1 className="mt-4 font-display text-4xl font-semibold tracking-tighter text-rose-600 sm:text-5xl">
             Page not found
           </h1>
-          <p className="mt-4 text-lg tracking-tight text-blue-900">
+          <p className="mt-4 text-lg tracking-tight text-rose-900">
             Sorry, we couldn’t find the page you’re looking for.
           </p>
           <Button href="/" className="mt-8">

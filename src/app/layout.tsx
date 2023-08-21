@@ -1,15 +1,8 @@
 import clsx from 'clsx'
 import { type Metadata } from 'next'
-import { DM_Sans, Hind } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 
 import '@/styles/tailwind.css'
-
-const hind = Hind({
-  subsets: ['latin'],
-  weight: ['400', '600'],
-  display: 'swap',
-  variable: '--font-hind',
-})
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -35,11 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(
-        'h-full bg-white antialiased',
-        hind.variable,
-        dmSans.variable,
-      )}
+      className={clsx('h-full bg-white antialiased', dmSans.variable)}
     >
       <body className="flex min-h-full">
         <div className="flex w-full flex-col">{children}</div>
