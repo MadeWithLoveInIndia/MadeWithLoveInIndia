@@ -191,7 +191,7 @@ export function Speakers() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
+            className="font-display text-4xl font-semibold tracking-tighter text-blue-600 sm:text-5xl"
           >
             Speakers
           </h2>
