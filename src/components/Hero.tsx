@@ -8,9 +8,10 @@ export function Hero() {
       <BackgroundImage className="-bottom-14 -top-36" />
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
-          <h1 className="font-display text-5xl font-bold tracking-tighter text-blue-600 sm:text-7xl">
-            <span className="sr-only">DeceptiConf - </span>A design conference
-            for the dark side.
+          <h1 className="font-display text-5xl font-bold tracking-tighter sm:text-7xl">
+            <span className="sr-only">Made with Love in India - </span>A
+            movement to celebrate, promote, and build a brand —{' '}
+            <span className="text-blue-600">India</span>.
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             <p>
@@ -25,8 +26,8 @@ export function Hero() {
               how to deploy them without ever being detected.
             </p>
           </div>
-          <Button href="#" className="mt-10 w-full sm:hidden">
-            Get your tickets
+          <Button href="#submit" className="mt-10 w-full sm:hidden">
+            Submit your startup
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[

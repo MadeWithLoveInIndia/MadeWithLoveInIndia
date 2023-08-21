@@ -1,13 +1,14 @@
 import clsx from 'clsx'
 import { type Metadata } from 'next'
-import { DM_Sans, Inter } from 'next/font/google'
+import { DM_Sans, Hind } from 'next/font/google'
 
 import '@/styles/tailwind.css'
 
-const inter = Inter({
+const hind = Hind({
   subsets: ['latin'],
+  weight: ['400', '600'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-hind',
 })
 
 const dmSans = DM_Sans({
@@ -36,7 +37,7 @@ export default function RootLayout({
       lang="en"
       className={clsx(
         'h-full bg-white antialiased',
-        inter.variable,
+        hind.variable,
         dmSans.variable,
       )}
     >

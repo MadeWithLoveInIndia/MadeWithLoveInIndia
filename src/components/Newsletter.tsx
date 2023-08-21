@@ -46,7 +46,7 @@ export function Newsletter() {
               <h3 className="text-lg font-semibold tracking-tight text-blue-900">
                 Sign up to our newsletter <span aria-hidden="true">&darr;</span>
               </h3>
-              <div className="mt-5 flex rounded-3xl bg-white py-2.5 pr-2.5 shadow-xl shadow-blue-900/5 focus-within:ring-2 focus-within:ring-blue-900">
+              <div className="mt-5 flex rounded-full bg-white py-2.5 pr-2.5 shadow-xl shadow-blue-900/5 focus-within:ring-2 focus-within:ring-blue-900">
                 <input
                   type="email"
                   required
