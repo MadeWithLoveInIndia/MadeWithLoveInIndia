@@ -39,8 +39,8 @@ export function Newsletter() {
               </p>
               <p className="mt-4 text-lg tracking-tight text-rose-900">
                 If you want to know more about the initiative, have a press
-                request, or want to learn more about licensing, please use the
-                form to get in touch.
+                request, or want to learn more about licensing the brand, please
+                use the form to get in touch.
               </p>
             </div>
             <form>

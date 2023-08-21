@@ -24,15 +24,15 @@ function Code() {
   return (
     <div className="overflow-x-auto whitespace-nowrap rounded-lg bg-white/60 p-8 text-center font-mono shadow-xl shadow-rose-900/5 backdrop-blur">
       &lt;a href="https://madewithlove.org.in" target="_blank"&gt;Made with
-      &lt;span aria-label="Love" style="color: #e74c3c"&gt;&hearts;&lt;/span&gt;
-      in India&lt;/a&gt;
+      &lt;span aria-label="Love" style="color:
+      #e74c3c"&gt;&amp;hearts;&lt;/span&gt; in India&lt;/a&gt;
     </div>
   )
 }
 
 export function Schedule() {
   return (
-    <section id="schedule" aria-label="Schedule" className="py-20 sm:py-32">
+    <section id="join" aria-label="Schedule" className="py-20 sm:py-32">
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
           <h2 className="font-display text-4xl font-semibold tracking-tighter text-rose-600 sm:text-5xl">
@@ -65,9 +65,17 @@ export function Schedule() {
             on in our open-source repository on GitHub to add a link to your
             website to our collection. Make a pull request and we’ll merge it!
           </p>
-          <h3 className="mb-12 mt-14 font-display text-3xl font-semibold tracking-tighter text-rose-600 sm:mt-24">
-            Responsibilities
-          </h3>
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
+            <h3 className="font-display text-3xl font-semibold tracking-tighter text-rose-600 sm:mt-24">
+              Responsibilities
+            </h3>
+            <p className="mb-12 mt-4 font-display text-2xl tracking-tight text-rose-900">
+              We hold a deep commitment to both our nation's heritage and her
+              future. As stewards of this movement, we embrace a set of
+              responsibilities that reflect our dedication to upholding the
+              values of respect, inclusivity, and ethical conduct.
+            </p>
+          </div>
           <Grid
             items={[
               {

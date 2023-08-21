@@ -1,5 +1,6 @@
-import fs from 'fs/promises'
-import matter from 'gray-matter'
+const fs = require('fs/promises')
+const matter = require('gray-matter')
+
 ;(async () => {
   const files = await fs.readdir('./data')
   const result: unknown[] = []

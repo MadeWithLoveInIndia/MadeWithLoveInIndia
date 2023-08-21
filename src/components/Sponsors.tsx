@@ -5,7 +5,7 @@ export function Sponsors() {
     <section
       id="sponsors"
       aria-label="Sponsors"
-      className="flex justify-center py-20 sm:pb-32"
+      className="flex justify-center pb-8 pt-20"
     >
       <Container>
         <p className="mb-4 text-center">A not-for-profit initiative by</p>

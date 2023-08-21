@@ -2,13 +2,12 @@
   "name": "madewithloveinindia",
   "version": "5.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate": "ts-node-esm scripts/generate-data.ts"
+    "generate": "ts-node scripts/generate-data.ts"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {

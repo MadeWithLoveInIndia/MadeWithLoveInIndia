@@ -17,10 +17,10 @@ export function Hero() {
             <p>
               At the crossroads of tradition and innovation, where creativity
               flourishes and entrepreneurship thrives, lies a remarkable
-              movement founded in April 2013 &mdash; Made with Love in India.
-              Rooted in the heart of this diverse nation, our mission is to
-              spotlight the incredible stories, talents, and endeavors that
-              define the spirit of India&rsquo;s entrepreneurial landscape.
+              movement &mdash; Made with Love in India. Rooted in the heart of
+              this diverse nation, our mission is to spotlight the incredible
+              stories, talents, and endeavors that define the spirit of
+              India&rsquo;s entrepreneurial landscape.
             </p>
             <p>
               Next time you see the{' '}

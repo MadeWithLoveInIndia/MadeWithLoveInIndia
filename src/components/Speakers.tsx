@@ -21,10 +21,17 @@ export function Speakers() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="my-14 font-display text-4xl font-semibold tracking-tighter text-rose-600 sm:text-5xl"
+            className="font-display text-4xl font-semibold tracking-tighter text-rose-600 sm:text-5xl"
           >
             We&rsquo;re made in India.
-          </h2>
+          </h2>{' '}
+          <p className="mb-12 mt-4 font-display text-2xl tracking-tight text-rose-900">
+            Step into a world where every creation tells a story, and where Made
+            with Love in India signifies not just a product's origin, but a
+            testament to the nation's creativity, resilience, and unwavering
+            spirit. Welcome to a celebration of India's innovation &mdash; where
+            passion meets possibility.
+          </p>
         </div>
         <Grid
           items={[
