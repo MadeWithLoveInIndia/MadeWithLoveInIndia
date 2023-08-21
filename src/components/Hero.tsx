@@ -33,7 +33,7 @@ export function Hero() {
               length and breadth of this incredible nation.
             </p>
           </div>
-          <Button href="#join" className="mt-10 w-full sm:hidden">
+          <Button href="/#join" className="mt-10 w-full sm:hidden">
             Join the movement
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
