@@ -1,11 +1,7 @@
-export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
+export function Logo() {
   return (
     <div className="text-2xl font-semibold">
-      Made with{' '}
-      <span aria-label="Love" className="font-display">
-        &hearts;
-      </span>{' '}
-      in India
+      Made with <span className="love">Love</span> in India
     </div>
   )
 }

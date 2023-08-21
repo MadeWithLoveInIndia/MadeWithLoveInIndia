@@ -13,11 +13,12 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - DeceptiConf',
-    default: 'DeceptiConf - A community-driven design conference',
+    template: '%s - Made with Love in India',
+    default:
+      'Made with Love in India - A movement to celebrate, promote, and build a brand, India.',
   },
   description:
-    'At DeceptiConf you’ll learn about the latest dark patterns being developed to trick even the smartest visitors, and you’ll learn how to deploy them without ever being detected.',
+    'At the crossroads of tradition and innovation, where creativity flourishes and entrepreneurship thrives, lies a remarkable movement founded in April 2013 — Made with Love in India. Rooted in the heart of this diverse nation, our mission is to spotlight the incredible stories, talents, and endeavors that define the spirit of India’s entrepreneurial landscape.',
 }
 
 export default function RootLayout({

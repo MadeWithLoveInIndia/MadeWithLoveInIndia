@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'MadeWithLove';
+  src: url('/fonts/mwlii.eot');
+  src:
+    url('/fonts/mwlii.eot#iefix') format('embedded-opentype'),
+    url('/fonts/mwlii.ttf') format('truetype'),
+    url('/fonts/mwlii.woff') format('woff'),
+    url('/fonts/mwlii.svg#mwlii') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.love {
+  font-family: 'MadeWithLove' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  letter-spacing: 0;
+  -webkit-font-feature-settings: 'liga';
+  -ms-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga';
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f43f5e;
+  display: inline-block;
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+}
+
+::-moz-selection {
+  background: #f6cdd1;
+}
+
+::selection {
+  background: #f6cdd1;
+}

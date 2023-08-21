@@ -10,7 +10,7 @@ export function Header() {
           <Logo className="h-12 w-auto text-slate-900" />
         </div>
         <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
-          <Button href="#submit">Submit your initiative</Button>
+          <Button href="#join">Join the movement</Button>
         </div>
       </Container>
     </header>

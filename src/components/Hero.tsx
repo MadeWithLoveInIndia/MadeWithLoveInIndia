@@ -23,15 +23,18 @@ export function Hero() {
               define the spirit of India&rsquo;s entrepreneurial landscape.
             </p>
             <p>
-              Next time you see the <strong>Made with &hearts; in India</strong>{' '}
+              Next time you see the{' '}
+              <strong>
+                Made with <span className="love">Love</span> in India
+              </strong>{' '}
               badge on a product, know that you&rsquo;re not just looking at a
               symbol &mdash; you&rsquo;re witnessing a commitment to excellence,
               a dedication to craft, and a journey of innovation that spans the
               length and breadth of this incredible nation.
             </p>
           </div>
-          <Button href="#submit" className="mt-10 w-full sm:hidden">
-            Submit your initiative
+          <Button href="#join" className="mt-10 w-full sm:hidden">
+            Join the movement
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
