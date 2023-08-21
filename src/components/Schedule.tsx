@@ -1,305 +1,31 @@
-'use client'
-
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
-import { useEffect, useState } from 'react'
-
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Container } from '@/components/Container'
 
-interface Day {
-  date: React.ReactNode
-  dateTime: string
-  summary: string
-  timeSlots: Array<{
-    name: string
-    description: string | null
-    start: string
-    end: string
-  }>
-}
-
-const schedule: Array<Day> = [
-  {
-    date: 'April 4',
-    dateTime: '2022-04-04',
-    summary:
-      'The first day of the conference is focused on dark patterns for ecommerce.',
-    timeSlots: [
-      {
-        name: 'Steven McHail',
-        description: 'Not so one-time payments',
-        start: '9:00AM',
-        end: '10:00AM',
-      },
-      {
-        name: 'Jaquelin Isch',
-        description: 'The finer print',
-        start: '10:00AM',
-        end: '11:00AM',
-      },
-      {
-        name: 'Dianne Guilianelli',
-        description: 'Post-purchase blackmail',
-        start: '11:00AM',
-        end: '12:00PM',
-      },
-      {
-        name: 'Lunch',
-        description: null,
-        start: '12:00PM',
-        end: '1:00PM',
-      },
-      {
-        name: 'Ronni Cantadore',
-        description: 'Buy or die',
-        start: '1:00PM',
-        end: '2:00PM',
-      },
-      {
-        name: 'Erhart Cockrin',
-        description: 'In-person cancellation',
-        start: '2:00PM',
-        end: '3:00PM',
-      },
-      {
-        name: 'Parker Johnson',
-        description: 'The pay/cancel switcheroo',
-        start: '3:00PM',
-        end: '4:00PM',
-      },
-    ],
-  },
-  {
-    date: 'April 5',
-    dateTime: '2022-04-05',
-    summary:
-      'Next we spend the day talking about deceiving people with technology.',
-    timeSlots: [
-      {
-        name: 'Damaris Kimura',
-        description: 'The invisible card reader',
-        start: '9:00AM',
-        end: '10:00AM',
-      },
-      {
-        name: 'Ibrahim Frasch',
-        description: 'Stealing fingerprints',
-        start: '10:00AM',
-        end: '11:00AM',
-      },
-      {
-        name: 'Cathlene Burrage',
-        description: 'Voting machines',
-        start: '11:00AM',
-        end: '12:00PM',
-      },
-      {
-        name: 'Lunch',
-        description: null,
-        start: '12:00PM',
-        end: '1:00PM',
-      },
-      {
-        name: 'Rinaldo Beynon',
-        description: 'Blackhat SEO that works',
-        start: '1:00PM',
-        end: '2:00PM',
-      },
-      {
-        name: 'Waylon Hyden',
-        description: 'Turning your audience into a botnet',
-        start: '2:00PM',
-        end: '3:00PM',
-      },
-      {
-        name: 'Giordano Sagucio',
-        description: 'Fly phishing',
-        start: '3:00PM',
-        end: '4:00PM',
-      },
-    ],
-  },
-  {
-    date: 'April 6',
-    dateTime: '2022-04-06',
-    summary:
-      'We close out the event previewing new techniques that are still in development.',
-    timeSlots: [
-      {
-        name: 'Andrew Greene',
-        description: 'Neuralink dark patterns',
-        start: '9:00AM',
-        end: '10:00AM',
-      },
-      {
-        name: 'Heather Terry',
-        description: 'DALL-E for passports',
-        start: '10:00AM',
-        end: '11:00AM',
-      },
-      {
-        name: 'Piers Wilkins',
-        description: 'Quantum password cracking',
-        start: '11:00AM',
-        end: '12:00PM',
-      },
-      {
-        name: 'Lunch',
-        description: null,
-        start: '12:00PM',
-        end: '1:00PM',
-      },
-      {
-        name: 'Gordon Sanderson',
-        description: 'SkyNet is coming',
-        start: '1:00PM',
-        end: '2:00PM',
-      },
-      {
-        name: 'Kimberly Parsons',
-        description: 'Dark patterns for the metaverse',
-        start: '2:00PM',
-        end: '3:00PM',
-      },
-      {
-        name: 'Richard Astley',
-        description: 'Knowing the game and playing it',
-        start: '3:00PM',
-        end: '4:00PM',
-      },
-    ],
-  },
-]
-
-function ScheduleTabbed() {
-  let [tabOrientation, setTabOrientation] = useState('horizontal')
-
-  useEffect(() => {
-    let smMediaQuery = window.matchMedia('(min-width: 640px)')
-
-    function onMediaQueryChange({ matches }: { matches: boolean }) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
-    }
-
-    onMediaQueryChange(smMediaQuery)
-    smMediaQuery.addEventListener('change', onMediaQueryChange)
-
-    return () => {
-      smMediaQuery.removeEventListener('change', onMediaQueryChange)
-    }
-  }, [])
-
+export function Grid({
+  items,
+}: {
+  items: { title: React.ReactNode; description: React.ReactNode }[]
+}) {
   return (
-    <Tab.Group
-      as="div"
-      className="mx-auto grid max-w-2xl grid-cols-1 gap-y-6 sm:grid-cols-2 lg:hidden"
-      vertical={tabOrientation === 'vertical'}
-    >
-      <Tab.List className="-mx-4 flex gap-x-4 gap-y-10 overflow-x-auto pb-4 pl-4 sm:mx-0 sm:flex-col sm:pb-0 sm:pl-0 sm:pr-8">
-        {({ selectedIndex }) => (
-          <>
-            {schedule.map((day, dayIndex) => (
-              <div
-                key={day.dateTime}
-                className={clsx(
-                  'relative w-3/4 flex-none pr-4 sm:w-auto sm:pr-0',
-                  dayIndex !== selectedIndex && 'opacity-70',
-                )}
-              >
-                <DaySummary
-                  day={{
-                    ...day,
-                    date: (
-                      <Tab className="ui-not-focus-visible:outline-none">
-                        <span className="absolute inset-0" />
-                        {day.date}
-                      </Tab>
-                    ),
-                  }}
-                />
-              </div>
-            ))}
-          </>
-        )}
-      </Tab.List>
-      <Tab.Panels>
-        {schedule.map((day) => (
-          <Tab.Panel
-            key={day.dateTime}
-            className="ui-not-focus-visible:outline-none"
-          >
-            <TimeSlots day={day} />
-          </Tab.Panel>
-        ))}
-      </Tab.Panels>
-    </Tab.Group>
-  )
-}
-
-function DaySummary({ day }: { day: Day }) {
-  return (
-    <>
-      <h3 className="text-2xl font-semibold tracking-tight text-rose-900">
-        <time dateTime={day.dateTime}>{day.date}</time>
-      </h3>
-      <p className="mt-1.5 text-base tracking-tight text-rose-900">
-        {day.summary}
-      </p>
-    </>
-  )
-}
-
-function TimeSlots({ day, className }: { day: Day; className?: string }) {
-  return (
-    <ol
-      role="list"
-      className={clsx(
-        className,
-        'space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-rose-900/5 backdrop-blur',
-      )}
-    >
-      {day.timeSlots.map((timeSlot, timeSlotIndex) => (
-        <li
-          key={timeSlot.start}
-          aria-label={`${timeSlot.name} talking about ${timeSlot.description} at ${timeSlot.start} - ${timeSlot.end} PST`}
-        >
-          {timeSlotIndex > 0 && (
-            <div className="mx-auto mb-8 h-px w-48 bg-rose-500/10" />
-          )}
-          <h4 className="text-lg font-semibold tracking-tight text-rose-900">
-            {timeSlot.name}
+    <div className="grid gap-12 lg:grid-cols-3">
+      {items.map((item, index) => (
+        <article className="space-y-2" key={index}>
+          <h4 className="font-display text-xl font-semibold tracking-tight text-rose-900">
+            {item.title}
           </h4>
-          {timeSlot.description && (
-            <p className="mt-1 tracking-tight text-rose-900">
-              {timeSlot.description}
-            </p>
-          )}
-          <p className="mt-1 font-mono text-sm text-slate-500">
-            <time dateTime={`${day.dateTime}T${timeSlot.start}-08:00`}>
-              {timeSlot.start}
-            </time>{' '}
-            -{' '}
-            <time dateTime={`${day.dateTime}T${timeSlot.end}-08:00`}>
-              {timeSlot.end}
-            </time>{' '}
-            PST
-          </p>
-        </li>
+          <p>{item.description}</p>
+        </article>
       ))}
-    </ol>
+    </div>
   )
 }
 
-function ScheduleStatic() {
+function Code() {
   return (
-    <div className="hidden lg:grid lg:grid-cols-3 lg:gap-x-8">
-      {schedule.map((day) => (
-        <section key={day.dateTime}>
-          <DaySummary day={day} />
-          <TimeSlots day={day} className="mt-10" />
-        </section>
-      ))}
+    <div className="overflow-x-auto whitespace-nowrap rounded-lg bg-white/60 p-8 text-center font-mono shadow-xl shadow-rose-900/5 backdrop-blur">
+      &lt;a href="https://madewithlove.org.in" target="_blank"&gt;Made with
+      &lt;span aria-label="Love" style="color: #e74c3c"&gt;&hearts;&lt;/span&gt;
+      in India&lt;/a&gt;
     </div>
   )
 }
@@ -313,8 +39,9 @@ export function Schedule() {
             Join the movement.
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-rose-900">
-            If you use the Made with Love in India badge in your startup’s
-            website or products, submit it and get featured on our platform.
+            If you use the Made with Love in India badge in your startup or
+            project’s website or products, submit it and get featured on our
+            platform.
           </p>
           <p className="mt-4 font-display text-2xl tracking-tight text-rose-900">
             Copy and paste the following code in your footer:
@@ -324,8 +51,57 @@ export function Schedule() {
       <div className="relative mt-14 sm:mt-24">
         <BackgroundImage position="right" className="-bottom-32 -top-40" />
         <Container className="relative">
-          <ScheduleTabbed />
-          <ScheduleStatic />
+          <Code />
+          <p className="mt-14 font-display text-2xl tracking-tight text-rose-900 sm:mt-24">
+            Once you have added the badge, follow the{' '}
+            <a
+              href="https://github.com/MadeWithLoveInIndia/madewithlove.org.in#join-the-movement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold hover:text-rose-500"
+            >
+              Contributing guidelines
+            </a>{' '}
+            on in our open-source repository on GitHub to add a link to your
+            website to our collection. Make a pull request and we’ll merge it!
+          </p>
+          <h3 className="mb-12 mt-14 font-display text-3xl font-semibold tracking-tighter text-rose-600 sm:mt-24">
+            Responsibilities
+          </h3>
+          <Grid
+            items={[
+              {
+                title: 'Respecting our identity',
+                description:
+                  "We pledge never to use our nation's name, flag, or symbols in any way that disrespects or diminishes their significance. Our pride in India's cultural richness is woven into everything we do, and we ensure that our actions align with the honor and dignity they deserve.",
+              },
+              {
+                title: 'Embracing diversity and inclusivity',
+                description:
+                  "Just as India is a tapestry of cultures, languages, and traditions, we strive to make our products and services accessible and inclusive to all. We're committed to breaking down barriers and creating opportunities that resonate with people from every corner of our diverse nation.",
+              },
+              {
+                title: 'Contributing to growth',
+                description:
+                  'As responsible citizens, we recognize the importance of contributing to the well-being of our nation. We commit to paying our fair share of taxes, thereby actively participating in the growth and development of our country. Our success is intertwined with the prosperity of India, and we embrace this responsibility wholeheartedly.',
+              },
+              {
+                title: 'Sustaining ethical practices',
+                description:
+                  'Integrity forms the cornerstone of our endeavors. We promise to maintain the highest standards of ethical conduct, treating our partners, customers, and stakeholders with fairness and honesty. Our Made with Love in India community is built on trust, and we nurture it with every decision we make.',
+              },
+              {
+                title: 'Supporting local communities',
+                description:
+                  'Just as we champion entrepreneurs and startups across India, we also extend our support to local communities. Through collaborations and initiatives, we aim to uplift the regions that inspire our creations, contributing to their social and economic well-being.',
+              },
+              {
+                title: 'Empowering creators',
+                description:
+                  "Our responsibility extends to the very heart of our movement – the creators. We vow to empower the dreamers and visionaries who breathe life into their ideas. By providing a platform that nurtures their potential, we help them realize their aspirations and drive India's entrepreneurial spirit forward.",
+              },
+            ]}
+          />
         </Container>
       </div>
     </section>

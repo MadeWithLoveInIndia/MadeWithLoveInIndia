@@ -14,7 +14,7 @@ export function Footer() {
               href="https://anandchowdhary.com?utm_source=mwlii&utm_medium=link&utm_campaign=footer"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium hover:text-rose-500"
+              className="font-semibold hover:text-rose-500"
             >
               Anand Chowdhary
             </a>

@@ -7,6 +7,7 @@ import { useEffect, useId, useState } from 'react'
 
 import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
+import { Grid } from '@/components/Schedule'
 import andrewGreeneImage from '@/images/avatars/andrew-greene.jpg'
 import cathleneBurrageImage from '@/images/avatars/cathlene-burrage.jpg'
 import damarisKimuraImage from '@/images/avatars/damaris-kimura.jpg'
@@ -191,15 +192,30 @@ export function Speakers() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-semibold tracking-tighter text-rose-600 sm:text-5xl"
+            className="mb-6 font-display text-4xl font-semibold tracking-tighter text-rose-600 sm:text-5xl"
           >
-            Speakers
+            We&rsquo;re made in India.
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-rose-900">
-            Learn from the experts on the cutting-edge of deception at the most
-            sinister companies.
-          </p>
         </div>
+        <Grid
+          items={[
+            {
+              title: 'A badge of distinction',
+              description:
+                'When this badge graces a product or service, it carries with it a story of passion and purpose. It&rsquo;s a testament to the countless hours of tireless work, the spark of inspiration that ignited the idea, and the unwavering belief in the potential of Indian creativity.',
+            },
+            {
+              title: 'Crafted with care',
+              description:
+                "Whether it's an artisanal creation, a technological breakthrough, or a game-changing service, Made with Love in India encapsulates the very essence of what makes this nation remarkable. It signifies that you're holding a piece of India's soul in your hands – a fusion of heritage and innovation.",
+            },
+            {
+              title: 'Empowering dreams',
+              description:
+                "With every Made with Love in India badge, you're part of something bigger. You're supporting the dreams of entrepreneurs who dared to dream, who took the road less traveled, and who are now shaping industries and leaving their mark on the world.",
+            },
+          ]}
+        />
         <Tab.Group
           as="div"
           className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
