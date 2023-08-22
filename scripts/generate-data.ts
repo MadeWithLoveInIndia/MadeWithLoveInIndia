@@ -11,7 +11,7 @@ const validate = require('jsonschema').validate
     const validated = validate(data, schema)
     if (validated.errors.length > 0) throw new Error(validated.errors[0])
     result.push({
-      ...data.data,
+      ...data,
       slug: file.replace('.json', ''),
     })
 

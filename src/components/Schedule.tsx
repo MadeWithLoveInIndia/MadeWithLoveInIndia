@@ -55,7 +55,7 @@ export function Schedule() {
           <p className="mt-14 font-display text-2xl tracking-tight text-rose-900 sm:mt-24">
             Once you have added the badge, follow the{' '}
             <a
-              href="https://github.com/MadeWithLoveInIndia/madewithlove.org.in#join-the-movement"
+              href="https://github.com/MadeWithLoveInIndia/MadeWithLoveInIndia#join-the-movement"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold hover:text-rose-500"

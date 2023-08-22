@@ -60,8 +60,8 @@ export function Speakers() {
         >
           {!showAll && (
             <>
-              <div className="z-1 pointer-events-none absolute bottom-0 left-0 right-0 flex h-64 items-end justify-center bg-gradient-to-b from-transparent to-white" />
-              <div className="z-2 absolute bottom-0 left-0 right-0 flex items-center justify-center">
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 flex h-64 items-end justify-center bg-gradient-to-b from-transparent to-white" />
+              <div className="absolute bottom-0 left-0 right-0 z-30 flex items-center justify-center">
                 <Button onClick={() => setShowAll((val) => !val)}>
                   Show all
                 </Button>
@@ -94,7 +94,10 @@ export function Speakers() {
               ...data,
               ...data,
             ].map((item, index) => (
-              <div key={`${item.slug}_${index}`} className="flex">
+              <div
+                key={`${item.slug}_${index}`}
+                className="relative flex transition-opacity hover:opacity-70"
+              >
                 <div className="mr-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl shadow">
                   <img
                     alt=""
@@ -113,15 +116,19 @@ export function Speakers() {
                 <div className="col-span-3 grow space-y-1">
                   {'name' in item && typeof item.name === 'string' && (
                     <div className="font-semibold">
-                      <Link href={`/${item.slug}`}>{item.name}</Link>
+                      <Link
+                        className="parent-relative-full-link"
+                        href={`/${item.slug}`}
+                      >
+                        {item.name}
+                      </Link>
                     </div>
                   )}
-                  {'description' in item &&
-                    typeof item.description === 'string' && (
-                      <p className="text-sm leading-snug text-slate-500">
-                        {item.description}
-                      </p>
-                    )}
+                  {'tagline' in item && typeof item.tagline === 'string' && (
+                    <p className="text-sm leading-snug text-slate-500">
+                      {item.tagline}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}

@@ -13,6 +13,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@headlessui/tailwindcss": "^0.2.0",
+    "@tabler/icons-react": "^2.32.0",
     "@types/node": "20.4.5",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
