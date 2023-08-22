@@ -1,11 +1,15 @@
 const fs = require('fs/promises')
+const validate = require('jsonschema').validate
 
 ;(async () => {
   const files = await fs.readdir('./data')
+  const schema = JSON.parse(await fs.readFile('./public/schema.json', 'utf-8'))
   const result: unknown[] = []
   for (const file of files) {
     const text = await fs.readFile(`./data/${file}`, 'utf-8')
     const data = JSON.parse(text)
+    const validated = validate(data, schema)
+    if (validated.errors.length > 0) throw new Error(validated.errors[0])
     result.push({
       ...data.data,
       slug: file.replace('.json', ''),

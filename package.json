@@ -27,6 +27,7 @@
   "devDependencies": {
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.16",
+    "jsonschema": "^1.4.1",
     "prettier": "^3.0.1",
     "prettier-plugin-tailwindcss": "^0.5.2",
     "sharp": "^0.32.0",
