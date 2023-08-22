@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "https://anandchowdhary.github.io/okrs/schema.json",
+  "title": "Made with Love in India project",
+  "description": "A project in the collection of Made with Love in India projects",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Name",
+      "type": "string",
+      "enum": [
+        "company",
+        "open source project",
+        "nonprofit",
+        "institution",
+        "community",
+        "personal website",
+        "other"
+      ]
+    },
+    "name": {
+      "description": "Name",
+      "type": "string"
+    },
+    "tagline": {
+      "description": "Description up to 50 characters",
+      "type": "string",
+      "maxLength": 50
+    },
+    "url": {
+      "description": "Landing page URL",
+      "type": "string"
+    },
+
+    "description": {
+      "description": "Long description in markdown",
+      "type": "string"
+    },
+    "logo": {
+      "description": "Hosted logo URL",
+      "type": "string"
+    },
+    "founded": {
+      "description": "Year founded",
+      "type": "number",
+      "minimum": 1947
+    },
+    "city": {
+      "description": "City",
+      "type": "string"
+    },
+    "state": {
+      "description": "State",
+      "type": "string"
+    },
+
+    "blog": {
+      "description": "Blog URL",
+      "type": "string"
+    },
+    "facebook": {
+      "description": "Facebook page or profile username",
+      "type": "string"
+    },
+    "twitter": {
+      "description": "Twitter username",
+      "type": "string"
+    },
+    "instagram": {
+      "description": "Instagram username",
+      "type": "string"
+    },
+    "linkedin_profile": {
+      "description": "LinkedIn profile username",
+      "type": "string"
+    },
+    "linkedin_page": {
+      "description": "LinkedIn company username or ID",
+      "type": "string"
+    },
+
+    "adminTags": {
+      "description": "Tags",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["type", "name", "tagline", "url"]
+}

@@ -73,7 +73,11 @@ export function Newsletter() {
                 use the form to get in touch.
               </p>
             </div>
-            <form>
+            <form
+              method="post"
+              action="https://formspree.io/mwlii@anandchowdhary.com"
+              target="_blank"
+            >
               <h3 className="text-lg font-semibold tracking-tight text-rose-900">
                 Get in touch <span aria-hidden="true">&darr;</span>
               </h3>

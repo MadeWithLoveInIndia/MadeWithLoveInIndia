@@ -110,9 +110,11 @@ export function Speakers() {
                 </div>
                 <div className="col-span-3 grow space-y-1">
                   <div className="font-semibold">
-                    <Link href={`/${item.slug}`}>{item.title}</Link>
+                    <Link href={`/${item.slug}`}>{item.name}</Link>
                   </div>
-                  <p className="text-sm leading-snug">{item.description}</p>
+                  <p className="text-sm leading-snug text-slate-500">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             ))}
