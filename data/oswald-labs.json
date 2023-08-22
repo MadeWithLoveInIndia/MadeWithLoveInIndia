@@ -1,4 +1,5 @@
 {
+  "$schema": "http://madewithloveinindia.org/schema.json",
   "type": "company",
   "name": "Oswald Labs",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Oswald_Labs_New_Logo.svg",

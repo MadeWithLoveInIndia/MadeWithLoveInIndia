@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   },
   description:
     'At the crossroads of tradition and innovation, where creativity flourishes and entrepreneurship thrives, lies a remarkable movement founded in April 2013 — Made with Love in India. Rooted in the heart of this diverse nation, our mission is to spotlight the incredible stories, talents, and endeavors that define the spirit of India’s entrepreneurial landscape.',
+  manifest: '/site.webmanifest',
+  themeColor: '#f43f5e',
+  icons: [
+    { rel: 'icon', sizes: '32x32', url: '/favicon-32x32.png' },
+    { rel: 'icon', sizes: '16x16', url: '/favicon-16x16.png' },
+    { rel: 'apple-touch-icon', url: '/apple-touch-icon.png' },
+    { rel: 'mask-icon', color: '#f43f5e', url: '/safari-pinned-tab.svg' },
+  ],
 }
 
 export default function RootLayout({

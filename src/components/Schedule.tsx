@@ -25,7 +25,7 @@ function Code() {
     <div className="overflow-x-auto whitespace-nowrap rounded-lg bg-white/60 p-8 text-center font-mono shadow-xl shadow-rose-900/5 backdrop-blur">
       &lt;a href="https://madewithlove.org.in" target="_blank"&gt;Made with
       &lt;span aria-label="Love" style="color:
-      #e74c3c"&gt;&amp;hearts;&lt;/span&gt; in India&lt;/a&gt;
+      #f43f5e"&gt;&amp;hearts;&lt;/span&gt; in India&lt;/a&gt;
     </div>
   )
 }

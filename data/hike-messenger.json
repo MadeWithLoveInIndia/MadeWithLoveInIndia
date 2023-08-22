@@ -1,4 +1,5 @@
 {
+  "$schema": "http://madewithloveinindia.org/schema.json",
   "type": "company",
   "name": "Hike Messenger",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hike_Logo.png",
