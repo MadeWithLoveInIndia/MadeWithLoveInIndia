@@ -9,7 +9,8 @@ const validate = require('jsonschema').validate
     const text = await fs.readFile(`./data/${file}`, 'utf-8')
     const data = JSON.parse(text)
     const validated = validate(data, schema)
-    if (validated.errors.length > 0) throw new Error(validated.errors[0])
+    if (validated.errors.length > 0)
+      throw new Error(`Invalid data: ${file} - ${validated.errors[0]}`)
     result.push({
       ...data,
       slug: file.replace('.json', ''),

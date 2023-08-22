@@ -61,7 +61,7 @@ export function Speakers() {
           {!showAll && (
             <>
               <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 flex h-64 items-end justify-center bg-gradient-to-b from-transparent to-white" />
-              <div className="absolute bottom-0 left-0 right-0 z-30 flex items-center justify-center">
+              <div className="absolute bottom-0 left-1/2 z-30 flex -translate-x-1/2 items-center justify-center">
                 <Button onClick={() => setShowAll((val) => !val)}>
                   Show all
                 </Button>
@@ -69,31 +69,7 @@ export function Speakers() {
             </>
           )}
           <div className="mt-20 grid gap-16 md:grid-cols-4">
-            {[
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-              ...data,
-            ].map((item, index) => (
+            {data.map((item, index) => (
               <ListItem key={`${item.slug}_${index}`} item={item} />
             ))}
           </div>

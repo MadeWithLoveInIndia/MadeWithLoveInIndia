@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "personal website",
+  "name": "Anand Chowdhary",
+  "tagline": "Creative technologist and entrepreneur",
+  "url": "https://anandchowdhary.com",
+  "city": "New Delhi",
+  "state": "delhi"
+}

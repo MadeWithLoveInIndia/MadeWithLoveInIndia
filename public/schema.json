@@ -10,6 +10,7 @@
       "type": "string",
       "enum": [
         "company",
+        "app",
         "open source project",
         "nonprofit",
         "institution",

@@ -16,6 +16,8 @@ import {
   IconBrandTwitter,
   IconMap,
   IconMapPin,
+  IconNews,
+  IconWorldWww,
 } from '@tabler/icons-react'
 import Link from 'next/link'
 
@@ -95,10 +97,16 @@ export function CollectionPage({
               </li>
               {[
                 {
-                  key: 'github_username',
-                  label: 'GitHub',
-                  Icon: IconBrandGithub,
-                  format: (value: string) => `https://github.com/${value}`,
+                  key: 'blog',
+                  label: 'Blog',
+                  Icon: IconNews,
+                  format: (value: string) => value,
+                },
+                {
+                  key: 'url',
+                  label: 'Website',
+                  Icon: IconWorldWww,
+                  format: (value: string) => value,
                 },
                 {
                   key: 'github_repository_name',
@@ -155,7 +163,11 @@ export function CollectionPage({
                     >
                       <item.Icon className="h-5 w-5" strokeWidth={1.5} />
                       <span>{item.label}</span>
-                      <span className="font-semibold">{value}</span>
+                      <span className="font-semibold">
+                        {value.startsWith('http')
+                          ? new URL(value).hostname
+                          : value}
+                      </span>
                     </a>
                   </li>
                 )

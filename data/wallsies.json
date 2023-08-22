@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "app",
+  "name": "Wallsies",
+  "tagline": "Wallpaper pack with beautiful, high-res wallpapers",
+  "url": "https://play.google.com/store/apps/details?id=com.wallsies",
+  "city": "New Delhi",
+  "state": "delhi"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "company",
+  "name": "Megatron Technologies",
+  "tagline": "Technology company based in India and Europe",
+  "url": "http://megatrontech.com",
+  "city": "Bangalore",
+  "state": "karnataka"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "community",
+  "name": "MINET",
+  "tagline": "The Mother's International School's tech club",
+  "url": "https://minet.co",
+  "city": "New Delhi",
+  "state": "delhi"
+}
