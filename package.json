@@ -18,7 +18,6 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
-    "gray-matter": "^4.0.3",
     "next": "13.4.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",

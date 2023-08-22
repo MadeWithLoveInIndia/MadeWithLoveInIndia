@@ -99,22 +99,29 @@ export function Speakers() {
                   <img
                     alt=""
                     src={
-                      item.github
+                      'github' in item && item.github
                         ? `https://github.com/${item.github}.png?size=200`
-                        : `https://logo.clearbit.com/${
+                        : 'url' in item && typeof item.url === 'string'
+                        ? `https://logo.clearbit.com/${
                             new URL(item.url).hostname
                           }`
+                        : ''
                     }
                     className="rounded-xl"
                   />
                 </div>
                 <div className="col-span-3 grow space-y-1">
-                  <div className="font-semibold">
-                    <Link href={`/${item.slug}`}>{item.name}</Link>
-                  </div>
-                  <p className="text-sm leading-snug text-slate-500">
-                    {item.description}
-                  </p>
+                  {'name' in item && typeof item.name === 'string' && (
+                    <div className="font-semibold">
+                      <Link href={`/${item.slug}`}>{item.name}</Link>
+                    </div>
+                  )}
+                  {'description' in item &&
+                    typeof item.description === 'string' && (
+                      <p className="text-sm leading-snug text-slate-500">
+                        {item.description}
+                      </p>
+                    )}
                 </div>
               </div>
             ))}

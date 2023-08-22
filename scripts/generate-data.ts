@@ -1,28 +1,27 @@
 const fs = require('fs/promises')
-const matter = require('gray-matter')
 
 ;(async () => {
   const files = await fs.readdir('./data')
   const result: unknown[] = []
   for (const file of files) {
     const text = await fs.readFile(`./data/${file}`, 'utf-8')
-    const data = matter(text)
+    const data = JSON.parse(text)
     result.push({
       ...data.data,
-      slug: file.replace('.mdx', ''),
+      slug: file.replace('.json', ''),
     })
 
-    await fs.mkdir(`./src/app/(entries)/(data)/${file.replace('.mdx', '')}`, {
+    await fs.mkdir(`./src/app/(entries)/(data)/${file.replace('.json', '')}`, {
       recursive: true,
     })
     await fs.writeFile(
-      `./src/app/(entries)/(data)/${file.replace('.mdx', '')}/page.tsx`,
-      `'use client';
-
-import Content from '../../../../../data/${file}';
+      `./src/app/(entries)/(data)/${file.replace('.json', '')}/page.tsx`,
+      `
+import { CollectionPage } from "@/app/(entries)/component";
+const data = JSON.parse(\`${JSON.stringify(data)}\`);
 
 export default function Page() {
-  return <Content />
+  return <CollectionPage data={data} />
 }
 `,
     )
