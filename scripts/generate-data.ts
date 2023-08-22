@@ -26,6 +26,7 @@ export default function Page() {
 `,
     )
   }
+  await fs.mkdir('./src/generated', { recursive: true })
   await fs.writeFile(
     './src/generated/data.json',
     JSON.stringify(result, null, 2),
