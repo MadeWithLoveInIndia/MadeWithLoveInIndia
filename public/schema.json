@@ -58,6 +58,14 @@
       "description": "Blog URL",
       "type": "string"
     },
+    "github_username": {
+      "description": "GitHub username",
+      "type": "string"
+    },
+    "github_repository_name": {
+      "description": "GitHub repository name without the username",
+      "type": "string"
+    },
     "facebook": {
       "description": "Facebook page or profile username",
       "type": "string"
@@ -87,5 +95,5 @@
       }
     }
   },
-  "required": ["type", "name", "tagline", "url"]
+  "required": ["type", "name", "tagline", "url", "city", "state"]
 }

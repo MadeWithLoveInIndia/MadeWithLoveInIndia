@@ -15,13 +15,25 @@ const validate = require('jsonschema').validate
       slug: file.replace('.json', ''),
     })
 
-    await fs.mkdir(`./src/app/(entries)/(data)/${file.replace('.json', '')}`, {
-      recursive: true,
-    })
+    await fs.mkdir(
+      `./src/app/[state]/[city]/(entries)/(data)/${file.replace('.json', '')}`,
+      { recursive: true },
+    )
     await fs.writeFile(
-      `./src/app/(entries)/(data)/${file.replace('.json', '')}/page.tsx`,
-      `
-import { CollectionPage } from "@/app/(entries)/component";
+      `./src/app/[state]/[city]/(entries)/(data)/${file.replace(
+        '.json',
+        '',
+      )}/page.tsx`,
+      `import { type Metadata } from 'next';
+import { CollectionPage } from "@/app/[state]/[city]/(entries)/component";
+
+export const metadata: Metadata = {
+  title: "${data.name}",
+  description: "${data.name} (${
+    data.tagline
+  }) is part of Made with Love in India, a movement to celebrate, promote, and build a brand, India."
+};
+
 const data = JSON.parse(\`${JSON.stringify(data)}\`);
 
 export default function Page() {

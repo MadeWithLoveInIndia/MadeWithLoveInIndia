@@ -1,5 +1,6 @@
 'use client'
 
+import { slugify } from '@/app/[state]/[city]/(entries)/component'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Grid } from '@/components/Schedule'
@@ -118,7 +119,9 @@ export function Speakers() {
                     <div className="font-semibold">
                       <Link
                         className="parent-relative-full-link"
-                        href={`/${item.slug}`}
+                        href={`/${slugify(item.state)}/${slugify(item.city)}/${
+                          item.slug
+                        }`}
                       >
                         {item.name}
                       </Link>
