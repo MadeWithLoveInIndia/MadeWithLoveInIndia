@@ -5,7 +5,6 @@ import { Layout } from '@/components/Layout'
 import { Schedule } from '@/components/Schedule'
 import data from '@/generated/data.json'
 import { IconArrowLeft } from '@tabler/icons-react'
-import type { GetStaticPaths } from 'next'
 import Link from 'next/link'
 
 export const states = [
@@ -61,11 +60,8 @@ export const getStateName = (slug: string) =>
     .replace(/ And /g, ' & ')
     .replace('Haveli & Daman', 'Haveli and Daman') // Fix for Dadra and Nagar Haveli and Daman and Diu
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: states.map(({ slug: state }) => ({ params: { state } })),
-    fallback: false,
-  }
+export const generateStaticParams = async () => {
+  return states.map(({ slug: state }) => ({ state }))
 }
 
 export function ListItem({ item }: { item: any }) {

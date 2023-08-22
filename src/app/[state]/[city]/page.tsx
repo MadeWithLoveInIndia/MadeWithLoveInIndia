@@ -6,21 +6,15 @@ import { Layout } from '@/components/Layout'
 import { Schedule } from '@/components/Schedule'
 import data from '@/generated/data.json'
 import { IconArrowLeft } from '@tabler/icons-react'
-import { GetStaticPaths } from 'next'
 import Link from 'next/link'
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: data
-      .map(({ city, state }) => ({
-        params: { state, city: slugify(city) },
-      }))
-      .filter(
-        (value, index, self) =>
-          self.findIndex((v) => v.params.city === value.params.city) === index,
-      ),
-    fallback: false,
-  }
+export const generateStaticParams = async () => {
+  return data
+    .map(({ city, state }) => ({ state, city: slugify(city) }))
+    .filter(
+      (value, index, self) =>
+        self.findIndex((v) => v.city === value.city) === index,
+    )
 }
 
 export default function CityPage({
