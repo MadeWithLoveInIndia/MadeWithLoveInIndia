@@ -1,3 +1,4 @@
+import { getStateName } from '@/app/[state]/page'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -72,7 +73,7 @@ export function CollectionPage({
             <ul className="mt-6 space-y-2">
               <li>
                 <Link
-                  href={`/${slugify(data.state)}/${slugify(data.city)}`}
+                  href={`/${data.state}/${slugify(data.city)}`}
                   className="inline-flex items-center space-x-3 opacity-80 transition-opacity hover:opacity-100"
                 >
                   <IconMapPin className="h-5 w-5" strokeWidth={1.5} />
@@ -82,12 +83,14 @@ export function CollectionPage({
               </li>
               <li>
                 <Link
-                  href={`/${slugify(data.state)}`}
+                  href={`/${data.state}`}
                   className="inline-flex items-center space-x-3 opacity-80 transition-opacity hover:opacity-100"
                 >
                   <IconMap className="h-5 w-5" strokeWidth={1.5} />
                   <span>State</span>
-                  <span className="font-semibold">{data.state}, India</span>
+                  <span className="font-semibold">
+                    {getStateName(data.state)}
+                  </span>
                 </Link>
               </li>
               {[

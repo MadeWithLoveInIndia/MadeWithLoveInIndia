@@ -1,8 +1,10 @@
 import Image from 'next/image'
 
+import { getStateName, states } from '@/app/[state]/page'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-newsletter.jpg'
+import Link from 'next/link'
 
 function ArrowRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -82,11 +84,13 @@ export function Newsletter() {
                 Get in touch <span aria-hidden="true">&darr;</span>
               </h3>
               <textarea
+                name="message"
                 className="mt-5 w-full resize-none rounded-4xl bg-white p-6 text-base text-slate-900 shadow-xl shadow-rose-900/5 placeholder:text-slate-400 focus-within:ring-2 focus:outline-none focus:ring-rose-900"
                 placeholder="Message"
               />
               <div className="mt-5 flex rounded-4xl bg-white py-2.5 pr-2.5 shadow-xl shadow-rose-900/5 focus-within:ring-2 focus-within:ring-rose-900">
                 <input
+                  name="email"
                   type="email"
                   required
                   placeholder="Email address"
@@ -101,6 +105,31 @@ export function Newsletter() {
                 </Button>
               </div>
             </form>
+          </div>
+        </div>
+        <div className="pt-20 sm:pt-32">
+          <div className="grid grid-cols-2 gap-6 text-sm md:grid-cols-9">
+            {states.map((state) => {
+              const stateName = getStateName(state.slug)
+              return (
+                <div
+                  key={state.slug}
+                  className="relative space-y-3 leading-snug transition-opacity hover:opacity-80"
+                >
+                  <img
+                    alt={`Monuments in ${stateName}`}
+                    src={`https://tse2.mm.bing.net/th?q=${stateName}+India+monuments&w=700&h=400&c=7&rs=1&p=0&dpr=3&pid=1.7&mkt=en-IN&adlt=moderate`}
+                    className="aspect-video w-full rounded-xl border object-cover shadow-lg"
+                  />
+                  <Link
+                    href={`/${state.slug}`}
+                    className="parent-relative-full-link flex truncate"
+                  >
+                    {stateName}
+                  </Link>
+                </div>
+              )
+            })}
           </div>
         </div>
       </Container>

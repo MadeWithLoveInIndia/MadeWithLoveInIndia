@@ -1,12 +1,11 @@
 'use client'
 
-import { slugify } from '@/app/[state]/[city]/(entries)/component'
+import { ListItem } from '@/app/[state]/page'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Grid } from '@/components/Schedule'
 import data from '@/generated/data.json'
 import clsx from 'clsx'
-import Link from 'next/link'
 import React from 'react'
 
 export function Speakers() {
@@ -95,45 +94,7 @@ export function Speakers() {
               ...data,
               ...data,
             ].map((item, index) => (
-              <div
-                key={`${item.slug}_${index}`}
-                className="relative flex transition-opacity hover:opacity-70"
-              >
-                <div className="mr-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl shadow">
-                  <img
-                    alt=""
-                    src={
-                      'github' in item && item.github
-                        ? `https://github.com/${item.github}.png?size=200`
-                        : 'url' in item && typeof item.url === 'string'
-                        ? `https://logo.clearbit.com/${
-                            new URL(item.url).hostname
-                          }`
-                        : ''
-                    }
-                    className="rounded-xl"
-                  />
-                </div>
-                <div className="col-span-3 grow space-y-1">
-                  {'name' in item && typeof item.name === 'string' && (
-                    <div className="font-semibold">
-                      <Link
-                        className="parent-relative-full-link"
-                        href={`/${slugify(item.state)}/${slugify(item.city)}/${
-                          item.slug
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
-                    </div>
-                  )}
-                  {'tagline' in item && typeof item.tagline === 'string' && (
-                    <p className="text-sm leading-snug text-slate-500">
-                      {item.tagline}
-                    </p>
-                  )}
-                </div>
-              </div>
+              <ListItem key={`${item.slug}_${index}`} item={item} />
             ))}
           </div>
         </div>
