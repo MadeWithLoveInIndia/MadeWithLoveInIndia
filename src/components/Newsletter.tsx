@@ -77,7 +77,7 @@ export function Newsletter() {
             </div>
             <form
               method="post"
-              action="https://formspree.io/mwlii@anandchowdhary.com"
+              action="https://formspree.io/f/xrgwqvjz"
               target="_blank"
             >
               <h3 className="text-lg font-semibold tracking-tight text-rose-900">
