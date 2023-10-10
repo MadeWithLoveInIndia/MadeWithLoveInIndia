@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "AFCP",
+  "tagline": "Competitive programming automation for Atom editor",
+  "url": "https://github.com/horcrux2301/AFCP",
+  "city": "Bangalore",
+  "state": "karnataka"
+}

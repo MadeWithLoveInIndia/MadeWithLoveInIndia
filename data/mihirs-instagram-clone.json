@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "Mihir's Instagram Clone",
+  "tagline": "Instagram Clone using React, Firebase and Ant",
+  "url": "https://github.com/mihir0699/Instagram-Clone",
+  "city": "Orai",
+  "state": "uttar-pradesh"
+}

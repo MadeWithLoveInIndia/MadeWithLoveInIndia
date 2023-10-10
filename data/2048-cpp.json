@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "2048.cpp",
+  "tagline": "Terminal version of the game 2048 written in C++",
+  "url": "https://github.com/plibither8/2048.cpp",
+  "city": "New Delhi",
+  "state": "delhi"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "Digital Payment Index",
+  "tagline": "Index for the digital transactions of India",
+  "url": "https://github.com/bala-ceg/digital-payment-index",
+  "city": "Chennai",
+  "state": "tamil-nadu"
+}

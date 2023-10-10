@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "Stock Market Price Checking App",
+  "tagline": "Real-time stock market price cheking app",
+  "url": "https://github.com/chinmayagrawal775/stockmarket-using-django-channels-celery",
+  "city": "Mathura",
+  "state": "uttar-pradesh"
+}

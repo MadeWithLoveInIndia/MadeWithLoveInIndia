@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "eMart",
+  "tagline": "Your one-stop shopping destination",
+  "url": "https://github.com/tarunsinghdev/mern-ecommerce",
+  "city": "Noida",
+  "state": "uttar-pradesh"
+}

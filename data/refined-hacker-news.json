@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "Refined Hacker News",
+  "tagline": "Browser extension to make HN better",
+  "url": "https://github.com/plibither8/refined-hacker-news",
+  "city": "New Delhi",
+  "state": "delhi"
+}

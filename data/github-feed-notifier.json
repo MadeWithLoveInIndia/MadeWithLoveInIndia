@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "GitHub Feed Notifier",
+  "tagline": "Notification service for GitHub dashboard updates",
+  "url": "https://github.com/plibither8/github-feed-notifier",
+  "city": "New Delhi",
+  "state": "delhi"
+}

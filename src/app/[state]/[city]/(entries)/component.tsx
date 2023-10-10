@@ -51,7 +51,7 @@ export function CollectionPage({
   const url = new URL(data.url)
   url.searchParams.set('utm_source', 'madewithloveinindia')
   url.searchParams.set('utm_medium', 'link')
-  url.searchParams.set('utm_campaign', data.slug)
+  url.searchParams.set('utm_campaign', 'madewithloveinindia.org')
 
   return (
     <Layout>

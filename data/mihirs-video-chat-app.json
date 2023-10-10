@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "Mihi's Video Chat App",
+  "tagline": "Video call & chat using React, Web RTC, Socket.io",
+  "url": "https://github.com/mihir0699/Video-Chat",
+  "city": "Orai",
+  "state": "uttar-pradesh"
+}

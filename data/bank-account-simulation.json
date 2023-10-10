@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "Bank Account Simulation",
+  "tagline": "All the basic functions of a bank account",
+  "url": "https://github.com/AnshDMishra/Bank-Account-Simulation-",
+  "city": "New Delhi",
+  "state": "delhi"
+}

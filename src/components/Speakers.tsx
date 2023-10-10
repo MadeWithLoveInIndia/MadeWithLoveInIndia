@@ -4,9 +4,49 @@ import { ListItem } from '@/app/[state]/page'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Grid } from '@/components/Schedule'
-import data from '@/generated/data.json'
+import _data from '@/generated/data.json'
 import clsx from 'clsx'
 import React from 'react'
+
+/**
+ * Order data in the following types:
+ * 1. company
+ * 2. nonprofit
+ * 3. institution
+ * 4. community
+ * 5. personal website
+ * 6. app
+ * 7. open source project
+ * 8. other
+ * and then alphabetically by name
+ */
+export const data = _data.sort((a, b) => {
+  const FEATURED = ['hike-messenger', 'snapdeal', 'oswald-labs', 'protecta']
+  if (FEATURED.includes(a.slug) && !FEATURED.includes(b.slug)) return -1
+  if (!FEATURED.includes(a.slug) && FEATURED.includes(b.slug))
+    return a.slug < b.slug ? -1 : 1
+
+  if (a.type === b.type) {
+    if (a.name === b.name) return 0
+    return a.name < b.name ? -1 : 1
+  }
+  const order = [
+    'company',
+    'nonprofit',
+    'institution',
+    'community',
+    'personal website',
+    'app',
+    'open source project',
+    'other',
+  ]
+
+  const aIndex = order.indexOf(a.type)
+  const bIndex = order.indexOf(b.type)
+  if (aIndex < bIndex) return -1
+  if (aIndex > bIndex) return 1
+  return 0
+})
 
 export function Speakers() {
   const [showAll, setShowAll] = React.useState(false)

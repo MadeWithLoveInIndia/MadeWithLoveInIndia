@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "Indian Customs IEC",
+  "tagline": "Verify import-export code with indian customs",
+  "url": "https://github.com/crusher95/indian-customs-iec",
+  "city": "Mumbai",
+  "state": "maharashtra"
+}
