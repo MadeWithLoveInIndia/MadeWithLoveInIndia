@@ -1,6 +1,8 @@
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import data from '@/generated/data.json'
+import Link from 'next/link'
 
 export function Hero() {
   return (
@@ -38,19 +40,43 @@ export function Hero() {
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
-              ['Websites', '187'],
-              ['Products', '324'],
-              ['Events', '4'],
-              ['People', '231'],
+              [
+                'Companies',
+                data.filter((i) => i.type === 'company').length,
+                '/companies',
+              ],
+              [
+                'Projects',
+                data.filter((i) => i.type === 'open source project').length,
+                '/open-source-projects',
+              ],
+              [
+                'People',
+                data.filter((i) => i.type === 'personal website').length,
+                '/personal-websites',
+              ],
               ['Founded', '2013'],
-            ].map(([name, value]) => (
-              <div key={name}>
-                <dt className="font-mono text-sm text-rose-600">{name}</dt>
-                <dd className="mt-0.5 text-2xl font-semibold tracking-tight text-rose-900">
-                  {value}
-                </dd>
-              </div>
-            ))}
+            ].map(([name, value, href]) =>
+              typeof href === 'string' ? (
+                <Link
+                  href={href}
+                  key={name}
+                  className="rounded-lg hover:opacity-50 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500"
+                >
+                  <dt className="font-mono text-sm text-rose-600">{name}</dt>
+                  <dd className="mt-0.5 text-2xl font-semibold tracking-tight text-rose-900">
+                    {value}
+                  </dd>
+                </Link>
+              ) : (
+                <div key={name}>
+                  <dt className="font-mono text-sm text-rose-600">{name}</dt>
+                  <dd className="mt-0.5 text-2xl font-semibold tracking-tight text-rose-900">
+                    {value}
+                  </dd>
+                </div>
+              ),
+            )}
           </dl>
         </div>
       </Container>

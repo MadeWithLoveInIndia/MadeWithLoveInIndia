@@ -46,6 +46,17 @@ export const states = [
   { slug: 'west-bengal' },
 ]
 
+export const categories = [
+  { slug: 'companies', type: 'company' },
+  { slug: 'apps', type: 'app' },
+  { slug: 'open-source-projects', type: 'open source project' },
+  { slug: 'nonprofits', type: 'nonprofit' },
+  { slug: 'institutions', type: 'institution' },
+  { slug: 'communities', type: 'community' },
+  { slug: 'personal-websites', type: 'personal website' },
+  { slug: 'others', type: 'other' },
+]
+
 /**
  * Convert a slug into a human readable state name
  * @param slug - Slug of the state
@@ -102,6 +113,47 @@ export function ListItem({ item }: { item: any }) {
 }
 
 export default function StatePage({ params }: { params: { state: string } }) {
+  const category = categories.find(({ slug }) => slug === params.state)
+
+  if (category) {
+    const items = data.filter(({ type }) => type === category.type)
+    return (
+      <Layout>
+        <div className="relative pt-20 sm:pt-36">
+          <BackgroundImage position="right" className="-bottom-14 -top-36" />
+          <Container className="relative grid gap-8 md:grid-cols-2">
+            <div>
+              <Link
+                href="/"
+                className="mb-4 inline-flex items-center space-x-2 font-medium text-rose-900 hover:text-rose-700"
+              >
+                <IconArrowLeft className="h-5 w-5" strokeWidth={1.5} />
+                <span>More categories</span>
+              </Link>
+              <h1 className="font-display text-5xl font-bold tracking-tighter sm:text-7xl">
+                {getStateName(category.slug)}
+              </h1>
+              {items.length === 0 && (
+                <p className="mt-4 text-lg text-slate-500">
+                  No initiatives have been listed for{' '}
+                  {getStateName(category.slug).toLowerCase()} yet.
+                </p>
+              )}
+            </div>
+          </Container>
+        </div>
+        <Container>
+          <div className="my-20 grid gap-16 md:grid-cols-4">
+            {items.map((item, index) => (
+              <ListItem key={`${item.slug}_${index}`} item={item} />
+            ))}
+          </div>
+        </Container>
+        <Schedule />
+      </Layout>
+    )
+  }
+
   const stateName = getStateName(params.state)
   const items = data.filter(({ state }) => slugify(state) === params.state)
 

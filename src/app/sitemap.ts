@@ -1,10 +1,14 @@
 import { slugify } from '@/app/[state]/[city]/(entries)/component'
-import { states } from '@/app/[state]/page'
+import { categories, states } from '@/app/[state]/page'
 import data from '@/generated/data.json'
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
+    ...categories.map((category) => ({
+      url: `https://madewithloveinindia.org/${category.slug}`,
+      lastModified: new Date(),
+    })),
     ...states.map((state) => ({
       url: `https://madewithloveinindia.org/${state.slug}`,
       lastModified: new Date(),
