@@ -38,7 +38,7 @@ export function Speakers() {
             {
               title: 'A badge of distinction',
               description:
-                'When this badge graces a product or service, it carries with it a story of passion and purpose. It&rsquo;s a testament to the countless hours of tireless work, the spark of inspiration that ignited the idea, and the unwavering belief in the potential of Indian creativity.',
+                'When this badge graces a product or service, it carries with it a story of passion and purpose. It is a testament to the countless hours of tireless work, the spark of inspiration that ignited the idea, and the unwavering belief in the potential of Indian creativity.',
             },
             {
               title: 'Crafted with care',
