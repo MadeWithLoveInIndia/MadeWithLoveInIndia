@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "company",
+  "name": "Melangebox",
+  "tagline": "Sustainable, affordable fashion for India",
+  "url": "https://www.melangebox.com",
+  "city": "Gurgaon",
+  "state": "haryana"
+}

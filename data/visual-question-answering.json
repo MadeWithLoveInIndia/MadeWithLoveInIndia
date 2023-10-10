@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "Visual Question Answering",
+  "tagline": "Deep learning-based Q and A",
+  "url": "https://anantzoid.github.io/VQA-Keras-Visual-Question-Answering/",
+  "city": "New Delhi",
+  "state": "delhi"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "company",
+  "name": "Snapdeal",
+  "tagline": "One of India's largest online marketplaces",
+  "url": "https://www.snapdeal.com",
+  "city": "New Delhi",
+  "state": "delhi"
+}

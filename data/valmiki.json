@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "app",
+  "name": "Valmiki",
+  "tagline": "The revolutionary tool for accessible reading",
+  "url": "https://valmiki.oswald.foundation",
+  "city": "New Delhi",
+  "state": "delhi"
+}

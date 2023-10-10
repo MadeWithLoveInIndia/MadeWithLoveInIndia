@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "open source project",
+  "name": "MobSF",
+  "tagline": "Intelligent mobile automated pen-testing framework",
+  "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+  "city": "Bangalore",
+  "state": "karnataka"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "company",
+  "name": "BoiToi",
+  "tagline": "Buy books online at lowest price in India",
+  "url": "https://boitoi.in",
+  "city": "Kolkata",
+  "state": "west-bengal"
+}

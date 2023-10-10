@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "personal website",
+  "name": "Mihir Chaturvedi",
+  "tagline": "Frontend and UX developer",
+  "url": "https://mihir.ch",
+  "city": "New Delhi",
+  "state": "delhi"
+}

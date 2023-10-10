@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "app",
+  "name": "Transfer.sh",
+  "tagline": "File transfer tool for Android",
+  "url": "https://play.google.com/store/apps/details?id=me.kartikarora.transfersh",
+  "city": "Manipal",
+  "state": "karnataka"
+}
