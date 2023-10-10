@@ -1,7 +1,7 @@
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { data } from '@/components/Speakers'
+import data from '@/generated/data.json'
 import Link from 'next/link'
 
 export function Hero() {

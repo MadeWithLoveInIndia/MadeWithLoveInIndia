@@ -46,6 +46,43 @@ export default function Page() {
   await fs.mkdir('./src/generated', { recursive: true })
   await fs.writeFile(
     './src/generated/data.json',
-    JSON.stringify(result, null, 2),
+    JSON.stringify(
+      (result as { slug: string; name: string; type: string }[]).sort(
+        (a, b) => {
+          const FEATURED = [
+            'hike-messenger',
+            'snapdeal',
+            'oswald-labs',
+            'protecta',
+          ]
+          if (FEATURED.includes(a.slug) && !FEATURED.includes(b.slug)) return -1
+          if (!FEATURED.includes(a.slug) && FEATURED.includes(b.slug))
+            return a.slug < b.slug ? -1 : 1
+
+          if (a.type === b.type) {
+            if (a.name === b.name) return 0
+            return a.name < b.name ? -1 : 1
+          }
+          const order = [
+            'company',
+            'nonprofit',
+            'institution',
+            'community',
+            'personal website',
+            'app',
+            'open source project',
+            'other',
+          ]
+
+          const aIndex = order.indexOf(a.type)
+          const bIndex = order.indexOf(b.type)
+          if (aIndex < bIndex) return -1
+          if (aIndex > bIndex) return 1
+          return 0
+        },
+      ),
+      null,
+      2,
+    ),
   )
 })()

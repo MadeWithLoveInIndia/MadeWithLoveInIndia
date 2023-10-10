@@ -4,7 +4,7 @@ import { BackgroundImage } from '@/components/BackgroundImage'
 import { Container } from '@/components/Container'
 import { Layout } from '@/components/Layout'
 import { Schedule } from '@/components/Schedule'
-import { data } from '@/components/Speakers'
+import data from '@/generated/data.json'
 import { IconArrowLeft } from '@tabler/icons-react'
 import Link from 'next/link'
 
