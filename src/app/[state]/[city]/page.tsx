@@ -1,12 +1,27 @@
-import { slugify } from '@/app/[state]/[city]/(entries)/component'
-import { ListItem, getStateName } from '@/app/[state]/page'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Container } from '@/components/Container'
 import { Layout } from '@/components/Layout'
+import { ListItem } from '@/components/ListItem'
 import { Schedule } from '@/components/Schedule'
+import { getStateName, slugify } from '@/data'
 import data from '@/generated/data.json'
 import { IconArrowLeft } from '@tabler/icons-react'
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+type Props = {
+  params: { state: string; city: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: `https://v1.screenshot.11ty.dev/${encodeURIComponent(
+        `https://madewithloveinindia.org/${params.state}/${params.city}`,
+      )}/opengraph`,
+    },
+  }
+}
 
 export const generateStaticParams = async () => {
   return data
@@ -17,11 +32,7 @@ export const generateStaticParams = async () => {
     )
 }
 
-export default function CityPage({
-  params,
-}: {
-  params: { state: string; city: string }
-}) {
+export default function CityPage({ params }: Props) {
   const cityName = getStateName(params.city)
   const stateName = getStateName(params.state)
   const items = data.filter(

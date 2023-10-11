@@ -1,8 +1,8 @@
 'use client'
 
-import { ListItem } from '@/app/[state]/page'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { ListItem } from '@/components/ListItem'
 import { Grid } from '@/components/Schedule'
 import data from '@/generated/data.json'
 import clsx from 'clsx'

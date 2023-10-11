@@ -28,12 +28,26 @@ const validate = require('jsonschema').validate
       `import { type Metadata } from 'next';
 import { CollectionPage } from "@/app/[state]/[city]/(entries)/component";
 
-export const metadata: Metadata = {
-  title: "${data.name}",
-  description: "${data.name} (${
-    data.tagline
-  }) is part of Made with Love in India, a movement to celebrate, promote, and build a brand, India."
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { state: string; city: string };
+}): Promise<Metadata> {
+  return {
+    title: "${data.name}",
+    description: "${data.name} (${
+      data.tagline
+    }) is part of Made with Love in India, a movement to celebrate, promote, and build a brand, India.",
+    openGraph: {
+      images: \`https://v1.screenshot.11ty.dev/\${encodeURIComponent(
+        \`https://madewithloveinindia.org/\${params.state}/\${params.city}/${file.replace(
+          '.json',
+          '',
+        )}\`,
+      )}/opengraph\`,
+    },
+  };
+}
 
 const data = JSON.parse(\`${JSON.stringify(data)}\`);
 

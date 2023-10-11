@@ -12,6 +12,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://madewithloveinindia.org'),
   title: {
     template: '%s - Made with Love in India',
     default:
@@ -27,6 +28,11 @@ export const metadata: Metadata = {
     { rel: 'apple-touch-icon', url: '/apple-touch-icon.png' },
     { rel: 'mask-icon', color: '#f43f5e', url: '/safari-pinned-tab.svg' },
   ],
+  openGraph: {
+    images: `https://v1.screenshot.11ty.dev/${encodeURIComponent(
+      'https://madewithloveinindia.org',
+    )}/opengraph`,
+  },
 }
 
 export default function RootLayout({

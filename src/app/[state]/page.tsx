@@ -1,118 +1,33 @@
-import { slugify } from '@/app/[state]/[city]/(entries)/component'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Container } from '@/components/Container'
 import { Layout } from '@/components/Layout'
+import { ListItem } from '@/components/ListItem'
 import { Schedule } from '@/components/Schedule'
+import { categories, getStateName, slugify, states } from '@/data'
 import data from '@/generated/data.json'
 import { IconArrowLeft } from '@tabler/icons-react'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export const states = [
-  { slug: 'andaman-and-nicobar-islands' },
-  { slug: 'andhra-pradesh' },
-  { slug: 'arunachal-pradesh' },
-  { slug: 'assam' },
-  { slug: 'bihar' },
-  { slug: 'chandigarh' },
-  { slug: 'chhattisgarh' },
-  { slug: 'dadra-and-nagar-haveli-and-daman-and-diu' },
-  { slug: 'delhi' },
-  { slug: 'goa' },
-  { slug: 'gujarat' },
-  { slug: 'haryana' },
-  { slug: 'himachal-pradesh' },
-  { slug: 'jammu-and-kashmir' },
-  { slug: 'jharkhand' },
-  { slug: 'karnataka' },
-  { slug: 'kerala' },
-  { slug: 'ladakh' },
-  { slug: 'lakshadweep' },
-  { slug: 'madhya-pradesh' },
-  { slug: 'maharashtra' },
-  { slug: 'manipur' },
-  { slug: 'meghalaya' },
-  { slug: 'mizoram' },
-  { slug: 'nagaland' },
-  { slug: 'odisha' },
-  { slug: 'puducherry' },
-  { slug: 'punjab' },
-  { slug: 'rajasthan' },
-  { slug: 'sikkim' },
-  { slug: 'tamil-nadu' },
-  { slug: 'telangana' },
-  { slug: 'tripura' },
-  { slug: 'uttar-pradesh' },
-  { slug: 'uttarakhand' },
-  { slug: 'west-bengal' },
-]
+type Props = {
+  params: { state: string }
+}
 
-export const categories = [
-  { slug: 'companies', type: 'company' },
-  { slug: 'apps', type: 'app' },
-  { slug: 'open-source-projects', type: 'open source project' },
-  { slug: 'nonprofits', type: 'nonprofit' },
-  { slug: 'institutions', type: 'institution' },
-  { slug: 'communities', type: 'community' },
-  { slug: 'personal-websites', type: 'personal website' },
-  { slug: 'others', type: 'other' },
-]
-
-/**
- * Convert a slug into a human readable state name
- * @param slug - Slug of the state
- * @returns Human readable state name
- * @example getStateName('andaman-and-nicobar-islands') // Andaman and Nicobar Islands
- */
-export const getStateName = (slug: string) =>
-  slug
-    .split('-')
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(' ')
-    .replace(/ And /g, ' & ')
-    .replace('Haveli & Daman', 'Haveli and Daman') // Fix for Dadra and Nagar Haveli and Daman and Diu
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: `https://v1.screenshot.11ty.dev/${encodeURIComponent(
+        `https://madewithloveinindia.org/${params.state}`,
+      )}/opengraph`,
+    },
+  }
+}
 
 export const generateStaticParams = async () => {
   return states.map(({ slug: state }) => ({ state }))
 }
 
-export function ListItem({ item }: { item: any }) {
-  return (
-    <div className="relative flex transition-opacity hover:opacity-70">
-      <div className="mr-5 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl shadow">
-        <img
-          alt=""
-          src={
-            'github' in item && item.github
-              ? `https://github.com/${item.github}.png?size=200`
-              : 'url' in item && typeof item.url === 'string'
-              ? `https://logo.clearbit.com/${new URL(item.url).hostname}`
-              : ''
-          }
-          className="rounded-xl"
-        />
-      </div>
-      <div className="col-span-3 grow space-y-1">
-        {'name' in item && typeof item.name === 'string' && (
-          <div className="font-semibold">
-            <Link
-              className="parent-relative-full-link"
-              href={`/${slugify(item.state)}/${slugify(item.city)}/${
-                item.slug
-              }`}
-            >
-              {item.name}
-            </Link>
-          </div>
-        )}
-        {'tagline' in item && typeof item.tagline === 'string' && (
-          <p className="text-sm leading-snug text-slate-500">{item.tagline}</p>
-        )}
-      </div>
-    </div>
-  )
-}
-
-export default function StatePage({ params }: { params: { state: string } }) {
+export default function StatePage({ params }: Props) {
   const category = categories.find(({ slug }) => slug === params.state)
 
   if (category) {

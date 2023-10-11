@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import { getStateName, states } from '@/app/[state]/page'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { getStateName, states } from '@/data'
 import backgroundImage from '@/images/background-newsletter.jpg'
 import Link from 'next/link'
 

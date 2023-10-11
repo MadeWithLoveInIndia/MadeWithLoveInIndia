@@ -1,4 +1,3 @@
-import { getStateName } from '@/app/[state]/page'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -6,6 +5,7 @@ import { Layout } from '@/components/Layout'
 import { Newsletter } from '@/components/Newsletter'
 import { Schedule } from '@/components/Schedule'
 import { Sponsors } from '@/components/Sponsors'
+import { getStateName, slugify } from '@/data'
 import {
   IconArrowLeft,
   IconArrowRight,
@@ -20,12 +20,6 @@ import {
   IconWorldWww,
 } from '@tabler/icons-react'
 import Link from 'next/link'
-
-export const slugify = (str: string) =>
-  str
-    .toLowerCase()
-    .replace(/ /g, '-')
-    .replace(/[^\w-]+/g, '')
 
 export function CollectionPage({
   data,

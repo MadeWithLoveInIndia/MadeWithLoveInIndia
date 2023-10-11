@@ -1,5 +1,4 @@
-import { slugify } from '@/app/[state]/[city]/(entries)/component'
-import { categories, states } from '@/app/[state]/page'
+import { categories, slugify, states } from '@/data'
 import data from '@/generated/data.json'
 import { MetadataRoute } from 'next'
 

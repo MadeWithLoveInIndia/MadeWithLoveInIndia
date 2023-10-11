@@ -2,6 +2,15 @@ import { BackgroundImage } from '@/components/BackgroundImage'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Sponsors } from '@/components/Sponsors'
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+  openGraph: {
+    images: `https://v1.screenshot.11ty.dev/${encodeURIComponent(
+      'https://madewithloveinindia.org/about',
+    )}/opengraph`,
+  },
+}
 
 export default function About() {
   return (
