@@ -8,6 +8,7 @@ import data from '@/generated/data.json'
 import { IconArrowLeft } from '@tabler/icons-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 type Props = {
   params: { state: string }
@@ -70,7 +71,9 @@ export default function StatePage({ params }: Props) {
   }
 
   const stateName = getStateName(params.state)
+  const state = states.find(({ slug }) => slug === params.state)
   const items = data.filter(({ state }) => slugify(state) === params.state)
+  if (!state) return redirect('/')
 
   return (
     <Layout>
