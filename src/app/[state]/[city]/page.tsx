@@ -3,11 +3,12 @@ import { Container } from '@/components/Container'
 import { Layout } from '@/components/Layout'
 import { ListItem } from '@/components/ListItem'
 import { Schedule } from '@/components/Schedule'
-import { getStateName, slugify } from '@/data'
+import { getStateName, slugify, states } from '@/data'
 import data from '@/generated/data.json'
 import { IconArrowLeft } from '@tabler/icons-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 type Props = {
   params: { state: string; city: string }
@@ -39,6 +40,8 @@ export default function CityPage({ params }: Props) {
     ({ state, city }) =>
       slugify(state) === params.state && slugify(city) === params.city,
   )
+  const state = states.find(({ slug }) => slug === params.state)
+  if (!state) return redirect('/')
 
   return (
     <Layout>
