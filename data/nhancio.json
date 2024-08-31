@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "Company Website",
+  "name": "nhancio",
+  "tagline": "AI Consultancy",
+  "url": "https://nhancio.com",
+  "city": "Hyderabad",
+  "state": "Telangana"
+}
