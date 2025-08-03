@@ -1,0 +1,9 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "app",
+  "name": "slinkr",
+  "tagline": "Shorten, Track, and Manage Your Links",
+  "url": "https://slinkr.in",
+  "city": "Mangaluru",
+  "state": "karnataka"
+}
