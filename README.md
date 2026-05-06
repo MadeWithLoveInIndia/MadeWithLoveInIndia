@@ -10,7 +10,7 @@ Step into a world where every creation tells a story, and where Made with Love i
 
 ## Contributing guidelines
 
-If you use the Made with Love in India badge in your startup or project’s website or products, submit it and get featured on our platform.
+If your company uses the Made with Love in India badge on its website or products, submit a GitHub pull request to get featured on our platform.
 
 When this badge graces a product or service, it carries with it a story of passion and purpose. It is a testament to the countless hours of tireless work, the spark of inspiration that ignited the idea, and the unwavering belief in the potential of Indian creativity.
 
@@ -28,13 +28,13 @@ Once you have added the badge, fork this repository and create a file `name.json
 ```json
 {
   "$schema": "http://madewithloveinindia.org/schema.json",
-  "type": "personal website",
-  "name": "Anand Chowdhary",
-  "tagline": "Creative technologist and entrepreneur",
-  "url": "https://anandchowdhary.com",
+  "type": "company",
+  "name": "Acme Labs",
+  "tagline": "Building delightful products from India",
+  "url": "https://example.com",
   "city": "New Delhi",
   "state": "delhi"
 }
 ```
 
-You can use the [schema](https://madewithloveinindia.org/schema.json) to validate your JSON file and for a reference for `type` values. Create a pull request with your changes and we'll review it as soon as possible.
+You can use the [schema](https://madewithloveinindia.org/schema.json) to validate your JSON file. Create a pull request with your changes and we'll review it as soon as possible.

@@ -39,9 +39,9 @@ export function Schedule() {
             Join the movement.
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-rose-900">
-            If you use the Made with Love in India badge in your startup or
-            project’s website or products, submit it and get featured on our
-            platform.
+            If your company uses the Made with Love in India badge on its
+            website or products, open a GitHub pull request to get featured on
+            our platform.
           </p>
           <p className="mt-4 font-display text-2xl tracking-tight text-rose-900">
             Copy and paste the following code in your footer:
@@ -62,8 +62,8 @@ export function Schedule() {
             >
               Contributing guidelines
             </a>{' '}
-            on in our open-source repository on GitHub to add a link to your
-            website to our collection. Make a pull request and we’ll merge it!
+            in our open-source repository on GitHub to add your company to the
+            collection. Open a pull request and we’ll review it.
           </p>
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
             <h3 className="font-display text-3xl font-semibold tracking-tighter text-rose-600 sm:mt-24">

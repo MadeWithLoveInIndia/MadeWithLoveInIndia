@@ -1,8 +1,8 @@
+import { AboutInitiative } from '@/components/AboutInitiative'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Layout } from '@/components/Layout'
-import { Newsletter } from '@/components/Newsletter'
 import { Schedule } from '@/components/Schedule'
 import { Sponsors } from '@/components/Sponsors'
 import { getStateName, slugify } from '@/data'
@@ -192,7 +192,7 @@ export function CollectionPage({
         </Container>
       </div>
       <Schedule />
-      <Newsletter />
+      <AboutInitiative />
       <Sponsors />
     </Layout>
   )
