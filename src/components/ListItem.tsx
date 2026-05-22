@@ -3,21 +3,26 @@
 import { slugify } from '@/data'
 import Link from 'next/link'
 
+function getLogoUrl(item: any) {
+  if ('github' in item && item.github) {
+    return `https://github.com/${item.github}.png?size=200`
+  }
+
+  if ('url' in item && typeof item.url === 'string') {
+    const hostname = new URL(item.url).hostname
+    return `https://www.google.com/s2/favicons?sz=128&domain=${encodeURIComponent(
+      hostname,
+    )}`
+  }
+
+  return ''
+}
+
 export function ListItem({ item }: { item: any }) {
   return (
     <div className="relative flex transition-opacity hover:opacity-70">
       <div className="mr-5 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl shadow">
-        <img
-          alt=""
-          src={
-            'github' in item && item.github
-              ? `https://github.com/${item.github}.png?size=200`
-              : 'url' in item && typeof item.url === 'string'
-              ? `https://logo.clearbit.com/${new URL(item.url).hostname}`
-              : ''
-          }
-          className="rounded-xl"
-        />
+        <img alt="" src={getLogoUrl(item)} className="rounded-xl" />
       </div>
       <div className="col-span-3 grow space-y-1">
         {'name' in item && typeof item.name === 'string' && (
