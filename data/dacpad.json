@@ -1,0 +1,13 @@
+{
+  "$schema": "http://madewithloveinindia.org/schema.json",
+  "type": "app",
+  "name": "DacPad",
+  "tagline": "Dashboard for Delivery Partners",
+  "url": "https://dacpad.in",
+  "description": "A smart, online dashboard built for Delivery Associates to log daily packets, reconcile cash deposits, and track performance payouts.",
+  "logo": "https://dacpad.in/images/logo.png",
+  "founded": 2026,
+  "city": "Ahmedabad",
+  "state": "gujarat",
+  "instagram": "dacpad.in"
+}
